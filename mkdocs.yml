@@ -1,5 +1,16 @@
-site_name: My Docs
+site_name: 2023.1- GamificaRequisitos
 site_url: https://example.com
+
+nav:
+  - Index: index.md
+  - Visão de produto: visao_produto_projeto/visao_projeto.md
 
 theme:
   name: material
+
+markdown_extensions:
+  - pymdownx.emoji
+  - pymdownx.tasklist
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.highlight

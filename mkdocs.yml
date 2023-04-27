@@ -1,9 +1,14 @@
 site_name: 2023.1- GamificaRequisitos
-site_url: https://example.com
+site_url: https://mdsreq-fga-unb.github.io/2023.1-GamificaRequisitos/
 
 nav:
-  - Index: index.md
-  - Visão de produto: visao_produto_projeto/visao_projeto.md
+  - Home: index.md
+  - Entrega 1:
+    - Visão do Produto: visao_produto_projeto/visao_produto.md
+    - Visão do Projeto: visao_produto_projeto/visao_projeto.md
+    - Processo de Desenvolvimento de software: visao_produto_projeto/processo-software.md
+    - Lições Aprendidas: visao_produto_projeto/licoes_aprendidas.md
+    - Bibliografia: visao_produto_projeto/bibliografia.md
 
 theme:
   name: material

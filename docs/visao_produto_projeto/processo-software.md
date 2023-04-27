@@ -20,15 +20,14 @@
 | Design Simples | Projetos com a prática de um design simples sao benéficos, principalmente, para a manutenção do projeto. |
 | Refatoração | Prática que envolve a melhoria contínua do código existente sem alterar sua funcionalidade |
 
-<table style="margin-left: auto; margin-right: auto;">
-    <tr>
-        <td align="center">
-            <a href="..\assets\ScrumMediumLabelled.png">
-                <img style="border-radius: 0%;" src="..\assets\ScrumMediumLabelled.png"/>
-                <h5 class="text-center">Figura 2 - Processo Scrum (Fonte: Mountain Goat Software, 2005)</h5>
-            </a>
-        </td>
-        </table>
+<br>
+
+![ScrumMediumLabelled](https://user-images.githubusercontent.com/77307847/234932293-2b98669a-cb9d-4d36-b972-b6e2dad0d38a.png)
+
+<div align="center">
+<h5 class="text-center">Figura 2 - Processo Scrum (Fonte: Mountain Goat Software, 2005)</h5>
+</div>
+<br>
 
 ## 3.2 Atividades
 

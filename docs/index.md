@@ -1,5 +1,5 @@
 # GamificaRequisitos
-lorem ipsulum
+O projeto GamificaRequisitos visa melhorar e auxiliar a dinâmica de gamificação da disciplina de requisitos de software, auxiliando em diversas áreas como acompanhamento de progresso, pontuação atual, diminuição de trabalho e mais outras funções que procuram facilitar a vida dos estudantes, monitores e professor da disciplina.
 
 ## Equipe
 

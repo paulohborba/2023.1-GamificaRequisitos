@@ -1,4 +1,5 @@
-## Organização do projeto
+# 2 Visão Geral do Projeto
+## 2.1 Organização do projeto
 
 | Papel | Atribuições | Responsável | Participantes | 
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -7,7 +8,7 @@
 | Analista de Qualidade | Garante a qualidade do produto, o cumprimento do conceito de pronto e a  realização de inspeções de código | Luciano, Paulo, Vinícius e Felipe (Alternância a cada unidade) |  Luciano, Paulo, Vinícius e Felipe |
 | Cliente | Responsável por validar as entregas com feedbacks relacionados ao projeto | George Marsicano Correa | George Marsicano Correa e Maria Abritta |
 
-## Planejamento das Fases e/ou Iterações do Projeto
+## 2.2 Planejamento das Fases e/ou Iterações do Projeto
 
 | Sprint | Produto (Entrega) | Data Início | Data fim |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
@@ -15,7 +16,7 @@
 | 2 | Definição do Processo Desenvolvimento; <br> Visão de Produto e Projeto; <br> Site do Projeto (GitPages); Vídeo de apresentação das entregas. | 20/04/2023 | 26/04/2023 |
 | 3 | Criação do Backlog. | 27/04/2023 | 03/05/2023 |
 | 4 | Negociação dos Requisitos;  Definição do MVP. | 04/05/2023 | 10/05/2023 |
-## Matriz de Comunicação
+## 2.3 Matriz de Comunicação
 
 | Descrição | Área/Envolvidos | Periodicidade |Produtos Gerados |
 | -------------------- | --------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------- |
@@ -24,7 +25,7 @@
 | Sprint Review | Equipe do Projeto | Semanal | Nenhum |
 | Situação do Projeto | Equipe do Projeto, George Marsicano | Semanal | Vídeo da reunião |
 
-## Gerenciamento de Riscos
+## 2.4 Gerenciamento de Riscos
 
 - Redução na equipe : Baixa
     - Trancamento ou desistência da disciplina por algum membro da equipe.
@@ -44,7 +45,7 @@
             Capacitar a equipe constantemente durante o projeto;
             Ajuda constante caso um membro não consiga realizar uma tarefa.
 
-## Critérios de Replanejamento
+## 2.5 Critérios de Replanejamento
 
 - Dificuldade no desenvolvimento do projeto.
 - Cliente insatisfeito com o produto entregue.
@@ -55,4 +56,4 @@
 
 |  Data | Versão | Descrição | Autor(es) |
 | :--------: | :----: | :---------------------------------: | :---------: |
-| 26/04/2023 |  0.1   | Criação e estruturação do documento | Paulo Borba |
+| 26/04/2023 |  0.1   | Criação e estruturação do documento | Paulo Borba e Luciano Machado |

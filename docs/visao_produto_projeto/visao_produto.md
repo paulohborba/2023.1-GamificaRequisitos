@@ -2,16 +2,15 @@
 ## 1.1 Problema
 
 O software tem a proposta de gamificação o sistema de PAXs da matéria, auxiliando o acompanhamento dos alunos em relação aos PAXs obtidos, ajudar o professor e os monitores na postagem dos PAXs de cada grupo, data e nome das atividades da disciplina, além de reunir todos esses dados para facilitar a análise e desenvolvimento de cada grupo ao longo do semestre.
+  
+<br>
+<div align="center">
 
-<table style="margin-left: auto; margin-right: auto;">
-    <tr>
-        <td align="center">
-            <a href="..\assets\ishikawa06.png">
-                <img style="border-radius: 0%;" src="..\assets\ishikawa06.png"/>
-                <h5 class="text-center">Figura 1 - Diagrama de Ishikawa (Fonte: Autoria Própria)</h5>
-            </a>
-        </td>
-        </table>
+![ishikawa06](https://user-images.githubusercontent.com/77307847/234924414-73053063-3eda-4602-a5e2-be64f3cc679d.png)
+
+<h5 class="text-center">Figura 1 - Diagrama de Ishikawa (Fonte: Autoria Própria)</h5>
+</div>
+<br>
 
 ## 1.2 Declaração de Posição do Produto
 

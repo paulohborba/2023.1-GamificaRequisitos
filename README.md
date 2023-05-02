@@ -1,4 +1,4 @@
-<h1 align="center"> GamificaRequisitos </h1>
+<h1 align="center"> Gamifica Requisitos </h1>
 <h3 align="center"> 2023.1 </h3>
 
 ## Introdução
@@ -6,9 +6,11 @@
 O projeto GamificaRequisitos está sendo desenvolvido pela equipe Game King durante a disciplina de Requisitos de Software no semestre 2023/1. Seu objetivo é melhorar e auxiliar a dinâmica de gamificação da disciplina, oferecendo diversas funções para tornar o aprendizado mais efetivo e envolvente. O sistema irá permitir acompanhamento de progresso, pontuação atual, além de propor desafios e oferecer recompensas em caso de sucesso. Com isso, espera-se atrair a atenção e aumentar o engajamento dos usuários, facilitando a vida dos estudantes, monitores e professores da disciplina.
 
 ## Documentação
+
 [Clique aqui](https://mdsreq-fga-unb.github.io/2023.1-GamificaRequisitos/) para acessar a documentação.
 
-## Equipe 
+## Equipe
+
 A equipe Gameking é composta por 4 estudantes de Engenharia de Software da UnB da disciplina de Requisitos de Software.
 
 <center>

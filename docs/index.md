@@ -1,5 +1,10 @@
-# GamificaRequisitos
-O projeto GamificaRequisitos visa melhorar e auxiliar a dinâmica de gamificação da disciplina de requisitos de software, auxiliando em diversas áreas como acompanhamento de progresso, pontuação atual, diminuição de trabalho e mais outras funções que procuram facilitar a vida dos estudantes, monitores e professor da disciplina.
+<h1 align="center"> Gamifica Requisitos </h1>
+<h3 align="center"> 2023.1 </h3>
+
+## Introdução
+
+O projeto Gamifica Requisitos está sendo desenvolvido pela equipe Game King durante a disciplina de Requisitos de Software no semestre 2023/1. Seu objetivo é melhorar e auxiliar a dinâmica de gamificação da disciplina, oferecendo diversas funções para tornar o aprendizado mais efetivo e envolvente. O sistema irá permitir acompanhamento de progresso, pontuação atual, além de propor desafios e oferecer recompensas em caso de sucesso. Com isso, espera-se atrair a atenção e aumentar o engajamento dos usuários, facilitando a vida dos estudantes, monitores e professores da disciplina.
+
 
 ## Equipe
 

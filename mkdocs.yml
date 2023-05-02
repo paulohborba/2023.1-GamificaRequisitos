@@ -1,4 +1,4 @@
-site_name: 2023.1- GamificaRequisitos
+site_name: Gamifica Requisitos
 site_url: https://mdsreq-fga-unb.github.io/2023.1-GamificaRequisitos/
 
 nav:
@@ -12,6 +12,20 @@ nav:
 
 theme:
   name: material
+  icon:
+    logo: material/gamepad-square 
+    favicon: images/favicon.png
+  palette:
+    - scheme: default
+      primary: amber
+      toggle:
+        icon: material/brightness-7
+        name: Modo noturno
+    - scheme: slate
+      primary: amber
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
 
 markdown_extensions:
   - pymdownx.emoji
@@ -19,3 +33,4 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.highlight
+  - pymdownx.superfences

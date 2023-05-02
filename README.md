@@ -11,8 +11,33 @@ O projeto GamificaRequisitos está sendo desenvolvido pela equipe Game King dura
 ## Equipe 
 A equipe Gameking é composta por 4 estudantes de Engenharia de Software da UnB da disciplina de Requisitos de Software.
 
-| [<img src="https://avatars.githubusercontent.com/u/77307847?v=4" width=50><br><sub>Vinícius Alves</sub>](https://github.com/viniciusalves999) 
-| :---: |
-| [<img src="https://avatars.githubusercontent.com/u/121826788?v=4" width=50><br><sub>Luciano Machado</sub>](https://github.com/lucianosgit) | :---: |
-| [<img src="https://avatars.githubusercontent.com/u/107002722?v=4" width=50><br><sub>Felipe Nunes</sub>](https://github.com/FelipeNunesdM) | :---: |
-| [<img src="https://avatars.githubusercontent.com/u/88103983?v=4" width=50><br><sub>Paulo Borba</sub>](https://github.com/paulohborba) | :---: |
+<center>
+
+<table style="margin-left: auto; margin-right: auto;">
+    <tr>
+        <td align="center">
+            <a href="https://github.com/viniciusalves999">
+                <img style="border-radius: 5%;" src="https://github.com/viniciusalves999.png" width="150px;"/>
+                <h5 class="text-center">Vinícius Alves</h5>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/lucianosgit">
+                <img style="border-radius: 5%;" src="https://github.com/lucianosgit.png" width="150px;"/>
+                <h5 class="text-center">Luciano Machado</h5>
+            </a>
+        </td>
+        <td align="center">
+            <a href="https://github.com/FelipeNunesdM">
+                <img style="border-radius: 5%;" src="https://github.com/FelipeNunesdM.png" width="150px;"/>
+                <h5 class="text-center">Felipe Nunes</h5>
+            </a>
+         <td align="center">
+            <a href="https://github.com/paulohborba">
+                <img style="border-radius: 5%;" src="https://github.com/paulohborba.png" width="150px;"/>
+                <h5 class="text-center">Paulo Borba</h5>
+            </a>
+        </td>
+</table>
+
+</center>

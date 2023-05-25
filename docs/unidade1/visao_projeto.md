@@ -11,7 +11,7 @@
 ## 2.2 Planejamento das Fases e/ou Iterações do Projeto
 
 | Sprint | Produto (Entrega) | Data Início | Data fim |
-| :----: | ----------------- | ----------- | ---------- |
+| :----: | :----------------:| :---------: | :------: |
 | 1 | Documento de definição do Produto. | 13/04/2023 | 19/04/2023 |
 | 2 | Visão de Produto e Projeto; Site do Projeto (GitPages). | 20/04/2023 | 26/04/2023 |
 | 3 | Backlog. | 27/04/2023 | 03/05/2023 |
@@ -26,10 +26,11 @@
 | 12 | Funcionalidades do MVP 2. | 29/06/2023 | 05/07/2023 |
 | 13 | Funcionalidades do MVP 2. | 06/07/2023 | 12/07/2023 |
 | 14 | Entrega da unidade 4; MVP 2. | 13/07/2023 | 19/07/2023 |
+
 ## 2.3 Matriz de Comunicação
 
-| Descrição | Área/Envolvidos | Periodicidade |Produtos Gerados |
-| -------------------- | --------------------------------------- | ------------- | -------------------------------------------------------------------------------------------------- |
+| Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados |
+| :-------: | :-------------: | :-----------: | :--------------: |
 | Sprint Planning  | Equipe do Projeto | Semanal | Nenhum |
 | Daily Scrum | Equipe do Projeto  | Diária | Nenhum |
 | Sprint Review | Equipe do Projeto | Semanal | Nenhum |

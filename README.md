@@ -18,8 +18,8 @@ A equipe Gameking é composta por 4 estudantes de Engenharia de Software da UnB 
 <table style="margin-left: auto; margin-right: auto;">
     <tr>
         <td align="center">
-            <a href="https://github.com/viniciusalves999">
-                <img style="border-radius: 5%;" src="https://github.com/viniciusalves999.png" width="150px;"/>
+            <a href="https://github.com/vinicius-alvess">
+                <img style="border-radius: 5%;" src="https://github.com/vinicius-alvess.png" width="150px;"/>
                 <h5 class="text-center">Vinícius Alves</h5>
             </a>
         </td>

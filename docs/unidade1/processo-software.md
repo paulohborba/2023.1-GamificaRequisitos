@@ -72,9 +72,9 @@ Atividades:
     - Estabelecer como os requisitos são estruturados e manter eles organizados em seu estado mais atual possível.
 
 E também baseado em Gupta, onde a abordagem deve ser baseada em como as necessidades e requisitos, ambiente e cultura organizacional, tamanho e complexidade, risco, orçamento e prazo de conclusão. Segue a tabela abaixo: 
-| |  |  |  |
-| :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
+
 | Requisitos | Cascata | Prototipação | Interativo e Incremental | Evolutivo | Spiral | RAD | Nosso Contexto |
+| :--------: | :-----: | :----------: | :---------------------:  | :------:  | :-----: | :---: | :------------: |
 | Os requisitos são facilmente compreensíveis e definidos? | Sim | Não | Não | Não | Não | Sim | Sim |
 | Mudamos os requisitos com bastante frequência? | Não | Sim | Não | Não | Não | Sim | Não |
 | Podemos mudar os requisitos no início do ciclo? | Sim | Não | Sim | Sim | Não | Sim | Sim |

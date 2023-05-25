@@ -25,7 +25,7 @@ O software tem a proposta de gamificação o sistema de PAXs da matéria, auxili
 
 ## 1.3 Objetivos do Produto
 
--     Transformar o processo de aprendizado em uma experiência lúdica e divertida. Através do uso de jogos e desafios, o aplicativo busca engajar os estudantes e tornar o aprendizado mais interativo e envolvente e fornecer uma plataforma que possibilite o acompanhamento do desempenho dos alunos em tempo real, permitindo que o ensino seja personalizado de acordo com as necessidades individuais de cada aluno. 
+- Transformar o processo de aprendizado em uma experiência lúdica e divertida. Através do uso de jogos e desafios, o aplicativo busca engajar os estudantes e tornar o aprendizado mais interativo e envolvente e fornecer uma plataforma que possibilite o acompanhamento do desempenho dos alunos em tempo real, permitindo que o ensino seja personalizado de acordo com as necessidades individuais de cada aluno. 
 
 
 ## 1.4 Tecnologias a Serem Utilizadas
@@ -39,4 +39,4 @@ O software tem a proposta de gamificação o sistema de PAXs da matéria, auxili
 |  Data | Versão | Descrição | Autor(es) |
 | :--------: | :----: | :---------------------------------: | :---------: |
 | 26/04/2023 |  0.1   | Criação e estruturação do documento | Paulo Borba e Vinícius Alves |
-| 26/04/2023 |  0.2   | Alteração do documento | Paulo Borba |
+| 24/05/2023 |  0.2   | Alteração do documento | Paulo Borba |

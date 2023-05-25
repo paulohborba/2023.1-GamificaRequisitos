@@ -12,10 +12,20 @@
 
 | Sprint | Produto (Entrega) | Data Início | Data fim |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| 1 | Definição do Produto; Definição do Dono do Produto. | 13/04/2023 | 19/04/2023 |
-| 2 | Definição do Processo Desenvolvimento; <br> Visão de Produto e Projeto; <br> Site do Projeto (GitPages); Vídeo de apresentação das entregas. | 20/04/2023 | 26/04/2023 |
-| 3 | Criação do Backlog. | 27/04/2023 | 03/05/2023 |
-| 4 | Negociação dos Requisitos;  Definição do MVP. | 04/05/2023 | 10/05/2023 |
+| 1 | Documento de definição do Produto. | 13/04/2023 | 19/04/2023 |
+| 2 | Visão de Produto e Projeto; Site do Projeto (GitPages). | 20/04/2023 | 26/04/2023 |
+| 3 | Backlog. | 27/04/2023 | 03/05/2023 |
+| 4 | Mural; MVP 1 e 2. | 04/05/2023 | 10/05/2023 |
+| 5 | Planilha de priorizacao das US. | 11/05/2023 | 17/05/2023 |
+| 6 | Entrega da unidade 2. | 18/05/2023 | 24/05/2023 |
+| 7 | Funcionalidades do MVP 1. | 25/05/2023 | 31/05/2023 |
+| 8 | Funcionalidades do MVP 1. | 01/06/2023 | 07/06/2023 |
+| 9 | Entrega da unidade 3; MVP 1. | 08/06/2023 | 14/06/2023 |
+| 10 | Funcionalidades do MVP 2. | 15/06/2023 | 21/06/2023 |
+| 11 | Funcionalidades do MVP 2. | 22/06/2023 | 28/06/2023 |
+| 12 | Funcionalidades do MVP 2. | 29/06/2023 | 05/07/2023 |
+| 13 | Funcionalidades do MVP 2. | 06/07/2023 | 12/07/2023 |
+| 14 | Entrega da unidade 4; MVP 2. | 13/07/2023 | 19/07/2023 |
 ## 2.3 Matriz de Comunicação
 
 | Descrição | Área/Envolvidos | Periodicidade |Produtos Gerados |
@@ -23,7 +33,8 @@
 | Sprint Planning  | Equipe do Projeto | Semanal | Nenhum |
 | Daily Scrum | Equipe do Projeto  | Diária | Nenhum |
 | Sprint Review | Equipe do Projeto | Semanal | Nenhum |
-| Situação do Projeto | Equipe do Projeto, George Marsicano | Semanal | Vídeo da reunião |
+| Situação do Projeto | Equipe do Projeto, Cliente | Semanal | Vídeo da reunião |
+| Reunião com monitor | Equipe do Projeto, Monitor | Semanal | Nenhum |
 
 ## 2.4 Gerenciamento de Riscos
 
@@ -47,13 +58,14 @@
 
 ## 2.5 Critérios de Replanejamento
 
-- Dificuldade no desenvolvimento do projeto.
-- Cliente insatisfeito com o produto entregue.
-- Qualidade do produto abaixo do esperado.
-- Escopo do projeto maior que o esperado.
+- Atrasos;
+- Alterações de requisitos; 
+- Alteração de tecnologias; 
+- Saída repentina de um membro sem aviso prévio. 
 
 ## Histórico de revisão
 
 |  Data | Versão | Descrição | Autor(es) |
 | :--------: | :----: | :---------------------------------: | :---------: |
 | 26/04/2023 |  0.1   | Criação e estruturação do documento | Paulo Borba e Luciano Machado |
+| 24/05/2023 |  0.2   | Alteração do documento | Paulo Borba |

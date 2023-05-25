@@ -4,7 +4,13 @@
 
 ### 3.1.1 Requisitos
 
-![Requisitos-tabela](https://photos.google.com/search/_tra_/photo/AF1QipPPgZTnyDRtcJwdSQSz9ejTyulmQa4qTNeQG9Lz)
+| |  |  |  |
+| :----: |--------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
+| Requisitos | Nosso Contexto |
+| Os requisitos são facilmente compreensíveis e definidos? | Sim |
+| Mudamos os requisitos com bastante frequência? | Não |
+| Podemos mudar os requisitos no início do ciclo? | Sim |
+| Os requisitos indicam um sistema complexo a ser construído? | Sim |
 
 
 ### 3.1.2 Scrum

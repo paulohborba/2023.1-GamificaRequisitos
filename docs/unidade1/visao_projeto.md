@@ -11,7 +11,7 @@
 ## 2.2 Planejamento das Fases e/ou Iterações do Projeto
 
 | Sprint | Produto (Entrega) | Data Início | Data fim |
-| :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
+| :----: | ----------------- | ----------- | ---------- |
 | 1 | Documento de definição do Produto. | 13/04/2023 | 19/04/2023 |
 | 2 | Visão de Produto e Projeto; Site do Projeto (GitPages). | 20/04/2023 | 26/04/2023 |
 | 3 | Backlog. | 27/04/2023 | 03/05/2023 |

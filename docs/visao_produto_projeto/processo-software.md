@@ -3,7 +3,7 @@
 ## 3.1 Metodologia
 
 ### 3.1.1 Requisitos
-| |  |  |  | |
+| |  |  |  | 
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- | 
 | Requisitos | Nosso Contexto |
 | Os requisitos são facilmente compreensíveis e definidos? | Sim |

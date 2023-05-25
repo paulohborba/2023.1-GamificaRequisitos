@@ -1,5 +1,7 @@
 # Backlog do Produto
 
+Para a criação do Backlog do Produto, foi ultilizado a ferramenta [MURAL](https://app.mural.co/invitation/mural/reqbacklog0444/1683932566864?sender=uf7e1660760d0a1d8cb2e3880&key=0b05e724-71e6-467f-bd58-573228f58888).
+
 ## Temas
 
 | Tema  | Descrição |

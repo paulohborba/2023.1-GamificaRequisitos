@@ -65,3 +65,9 @@ Após atribuirmos as pontuações em cada dimensão, calculamos a pontuação to
 |   T1   |  E1  | US17 | Como professor, eu quero arquivar e excluir o arquivamento de uma turma                                                                         |
 |   T1   |  E1  | US18 | Como professor, eu quero exportar uma arquivo .xls com matrícula, nome, email, equipe e o saldo de PAXs de todos os alunos da turma selecionada |
 |   T1   |  E1  | US19 | Como professor, eu quero criar turmas sem a necessidade de importar um arquivo .xls para que eu tenha mais liberdade e controle                 |
+
+
+## Histórico de versões
+ |  Data | Versão | Descrição | Autor(es) |
+| :--------: | :----: | :---------------------------------: | :---------: |
+| 24/05/2023 |   1.0   | Criação do documento | Vinícius Alves |

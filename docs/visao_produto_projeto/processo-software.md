@@ -3,13 +3,14 @@
 ## 3.1 Metodologia
 
 ### 3.1.1 Requisitos
-| |  |  |  | 
-| :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- | 
-| Requisitos | Nosso Contexto |
-| Os requisitos são facilmente compreensíveis e definidos? | Sim |
-| Mudamos os requisitos com bastante frequência? | Não |
+| |  |  |  |
+| :----: |--------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
+| Requisitos| Nosso Contexto |
+| Os requisitos são facilmente compreensíveis e definidos? | Sim | 
+| Mudamos os requisitos com bastante frequência? | Sim |
 | Podemos mudar os requisitos no início do ciclo? | Sim |
 | Os requisitos indicam um sistema complexo a ser construído? | Sim |
+
 
 ### 3.1.2 Scrum
 | |  |  |  |

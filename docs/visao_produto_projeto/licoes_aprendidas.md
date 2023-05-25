@@ -13,32 +13,32 @@ A equipe aprendeu sobre levantamento de requisitos, e como usar esses requisitos
 ### 4.2.1 Entregas unidade 1
 
 #### Pit OpenUp
-![pitOpenUp1](..\assets\images\pitOpenUp1.png)
-![pitOpenUp2](..\assets\images\pitOpenUp2.png)
-![pitOpenUp3](..\assets\images\pitOpenUp3.png)
-![pitOpenUp4](..\assets\images\pitOpenUp4.png)
-![pitOpenUp5](..\assets\images\pitOpenUp5.png)
-![pitOpenUp6](..\assets\images\pitOpenUp6.png)
-![pitOpenUp7](..\assets\images\pitOpenUp7.png)
-![pitOpenUp8](..\assets\images\pitOpenUp8.png)
-![pitOpenUp9](..\assets\images\pitOpenUp9.png)
-![pitOpenUp10](..\assets\images\pitOpenUp10.png)
+![pitOpenUp1](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/pitOpenUp1.png)
+![pitOpenUp2](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/pitOpenUp2.png)
+![pitOpenUp3](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/pitOpenUp3.png)
+![pitOpenUp4](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/pitOpenUp4.png)
+![pitOpenUp5](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/pitOpenUp5.png)
+![pitOpenUp6](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/pitOpenUp6.png)
+![pitOpenUp7](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/pitOpenUp7.png)
+![pitOpenUp8](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/pitOpenUp8.png)
+![pitOpenUp9](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/pitOpenUp9.png)
+![pitOpenUp10](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/pitOpenUp10.png)
 [Pit OpenUp](https://docs.google.com/presentation/d/17MpMKXRvh4ZH62C2J436M-gYnYiPG5VjA8QIPOz_NTY/edit#slide=id.g742e3e7cd_1_16)
 
 #### Projeto
-![projeto1](..\assets\images\projeto1.png)
-![projeto2](..\assets\images\projeto2.png)
-![projeto3](..\assets\images\projeto3.png)
-![projeto4](..\assets\images\projeto4.png)
+![projeto1](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/projeto1.png)
+![projeto2](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/projeto2.png)
+![projeto3](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/projeto3.png)
+![projeto4](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/projeto4.png)
 [Projeto](https://docs.google.com/presentation/d/1Sp4HujmcXZV-f6UrXX6xLJ3xl8YFkW_tAOhg7qaDg_g/edit#slide=id.g742e3e7cd_1_16)
 
 #### Visão Geral do Produto
-![visaoProduto1](..\assets\images\visaoProduto1.png)
-![visaoProduto2](..\assets\images\visaoProduto2.png)
-![visaoProduto3](..\assets\images\visaoProduto3.png)
-![visaoProduto4](..\assets\images\visaoProduto4.png)
-![visaoProduto5](..\assets\images\visaoProduto5.png)
-![visaoProduto6](..\assets\images\visaoProduto6.png)
+![visaoProduto1](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/visaoProduto1.png)
+![visaoProduto2](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/visaoProduto2.png)
+![visaoProduto3](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/visaoProduto3.png)
+![visaoProduto4](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/visaoProduto4.png)
+![visaoProduto5](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/visaoProduto5.png)
+![visaoProduto6](https://github.com/mdsreq-fga-unb/2023.1-GamificaRequisitos/blob/b6a406865ee2b3f74f9cdbf31b4b98258c05d0e7/docs/assets/images/visaoProduto6.png)
 [Visão Geral do Produto](https://docs.google.com/presentation/d/1ZhgAnHYnVDnj5TmEmtpEr290kKeuGmFlSFJGWy9nTQ4/edit#slide=id.g742e3e7cd_1_16)
 
 ## Histórico de revisão

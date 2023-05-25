@@ -5,11 +5,11 @@
 ### 3.1.1 Requisitos
 | |  |  |  |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| Requisitos | Cascata | Prototipação | Interativo e Incremental | Evolutivo | Spiral | RAD | Nosso Contexto |
-| Os requisitos são facilmente compreensíveis e definidos? | Sim | Não | Não | Não | Não | Sim | Sim |
-| Mudamos os requisitos com bastante frequência? | Não | Sim | Não | Não | Não | Sim | Não |
-| Podemos mudar os requisitos no início do ciclo? | Sim | Não | Sim | Sim | Não | Sim | Sim |
-| Os requisitos indicam um sistema complexo a ser construído? | Não | Sim | Sim | Sim | Não | Sim | Sim |
+| Requisitos | Nosso Contexto |
+| Os requisitos são facilmente compreensíveis e definidos? | Sim |
+| Mudamos os requisitos com bastante frequência? | Não |
+| Podemos mudar os requisitos no início do ciclo? | Sim |
+| Os requisitos indicam um sistema complexo a ser construído? | Sim |
 
 ### 3.1.2 Scrum
 | |  |  |  |

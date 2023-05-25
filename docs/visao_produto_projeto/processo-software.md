@@ -2,7 +2,16 @@
 
 ## 3.1 Metodologia
 
-### 3.1.1 Scrum
+### 3.1.1 Requisitos
+| |  |  |  |
+| :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
+| Requisitos | Cascata | Prototipação | Interativo e Incremental | Evolutivo | Spiral | RAD | Nosso Contexto |
+| Os requisitos são facilmente compreensíveis e definidos? | Sim | Não | Não | Não | Não | Sim | Sim |
+| Mudamos os requisitos com bastante frequência? | Não | Sim | Não | Não | Não | Sim | Não |
+| Podemos mudar os requisitos no início do ciclo? | Sim | Não | Sim | Sim | Não | Sim | Sim |
+| Os requisitos indicam um sistema complexo a ser construído? | Não | Sim | Sim | Sim | Não | Sim | Sim |
+
+### 3.1.2 Scrum
 | |  |  |  |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | Planejamento da sprint | Reuniao realizada no inicio de cada sprint com o objetivo de definir as Historias de Usuario entregaveis na sprint. | Discord |

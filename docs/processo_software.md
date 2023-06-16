@@ -1,9 +1,9 @@
-# 3 Processo de Desenvolvimento de Software
+# Processo de Desenvolvimento de Software
 
-## 3.1 Metodologia
+## Metodologia
 
 A equipe vai utilizar os métodos Scrum e algumas partes do XP (eXtreme Programming), assim criando uma abordagem ágil e eficiente no desenvolvimento do projeto.
-### 3.1.1 Scrum
+### Scrum
 | |  |  |  |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | Planejamento da sprint | Reuniao realizada no inicio de cada sprint com o objetivo de definir as Historias de Usuario entregaveis na sprint. | Discord |
@@ -13,7 +13,7 @@ A equipe vai utilizar os métodos Scrum e algumas partes do XP (eXtreme Programm
 | Daily Scrum | Reunião diária com duração máxima de 15 minutos, na qual os membros da equipe devem discutir o progresso de trabalho da Sprint desde a última reunião diária. | Discord (Assincrono) |
 | Backlog do produto | Lista dos requisitos do produto que necessitam ser desenvolvidos. | Trello |
 
-### 3.1.2 XP
+### XP
 | |  |  |  |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | Toda a Equipe | Ajuda a equipe trabalhar junta para resolver problemas e assim alcançar os objetivos do projeto, aumentando a produtividade e diminuindo conflitos entre os membros da equipe. |
@@ -26,11 +26,11 @@ A equipe vai utilizar os métodos Scrum e algumas partes do XP (eXtreme Programm
 ![ScrumMediumLabelled](https://user-images.githubusercontent.com/77307847/234932293-2b98669a-cb9d-4d36-b972-b6e2dad0d38a.png)
 
 <div align="center">
-<h5 class="text-center">Figura 2 - Processo Scrum (Fonte: Mountain Goat Software, 2005)</h5>
+    <h5 class="text-center">Figura 2 - Processo Scrum (Fonte: Mountain Goat Software, 2005)</h5>
 </div>
 <br>
 
-### 3.2 Requisitos
+### Requisitos
 
 Utilizaremos o 7 valores da Engenharia de requisitos e suas atividade sendo eles:
 Valores:
@@ -80,7 +80,7 @@ E também baseado em Gupta, onde a abordagem deve ser baseada em como as necessi
 | Podemos mudar os requisitos no início do ciclo? | Sim | Não | Sim | Sim | Não | Sim | Sim |
 | Os requisitos indicam um sistema complexo a ser construído? | Não | Sim | Sim | Sim | Não | Sim | Sim |
 
-## 3.3 Atividades
+## Atividades
 
 ### Atividade 1
 

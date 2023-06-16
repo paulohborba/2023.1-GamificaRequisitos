@@ -1,5 +1,6 @@
-# 2 Visão Geral do Projeto
-## 2.1 Organização do projeto
+# Visão Geral do Projeto
+
+## Organização do projeto
 
 | Papel | Atribuições | Responsável | Participantes | 
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------- |
@@ -8,7 +9,7 @@
 | Analista de Qualidade | Garante a qualidade do produto, o cumprimento do conceito de pronto e a  realização de inspeções de código | Luciano, Paulo, Vinícius e Felipe (Alternância a cada unidade) |  Luciano, Paulo, Vinícius e Felipe |
 | Cliente | Responsável por validar as entregas com feedbacks relacionados ao projeto | George Marsicano Correa | George Marsicano Correa e Maria Abritta |
 
-## 2.2 Planejamento das Fases e/ou Iterações do Projeto
+## Planejamento das Fases e/ou Iterações do Projeto
 
 | Sprint | Produto (Entrega) | Data Início | Data fim |
 | :----: | :----------------:| :---------: | :------: |
@@ -27,7 +28,7 @@
 | 13 | Funcionalidades do MVP 2. | 06/07/2023 | 12/07/2023 |
 | 14 | Entrega da unidade 4; MVP 2. | 13/07/2023 | 19/07/2023 |
 
-## 2.3 Matriz de Comunicação
+## Matriz de Comunicação
 
 | Descrição | Área/Envolvidos | Periodicidade | Produtos Gerados |
 | :-------: | :-------------: | :-----------: | :--------------: |
@@ -37,7 +38,7 @@
 | Situação do Projeto | Equipe do Projeto, Cliente | Semanal | Vídeo da reunião |
 | Reunião com monitor | Equipe do Projeto, Monitor | Semanal | Nenhum |
 
-## 2.4 Gerenciamento de Riscos
+## Gerenciamento de Riscos
 
 - Redução na equipe : Baixa
     - Trancamento ou desistência da disciplina por algum membro da equipe.
@@ -57,7 +58,7 @@
             Capacitar a equipe constantemente durante o projeto;
             Ajuda constante caso um membro não consiga realizar uma tarefa.
 
-## 2.5 Critérios de Replanejamento
+## Critérios de Replanejamento
 
 - Atrasos;
 - Alterações de requisitos; 

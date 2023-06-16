@@ -1,5 +1,4 @@
-## 5 REFERÊNCIAS BIBLIOGRÁFICAS
-
+## Referências Bibliográficas
 - [Scrum Guide](https://scrumguides.org/)
 - [eXtreme Programming](http://www.extremeprogramming.org/)
 - [Mountain Goats Software](https://www.mountaingoatsoftware.com/agile/scrum)

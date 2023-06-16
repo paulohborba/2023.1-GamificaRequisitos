@@ -2,7 +2,7 @@
 
 Para selecionar nosso MVP (Minimum Viable Product), adotamos a metodologia da Matriz de Priorização. Essa abordagem nos permitiu avaliar e classificar os requisitos do produto com base em critérios específicos, garantindo uma escolha criteriosa. Ao utilizar a matriz, consideramos três dimensões-chave para cada história de usuário: valor de negócios, viabilidade e capacidade técnica da equipe. Cada dimensão foi pontuada em uma escala que inclui "muito alta", "alta", "média", "baixa" e "muito baixa".
 
-Após atribuirmos as pontuações em cada dimensão, calculamos a pontuação total para cada história de usuário somando as avaliações das três dimensões. Com base nessa análise de priorização, selecionamos as histórias de usuário com as pontuações mais elevadas para compor tanto o MVP1. O MVP2 foi definido considerando as histórias de usuário com as menores pontuações, para que possamos no início do projeto entregar mais valor ao negócio do cliente.
+Após atribuirmos as pontuações em cada dimensão, calculamos a pontuação total para cada história de usuário somando as avaliações das três dimensões. Com base nessa análise de priorização, selecionamos as histórias de usuário com as pontuações mais elevadas para compor tanto o MVP 1. O MVP 2 foi definido considerando as histórias de usuário com as menores pontuações, para que possamos no início do projeto entregar mais valor ao negócio do cliente.
 
 ## Critérios para pontuação
 

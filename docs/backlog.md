@@ -1,16 +1,13 @@
 # Backlog do Produto
-
 Para a criação do Backlog do Produto, foi ultilizado a ferramenta [MURAL](https://app.mural.co/invitation/mural/reqbacklog0444/1683932566864?sender=uf7e1660760d0a1d8cb2e3880&key=0b05e724-71e6-467f-bd58-573228f58888).
 
 ## Temas
-
 | Tema  | Descrição |
 |:--:|:---------:|
 | T1 | Professor |
 | T2 |   Alunos  |
 
 ### Épicos
-
 |Tema| Épico| Descrição |
 |:-: |:----:| :-----------------------: |
 | T1 |  E1  | Gerenciamento de Turmas   |
@@ -19,9 +16,7 @@ Para a criação do Backlog do Produto, foi ultilizado a ferramenta [MURAL](http
 | T2 |  E4  | Atividades                |
 | T2 |  E5  | Perfil                    |
 
-
 #### Histórias de Usuário
-
 |Épico |  HU  | Descrição |
 |:----:|:----:| :-----------------------: |
 |  E1  | US01 | Como professor, eu quero importar uma arquivo .xls com a matricula e o email dos alunos para a criação da turma                                 |
@@ -44,7 +39,17 @@ Para a criação do Backlog do Produto, foi ultilizado a ferramenta [MURAL](http
 |  E1  | US18 | Como professor, eu quero exportar uma arquivo .xls com matrícula, nome, email, equipe e o saldo de PAXs de todos os alunos da turma selecionada |
 |  E1  | US19 | Como professor, eu quero criar turmas sem a necessidade de importar um arquivo .xls para que eu tenha mais liberdade e controle                 |
 
+# URPS: Requisitos Não-funcionais
+| URPS            | ID  | Descrição                                                           |
+| --------------- | --- | ------------------------------------------------------------------- |
+| Suportabilidade | RN1 | O sistema deve ser uma solução web                                  |
+| Usabilidade     | RN2 | O sistema é de uso livre para alunos da disciplina                  |
+| Usabilidade     | RN3 | O sistema possui hierarquia funcional                               |
+| Suportabilidade | RN4 | O sistema possui formatação para multiplataformas                   |
+| Usabilidade     | RN5 | Design simples e minimalista, para facilitar o uso do usuário       |
+| Confiabilidade  | RN6 | O sistema deve garantir segurança em relação aos dados dos usuários |
+
 ## Histórico de versões
 |  Data | Versão | Descrição | Autor(es) |
-| :--------: | :----: | :---------------------------------: | :---------: |
+| :--------: | :----: | :------------------: | :------------: |
 | 23/05/2023 |  1.0   | Criação do documento | Vinícius Alves |

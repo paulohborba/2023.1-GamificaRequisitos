@@ -2,15 +2,18 @@ site_name: Gamifica Requisitos
 site_url: https://mdsreq-fga-unb.github.io/2023.1-GamificaRequisitos/
 
 nav:
-  - Home: index.md
-  - Unidade 1:
-    - Visão do Produto: unidade1/visao_produto.md
-    - Visão do Projeto: unidade1/visao_projeto.md
-    - Processo de Desenvolvimento de software: unidade1/processo-software.md
-  - Unidade 2:
-    - Produto Backlog: unidade2/backlog.md
-    - MVPs: unidade2/mvps.md
-    - URPS+: unidade2/urps.md
+  - Início: index.md
+  - Visão do Produto: visao_produto.md
+  - Visão do Projeto: visao_projeto.md
+  - Processo de Desenvolvimento: processo_software.md
+  - Product Backlog: backlog.md
+  - MVPs: mvps.md
+  - Apresentações: apresentacoes.md
+  - Entregas:
+    - Pit OpenUp: entrega_pitch_openUp.md
+    - Visão Geral do Projeto: entrega_visao_geral_prod.md
+    - Planejamento do Projeto: entrega_planej_proj.md
+    - Mural: mural.md
   - Lições Aprendidas: licoes_aprendidas.md
   - Bibliografia: bibliografia.md
 

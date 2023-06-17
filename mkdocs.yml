@@ -8,6 +8,9 @@ nav:
   - Processo de Desenvolvimento: processo_software.md
   - Product Backlog: backlog.md
   - MVPs: mvps.md
+  - Canvas PBB: 
+    - US's: canvas_pbb.md
+    - BDD's: bdd.md
   - Apresentações: apresentacoes.md
   - Entregas:
     - Pit OpenUp: entrega_pitch_openUp.md

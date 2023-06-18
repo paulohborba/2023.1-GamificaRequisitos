@@ -4,36 +4,13 @@ html {
     font-family: 'Roboto';
 }
 
+.intro {
+    height: 100vh;
+    background: linear-gradient(#5bb0b5), #ed8f1d;
+}
+
 body{
-    display: flex;
-    min-height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 
-li {
-    list-style: none;
-    font-size: 25px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-#nav_bar {
-    float: initial;
-}
-
-#headerimg img {
-    display: block;
-    margin: auto;
-    clear: both;
 }
 
 :root {

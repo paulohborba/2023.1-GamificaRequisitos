@@ -243,3 +243,255 @@
 **Quando** importo dados dos alunos para a turma "Turma C" a partir de um arquivo .xls válido
 
 **Então** verifico que os dados de matrícula, nome e email dos alunos são importados corretamente para a turma
+
+## FEATURE: Criação de equipes
+
+## 1 PBI: Visualizar as informações dos integrantes de cada grupo
+
+### Cenário 1: Visualizar informações dos integrantes de um grupo
+
+**Dado** que estou autenticado como membro de um grupo
+
+**Quando** acesso a página de visualização do meu grupo
+
+**Então** visualizo as informações dos integrantes do grupo corretamente
+
+### Cenário 2: Validar restrições de acesso às informações do grupo
+
+**Dado** que estou autenticado como membro de um grupo diferente
+
+**Quando** tento acessar a página de visualização do grupo "Grupo A"
+
+**Então** recebo uma mensagem de erro informando que não tenho permissão para acessar as informações do grupo
+
+### Cenário 3: Verificar a lista de integrantes do grupo
+
+**Dado** que estou autenticado como professor
+
+**Quando** acesso a página de visualização do grupo "Grupo B"
+
+**Então** visualizo corretamente a lista de integrantes do grupo
+
+## 2 PBI: Editar informações do usuário
+
+### Cenário 1: Editar informações do usuário
+
+**Dado** que estou autenticado como usuário
+
+**Quando** acesso a página de edição do meu perfil
+
+**E** modifico minhas informações
+
+**Então** minhas informações são atualizadas com sucesso
+
+### Cenário 2: Validar restrições ao editar informações do usuário
+
+**Dado** que estou autenticado como usuário
+
+**Quando** tento editar informações do perfil
+
+**E** insiro dados inválidos
+
+**Então** recebo uma mensagem de erro informando as restrições de edição
+
+**E** minhas informações não são modificadas
+
+### Cenário 3: Verificar visualização das informações do usuário
+
+**Dado** que estou autenticado como administrador
+
+**Quando** acesso a página de visualização do perfil de um usuário
+
+**Então** visualizo todas as informações do usuário corretamente
+
+## 3 PBI: Visualizar informações do grupo
+
+### Cenário 1: Visualizar informações do grupo
+
+**Dado** que estou autenticado como membro de um grupo
+
+**Quando** acesso a página de visualização do meu grupo
+
+**Então** visualizo todas as informações do grupo corretamente
+
+### Cenário 2: Validar restrições de acesso às informações do grupo
+
+**Dado** que estou autenticado como membro de um grupo diferente
+
+**Quando** tento acessar a página de visualização do grupo "Grupo A"
+
+**Então** recebo uma mensagem de erro informando que não tenho permissão para acessar as informações do grupo
+
+### Cenário 3: Verificar visualização das informações do grupo como professor
+
+**Dado** que estou autenticado como professor
+
+**Quando** acesso a página de visualização do grupo "Grupo B"
+
+**Então** visualizo todas as informações do grupo corretamente
+
+## 4 PBI: Visualizar o ranking de PAX da minha turma
+
+### Cenário 1: Visualizar ranking de PAX da turma
+
+**Dado** que estou autenticado como aluno de uma turma
+
+**Quando** acesso a página de visualização do ranking de PAX
+
+**Então** visualizo o ranking de PAX da minha turma corretamente
+
+### Cenário 2: Validar restrições de acesso ao ranking de PAX
+
+**Dado** que estou autenticado como aluno de uma turma diferente
+
+**Quando** tento acessar a página de visualização do ranking de PAX da turma "Turma A"
+
+**Então** recebo uma mensagem de erro informando que não tenho permissão para acessar o ranking de PAX da turma
+
+### Cenário 3: Verificar visualização do ranking de PAX como professor
+
+**Dado** que estou autenticado como professor
+
+**Quando** acesso a página de visualização do ranking de PAX da turma "Turma B"
+
+**Então** visualizo o ranking de PAX da turma corretamente
+
+## FEATURE: Vizualizar informações de grupo
+
+## 1 PBI: Visualizar as regras para o cumprimento das atividades
+
+### Cenário 1: Visualizar as regras para uma atividade específica
+
+**Dado** que estou autenticado como membro de um grupo
+
+**Quando** acesso a página de visualização das regras para a atividade "Atividade A"
+
+**Então** visualizo as regras para cumprir a atividade corretamente
+
+### Cenário 2: Validar restrições de acesso às regras da atividade
+
+**Dado** que estou autenticado como membro de um grupo diferente
+
+**Quando** tento acessar a página de visualização das regras para a atividade "Atividade B"
+
+**Então** recebo uma mensagem de erro informando que não tenho permissão para acessar as regras da atividade
+
+### Cenário 3: Verificar visualização das regras para cumprimento das atividades como professor
+
+**Dado** que estou autenticado como professor
+
+**Quando** acesso a página de visualização das regras para a atividade "Atividade C"
+
+**Então** visualizo corretamente as regras para cumprir a atividade
+
+## 2 PBI: Visualizar as unidades e atividades
+
+### Cenário 1: Visualizar lista de unidades
+
+**Dado** que estou autenticado como membro de um grupo
+
+**Quando** acesso a página de visualização das unidades
+
+**Então** visualizo a lista de unidades corretamente
+
+### Cenário 2: Validar restrições de acesso às unidades
+
+**Dado** que estou autenticado como membro de um grupo diferente
+
+**Quando** tento acessar a página de visualização das unidades
+
+**Então** recebo uma mensagem de erro informando que não tenho permissão para acessar as unidades
+
+### Cenário 3: Verificar visualização das atividades de uma unidade
+
+**Dado** que estou autenticado como professor
+
+**Quando** acesso a página de visualização das atividades da unidade "Unidade A"
+
+**Então** visualizo corretamente as atividades da unidade
+
+## 3 PBI: Visualizar valor dos PAX de cada atividade
+
+### Cenário 1: Visualizar valor dos PAX de uma atividade específica
+
+**Dado** que estou autenticado como membro de um grupo
+
+**Quando** acesso a página de visualização do valor dos PAX da atividade "Atividade A"
+
+**Então** visualizo corretamente o valor dos PAX da atividade
+
+### Cenário 2: Validar restrições de acesso ao valor dos PAX da atividade
+
+**Dado** que estou autenticado como membro de um grupo diferente
+
+**Quando** tento acessar a página de visualização do valor dos PAX da atividade "Atividade B"
+
+**Então** recebo uma mensagem de erro informando que não tenho permissão para acessar o valor dos PAX da atividade
+
+### Cenário 3: Verificar visualização do valor dos PAX das atividades como professor
+
+**Dado** que estou autenticado como professor
+
+**Quando** acesso a página de visualização do valor dos PAX da atividade "Atividade C"
+
+**Então** visualizo corretamente o valor dos PAX da atividade
+
+## FEATURE: Vizualizar unidades e atividades
+
+## 1 PBI: Jogar jogos durante a fase de seleção de grupos
+
+### Cenário 1: Jogar um jogo durante a fase de seleção de grupos
+
+**Dado** que estou autenticado como participante da fase de seleção de grupos
+
+**Quando** acesso a página de jogos disponíveis
+
+**E** seleciono o jogo "Jogo A" para jogar
+
+**Então** sou redirecionado para o jogo
+
+**E** posso jogar o jogo conforme as regras estabelecidas
+
+### Cenário 2: Validar restrições de acesso aos jogos durante a fase de seleção de grupos
+
+**Dado** que estou autenticado como membro de um grupo formado
+
+**Quando** tento acessar a página de jogos disponíveis
+
+**Então** recebo uma mensagem de erro informando que não posso jogar durante a fase de seleção de grupos
+
+### Cenário 3: Verificar registro de pontuação do jogo durante a fase de seleção de grupos
+
+**Dado** que estou autenticado como participante da fase de seleção de grupos
+
+**Quando** acesso a página de visualização das pontuações do jogo "Jogo B"
+
+**Então** visualizo a minha pontuação registrada corretamente
+
+## 2 PBI: Selecionar participantes para formar minha equipe
+
+### Cenário 1: Selecionar participantes para formar minha equipe
+
+**Dado** que estou autenticado como participante da fase de seleção de grupos
+
+**Quando** acesso a página de seleção de participantes
+
+**E** seleciono os participantes "Participante A" e "Participante B" para a minha equipe
+
+**Então** os participantes são selecionados com sucesso para a minha equipe
+
+### Cenário 2: Validar restrições na seleção de participantes
+
+**Dado** que estou autenticado como participante da fase de seleção de grupos
+
+**Quando** tento selecionar participantes para a minha equipe, mas já atingi o limite máximo de participantes
+
+**Então** recebo uma mensagem de erro informando que não posso adicionar mais participantes à minha equipe
+
+### Cenário 3: Verificar a lista de participantes da minha equipe
+
+**Dado** que estou autenticado como participante da fase de seleção de grupos
+
+**Quando** acesso a página de visualização da minha equipe
+
+**Então** visualizo corretamente a lista de participantes da minha equipe

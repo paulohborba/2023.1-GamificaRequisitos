@@ -1,5 +1,4 @@
-import { getDatabase } from "../../node_modules/firebase/firebase-database";
-import { initializeApp } from "../../node_modules/firebase/firebase-app";
+import { initializeApp } from "../../node_modules/firebase/firebase-app.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA224zrzRZ7Iy7rrNRE9dWCUs-Kr23ktiE",
@@ -13,4 +12,3 @@ const firebaseConfig = {
 };
 
 const firebase = initializeApp(firebaseConfig);
-const db = getDatabase();

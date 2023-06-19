@@ -14,9 +14,17 @@
 
 ### Funcionalidade 1: Publicar atividade
 
-#### História 1.1: 
+#### História 1.1:
 
 Eu, como **professor** posso **definir a sequência das atividades e disciplinas** para **disponibilizar conteúdo**.
+
+#### Critérios de aceitação:
+
+1) Critério 1
+
+2) Critério 2
+
+3) Critério 3
 
 #### História 1.2: 
 

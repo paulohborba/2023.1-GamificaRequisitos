@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>LOGIN</title>
+    <title>Administração</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -10,16 +10,74 @@
 </head>
 
 <body>
+
+    <div class="head">
+
+        <button class="btn btn-lg btn-block btn-primary" id="authEmailPassButton">Atividades</button>
+
+        <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Sair</button>
+
+    </div>
+
     <h1>Administração</h1>
 
     <progress value="0" max="100" id="uploader"></progress>
     <br>
     <input type="file" value="Upload" id="fileButton">
+    <hr>
 
-    <p class="text-center">
+        <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Importar</button>
+    <hr>
         <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Voltar</button>
-    </p>
-    </div>
+    <hr>
+
+        <table border = '1'>
+            <thead>
+                <th>Col1 this is the longest title</th>
+                <th>Col2</th>
+                <th>Col3</th>
+                <th>Col4</th>
+                <th>Col5</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                </tr>
+                <tr>
+                    <td>Value 1</td>
+                    <td>Value 2</td>
+                    <td>Value 3</td>
+                    <td>Value 4</td>
+                    <td>Value 5</td>
+                </tr>
+    
+            </tbody>
+        </table>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
@@ -61,6 +119,26 @@
                     console.error(error.message);
                 });
         });
+
+        document.getElementById('authEmailPassButton').addEventListener('click', function () {
+            signInWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
+                .then((userCredential) => {
+                    if(emailInput.value=='prof@email.com'){
+                        window.location.replace("adm.html");
+                    }else{
+
+                    }
+        
+        document.getElementById('logOutButton').addEventListener('click', function () {
+            signOut(auth)
+                .then((userCredential) => {})
+                .catch((error) => {
+                    console.error(error.code);
+                    console.error(error.message);
+                    window.location.replace("index.html")
+                });
+        });
+
     </script>
 </body>
 

@@ -4,31 +4,31 @@
 
 No quadro apresentado na Tabela 1, são listados os principais papéis e os responsáveis por assegurar o cumprimento das tarefas associadas a cada papel.
 
-| Papel | Atribuições | Responsável | Participantes | 
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| Desenvolvedor | Realização da codificação do produto, dos testes, etc. Além de montar protótipos do sistema | Luciano e Paulo | Vinícius e Felipe |
-| Dono do Produto | Atualizar o escopo do produto, organizar o escopo das sprints, validar as entregas | Maria Abritta | George Marsicano Correa |
+|          Papel        | Atribuições | Responsável | Participantes | 
+| --------------------- | --------------------------------------------------------------- | ---------------------------------------- | -------- |
+|     Desenvolvedor     | Realização da codificação do produto, dos testes, etc. Além de montar protótipos do sistema | Luciano e Paulo | Vinícius e Felipe |
+|    Dono do Produto    | Atualizar o escopo do produto, organizar o escopo das sprints, validar as entregas | Maria Abritta | George Marsicano Correa |
 | Analista de Qualidade | Garante a qualidade do produto, o cumprimento do conceito de pronto e a  realização de inspeções de código | Vinícius e Felipe | Luciano e Paulo |
-| Cliente | Responsável por validar as entregas com feedbacks relacionados ao projeto | Maria Abritta | George Marsicano Correa |
+|        Cliente        | Responsável por validar as entregas com feedbacks relacionados ao projeto | Maria Abritta | George Marsicano Correa |
 
 ## Planejamento das Fases e/ou Iterações do Projeto
 
 | Sprint | Produto (Entrega) | Data Início | Data fim |
 | :----: | :----------------:| :---------: | :------: |
-| 1 | Documento de definição do Produto. | 13/04/2023 | 19/04/2023 |
-| 2 | Visão de Produto e Projeto; Site do Projeto (GitPages). | 20/04/2023 | 26/04/2023 |
-| 3 | Backlog. | 27/04/2023 | 03/05/2023 |
-| 4 | Mural; MVP 1 e 2. | 04/05/2023 | 10/05/2023 |
-| 5 | Planilha de priorizacao das US. | 11/05/2023 | 17/05/2023 |
-| 6 | Entrega da unidade 2. | 18/05/2023 | 24/05/2023 |
-| 7 | Funcionalidades do MVP 1. | 25/05/2023 | 31/05/2023 |
-| 8 | Funcionalidades do MVP 1. | 01/06/2023 | 07/06/2023 |
-| 9 | Entrega da unidade 3; MVP 1. | 08/06/2023 | 14/06/2023 |
-| 10 | Funcionalidades do MVP 2. | 15/06/2023 | 21/06/2023 |
-| 11 | Funcionalidades do MVP 2. | 22/06/2023 | 28/06/2023 |
-| 12 | Funcionalidades do MVP 2. | 29/06/2023 | 05/07/2023 |
-| 13 | Funcionalidades do MVP 2. | 06/07/2023 | 12/07/2023 |
-| 14 | Entrega da unidade 4; MVP 2. | 13/07/2023 | 19/07/2023 |
+| 1 | Visão geral do produto e do projeto; site do projeto (GitPages) | 13/04/2023 | 19/04/2023 |
+| 2 | Descoberta, elicitação, analise e consenso dos requisitos | 20/04/2023 | 26/04/2023 |
+| 3 | Validação, verificação e declaração dos requistos | 27/04/2023 | 03/05/2023 |
+| 4 | Backlog; priorizacao das US's | 04/05/2023 | 10/05/2023 |
+| 5 | Definição e consenso do MVP 1 e 2 | 11/05/2023 | 17/05/2023 |
+| 6 | Atualização do GitPages para entrega da unidade 2 | 18/05/2023 | 24/05/2023 |
+| 7 | Desenvolvimento da US01 e US02; Backlog estrutura SAFe | 25/05/2023 | 31/05/2023 |
+| 8 | Desenvolvimento da US07 e US13; Canvas PBB (US's) | 01/06/2023 | 07/06/2023 |
+| 9 | Desenvolvimento da US19 e US20; Canvas PBB (BDD) | 08/06/2023 | 14/06/2023 |
+| 10 | Testes e validação do produto (MVP 1) com o cliente | 15/06/2023 | 21/06/2023 |
+| 11 | Desenvolvimento da US03, US04 e US05; Modelos de casos de uso | 22/06/2023 | 28/06/2023 |
+| 12 | Desenvolvimento da US08, US09 e US10; Especificação de casos de uso  | 29/06/2023 | 05/07/2023 |
+| 13 | Desenvolvimento da US11, US12, US14, US15, US17 e US18 | 06/07/2023 | 12/07/2023 |
+| 14 | Atualização do GitPages; Testes e validação do produto (MVP 2) com o cliente | 13/07/2023 | 19/07/2023 |
 
 ## Matriz de Comunicação
 

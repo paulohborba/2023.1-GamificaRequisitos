@@ -17,7 +17,7 @@
     <input type="file" value="Upload" id="fileButton">
 
     <p class="text-center">
-        <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Voltar</button>
+        <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Log Out</button>
     </p>
     </div>
 
@@ -35,24 +35,38 @@
         };
         const app = initializeApp(firebaseConfig);
 
+        import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+        import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-storage.js";
+
+        const auth = getAuth(app);
+
         var uploader = document.getElementById('uploader');
 
         document.getElementById('fileButton').addEventListener('change', function (e) {
             var file = e.target.files[0];
+            const storage = getStorage(app);
+            const storageRef = ref(storage, 'arquivos/' + file.name);
+
+            const uploadTask = uploadBytesResumable(storageRef, file);
+
+            uploadTask.on('state_changed',
+                (snapshot) => {
+                    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    console.log('Upload is ' + progress + '% done');
+                    uploader.value = progress;
+                },
+                (error) => {
+                    console.log(error);
+                },
+                () => {
+                    getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                        console.log('File available at', downloadURL);
+                        alert('Envio Completo');
+                    });
+                }
+            );
         })
 
-        app.storages().ref('arquivos/' + file.name).put(file).on('state_changed',
-            function progress(snapshot) {
-                var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                uploader.value = percentage;
-            },
-            function error(err) {
-                console.log(err);
-            },
-            function complete() {
-                alert('Envio Completo');
-            });
-            
         document.getElementById('logOutButton').addEventListener('click', function () {
             signOut(auth)
                 .then((userCredential) => { })
@@ -60,6 +74,7 @@
                     console.error(error.code);
                     console.error(error.message);
                 });
+            window.location.replace('index.html');
         });
     </script>
 </body>

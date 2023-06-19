@@ -50,17 +50,15 @@
             var nameInput = document.getElementById('nameInput');
             var ageInput = document.getElementById('ageInput');
             var usersList = document.getElementById('usersList');
-            
-            function create(name, age) {
-                return push(ref(db, 'users'), {
-                    name: name,
-                    age: age
-                });
-            }
+
+
             document.getElementById('addButton').addEventListener(
                 'click',
                 function () {
-                    create(nameInput.value, ageInput.value)
+                    return push(ref(db, 'users'), {
+                        name: nameInput.value,
+                        age: ageInput.value
+                    });
                 }
             )
             onValue(ref(db, 'users'), (snapshot) => {

@@ -1,0 +1,70 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+.curva {
+    background: linear-gradient(45deg, #ed8f1d 60%, #ffff);
+    color: #ffffff;
+    text-align: center;
+}
+
+.curva h1{
+    font-size: 3.3rem;
+    font-family: 'Roboto';
+    margin: 0;
+}
+
+.curva svg{
+display: block;
+}
+
+:root {
+    --cor-primaria : #5bb0b5;
+    --cor-secundaria : #ed8f1d;
+}
+.btn {
+    border: none;
+    background-color: var(--cor-primaria);
+    margin-right: 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    cursor: pointer;
+    transition: background .3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #ed8f1d;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+    margin-top: 50;
+    padding: 10;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.curvaFooter {
+    background: linear-gradient(45deg, #5bb0b5 60%, #ffff);
+    color: #ffffff;
+    text-align: center;
+}
+
+.curvaFooter h1{
+    font-size: 0.9rem;
+    font-family: 'Roboto';
+    margin: 0;
+}
+
+.curvaFooter svg{
+display: block;
+}

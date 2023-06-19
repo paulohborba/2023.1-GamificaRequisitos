@@ -421,7 +421,7 @@ Eu, como **estudante** posso **visualizar informações do grupo** para **fácil
 
 **Então** visualizo todas as informações do grupo corretamente
 
-#### História 4.5: 
+#### História 4.4: 
 
 Eu, como **estudante** posso **visualizar o ranking de PAX da minha turma** para **observar o progresso de todas as equipes**.
 

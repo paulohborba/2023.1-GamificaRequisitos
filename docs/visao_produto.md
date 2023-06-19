@@ -23,17 +23,18 @@ O software pode oferecer funcionalidades que auxiliam no processo de formação 
 
 Uma síntese da solução pode ser encontrada no quadro-resumo a seguir, apresentado na Tabela 1.
   
-|  |  |
-| :----: | --------------------------------------------------------------------------------------------------------------------------------- |
-| Para | Docentes, discentes e monitores da disciplina de requisitos de software da FGA |
-| Quem | Em vários momentos não conseguem acompanhar as regras das dinâmicas nem os  PAXs obtidos ou perdidos | 
-| O GamificaRequisitos | Será um aplicativo que auxiliará a gamificação da disciplina |
-| Que | Conseguirá criar a organização necessária para que os envolvidos desfrutem da dinâmica e minimizar a frustração na participação |
-| Ao contrário | Do Aprender 3 que atualmente a gamificação não é utilizada |
-| Nosso produto | Atrai a atenção e aumentar o engajamento dos usuários, propondo desafios e oferecendo recompensas em caso de sucesso |
+|                      |                                                                                                                                 |
+| :------------------: | :-----------------------------------------------------------------------------------------------------------------------------: |
+|         Para         | Docentes, discentes e monitores da disciplina de requisitos de software da FGA                                                  |
+|         Quem         | Em vários momentos não conseguem acompanhar as regras das dinâmicas nem os  PAXs obtidos ou perdidos                            | 
+| O GamificaRequisitos | Será um aplicativo que auxiliará a gamificação da disciplina                                                                    |
+|         Que          | Conseguirá criar a organização necessária para que os envolvidos desfrutem da dinâmica e minimizar a frustração na participação |
+|     Ao contrário     | Do Aprender 3 que atualmente a gamificação não é utilizada                                                                      |
+|     Nosso produto    | Atrai a atenção e aumentar o engajamento dos usuários, propondo desafios e oferecendo recompensas em caso de sucesso            |
 <div align="center">
     <h5 class="text-center">Tabela 1 - Quadro-resumo da solução (Fonte: Autoria Própria)</h5>
 </div>
+
 <br>
 
 ## Objetivos do Produto

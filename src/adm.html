@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>LOGIN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="css/authStyles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Administração</h1>
+
+    <progress value="0" max="100" id="uploader"></progress>
+    <br>
+    <input type="file" value="Upload" id="fileButton">
+
+    <p class="text-center">
+        <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Voltar</button>
+    </p>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyA224zrzRZ7Iy7rrNRE9dWCUs-Kr23ktiE",
+            authDomain: "disciplinareq.firebaseapp.com",
+            databaseURL: "https://disciplinareq-default-rtdb.firebaseio.com",
+            projectId: "disciplinareq",
+            storageBucket: "disciplinareq.appspot.com",
+            messagingSenderId: "292130692921",
+            appId: "1:292130692921:web:29ab9b610e1c220d5652e8",
+            measurementId: "G-FLC6D2WGBC"
+        };
+        const app = initializeApp(firebaseConfig);
+
+        var uploader = document.getElementById('uploader');
+
+        document.getElementById('fileButton').addEventListener('change', function (e) {
+            var file = e.target.files[0];
+        })
+
+        app.storages().ref('arquivos/' + file.name).put(file).on('state_changed',
+            function progress(snapshot) {
+                var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                uploader.value = percentage;
+            },
+            function error(err) {
+                console.log(err);
+            },
+            function complete() {
+                alert('Envio Completo');
+            });
+            
+        document.getElementById('logOutButton').addEventListener('click', function () {
+            signOut(auth)
+                .then((userCredential) => { })
+                .catch((error) => {
+                    console.error(error.code);
+                    console.error(error.message);
+                });
+        });
+    </script>
+</body>
+
+</html>

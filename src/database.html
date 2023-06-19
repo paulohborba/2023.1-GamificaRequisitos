@@ -14,7 +14,7 @@
 
     <u1 id="usersList"></u1>
     <hr>
-    
+
     <div class="col-md-4">
         <form>
             <div class="form-group">
@@ -49,21 +49,20 @@
             const db = getDatabase(app);
             var nameInput = document.getElementById('nameInput');
             var ageInput = document.getElementById('ageInput');
-            var addButton = document.getElementById('addButton');
             var usersList = document.getElementById('usersList');
-            addButton.addEventListener(
+            
+            function create(name, age) {
+                return push(ref(db, 'users'), {
+                    name: name,
+                    age: age
+                });
+            }
+            document.getElementById('addButton').addEventListener(
                 'click',
                 function () {
                     create(nameInput.value, ageInput.value)
                 }
             )
-            function create(name, age) {
-                var data = {
-                    name: name,
-                    age: age
-                }
-                return push(ref(db, 'users'), data);
-            }
             onValue(ref(db, 'users'), (snapshot) => {
                 usersList.innerHTML = '';
                 snapshot.forEach((item) => {

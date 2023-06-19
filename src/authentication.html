@@ -31,10 +31,6 @@
 
     <button class="btn btn-lg btn-block btn-primary" id="authEmailPassButton">Login</button>
 
-    <button class="btn btn-lg btn-block btn-info" id="createUserButton">Criar conta</button>
-    <br>
-
-
 
     <p class="text-center">
         <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Voltar</button>
@@ -55,44 +51,32 @@
         };
         const app = initializeApp(firebaseConfig);
 
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+        import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 
         const auth = getAuth(app);
 
-        var authEmailPassButton = document.getElementById('authEmailPassButton');
-        var createUserButton = document.getElementById('createUserButton');
-        var logOutButton = document.getElementById('logOutButton');
         var emailInput = document.getElementById('emailInput');
         var passwordInput = document.getElementById('passwordInput');
         var displayName = document.getElementById('displayName');
 
-        createUserButton.addEventListener('click', function () {
-            createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
-                .then((userCredential) => {
-                    alert('Welcome ' + emailInput.value);
-                })
-                .catch((error) => {
-                    console.error(error.code);
-                    console.error(error.message);
-                    alert('Failed to Register');
-                });
-        });
-        authEmailPassButton.addEventListener('click', function () {
+        document.getElementById('authEmailPassButton').addEventListener('click', function () {
             signInWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
                 .then((userCredential) => {
-                    alert('Welcome ' + emailInput.value);
+                    if(emailInput.value=='prof@email.com'){
+                        window.location.replace("adm.html");
+                    }else{
+
+                    }
                 })
                 .catch((error) => {
                     console.error(error.code);
                     console.error(error.message);
-                    alert('Not Authenticated');
+                    alert('E-mail ou senha incorretos');
                 });
         });
-        logOutButton.addEventListener('click', function () {
+        document.getElementById('logOutButton').addEventListener('click', function () {
             signOut(auth)
-                .then((userCredential) => {
-                    alert('You Logged Out');
-                })
+                .then((userCredential) => {})
                 .catch((error) => {
                     console.error(error.code);
                     console.error(error.message);

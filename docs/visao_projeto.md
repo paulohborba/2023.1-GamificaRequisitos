@@ -2,12 +2,14 @@
 
 ## Organização do projeto
 
+No quadro apresentado na Tabela 1, são listados os principais papéis e os responsáveis por assegurar o cumprimento das tarefas associadas a cada papel.
+
 | Papel | Atribuições | Responsável | Participantes | 
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| Desenvolvedor | Realização da codificação do produto, dos testes, etc. Além de montar protótipos do sistema | Luciano, Paulo,  Vinícius e Felipe (Alternância a cada unidade) | Luciano, Paulo, Vinícius e Felipe |
-| Dono do Produto | Atualizar o escopo do produto, organizar o escopo das sprints, validar as entregas | George Marsicano Correa | George Marsicano Correa e Maria Abritta |
-| Analista de Qualidade | Garante a qualidade do produto, o cumprimento do conceito de pronto e a  realização de inspeções de código | Luciano, Paulo, Vinícius e Felipe (Alternância a cada unidade) |  Luciano, Paulo, Vinícius e Felipe |
-| Cliente | Responsável por validar as entregas com feedbacks relacionados ao projeto | George Marsicano Correa | George Marsicano Correa e Maria Abritta |
+| Desenvolvedor | Realização da codificação do produto, dos testes, etc. Além de montar protótipos do sistema | Luciano e Paulo | Vinícius e Felipe |
+| Dono do Produto | Atualizar o escopo do produto, organizar o escopo das sprints, validar as entregas | Maria Abritta | George Marsicano Correa |
+| Analista de Qualidade | Garante a qualidade do produto, o cumprimento do conceito de pronto e a  realização de inspeções de código | Vinícius e Felipe | Luciano e Paulo |
+| Cliente | Responsável por validar as entregas com feedbacks relacionados ao projeto | Maria Abritta | George Marsicano Correa |
 
 ## Planejamento das Fases e/ou Iterações do Projeto
 
@@ -71,3 +73,4 @@
 | :--------: | :----: | :---------------------------------: | :---------: |
 | 26/04/2023 |  0.1   | Criação e estruturação do documento | Paulo Borba e Luciano Machado |
 | 24/05/2023 |  0.2   | Alteração do documento | Paulo Borba |
+| 16/06/2023 |  2.0   | Atualização do visão para a entrega 3 | Vinícius Alves |

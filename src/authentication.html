@@ -25,20 +25,15 @@
                 <input type="password" class="form-control" id="passwordInput" placeholder="Password"></label>
             </div>
         </form>
+
+        <button class="btn btn-lg btn-block btn-primary" id="authEmailPassButton">Authenticate</button>
+        <button class="btn btn-lg btn-block btn-info" id="createUserButton">Create Account</button>
+        <br>
+
+        <p class="text-center">
+            <button class="btn btn-lg btn-block btn-default" id="logOutButton">Get Out</button>
+        </p>
     </div>
-
-    <button class="btn btn-lg btn-block btn-primary" id="authEmailPassButton">Authenticate</button>
-    <button class="btn btn-lg btn-block btn-info" id="createUserButton">Create Account</button>
-    <br>
-
-    <p class="text-center">
-        <button class="btn btn-lg btn-warning" id="authAnonymouslyButton"><i class="fa fa-user fa-2x"></i></button>
-    </p>
-    <br>
-
-    <p class="text-center">
-        <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Back</button>
-    </p>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
@@ -53,8 +48,8 @@
             measurementId: "G-FLC6D2WGBC"
         };
         const app = initializeApp(firebaseConfig);
-        
-        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 
         const auth = getAuth(app);
 
@@ -65,17 +60,38 @@
         var passwordInput = document.getElementById('passwordInput');
         var displayName = document.getElementById('displayName');
 
-        createUserButton.addEventListener('click', function(){
-        createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
-        .then((userCredential) => {
-            alert('Welcome '+ emailInput.value);
-        })
-        .catch((error) => {
-            console.error(error.code);
-            console.error(error.message);
-            alert('Failed to register');
+        createUserButton.addEventListener('click', function () {
+            createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
+                .then((userCredential) => {
+                    alert('Welcome ' + emailInput.value);
+                })
+                .catch((error) => {
+                    console.error(error.code);
+                    console.error(error.message);
+                    alert('Failed to Register');
+                });
         });
-    });
+        authEmailPassButton.addEventListener('click', function () {
+            signInWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
+                .then((userCredential) => {
+                    alert('Welcome ' + emailInput.value);
+                })
+                .catch((error) => {
+                    console.error(error.code);
+                    console.error(error.message);
+                    alert('Not Authenticated');
+                });
+        });
+        logOutButton.addEventListener('click', function () {
+            signOut(auth)
+                .then((userCredential) => {
+                    alert('You Logged Out');
+                })
+                .catch((error) => {
+                    console.error(error.code);
+                    console.error(error.message);
+                });
+        });
     </script>
 </body>
 

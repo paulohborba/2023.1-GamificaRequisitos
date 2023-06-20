@@ -2,7 +2,56 @@
 
 ## Metodologia
 
-A equipe vai utilizar os métodos Scrum e algumas partes do XP (eXtreme Programming), assim criando uma abordagem ágil e eficiente no desenvolvimento do projeto.
+### GUPTA
+
+De acordo com as considerações de Gupta (2008)¹, é fundamental que a seleção da abordagem de desenvolvimento de software leve em conta uma série de critérios relevantes. Entre esses critérios estão as necessidades e requisitos específicos do projeto, bem como o ambiente e a cultura organizacional em que o projeto será executado. Além disso, o tamanho e a complexidade do projeto, o risco envolvido, o orçamento disponível e o prazo para a conclusão do projeto também desempenham um papel crucial na escolha adequada da abordagem.
+
+É importante ressaltar que essa decisão não pode ser tomada de forma isolada ou estática. Pelo contrário, ela requer um processo contínuo de revisão e adaptação ao longo do tempo, visando garantir o sucesso do projeto. Dessa forma, é imprescindível monitorar e reavaliar regularmente a abordagem adotada, a fim de assegurar que esteja alinhada com as necessidades e condições do projeto. Veja a tabela abaixo.
+
+
+| Requisitos | Cascata | Prototipação | Interativo e Incremental | Evolutivo | Spiral | RAD | Nosso Contexto |
+| :--------: | :-----: | :----------: | :---------------------:  | :------:  | :-----: | :---: | :------------: |
+| Os requisitos são facilmente compreensíveis e definidos? | Sim | Não | Não | Não | Não | Sim | Sim |
+| Mudamos os requisitos com bastante frequência? | Não | Sim | Não | Não | Não | Sim | Não |
+| Podemos mudar os requisitos no início do ciclo? | Sim | Não | Sim | Sim | Não | Sim | Sim |
+| Os requisitos indicam um sistema complexo a ser construído? | Não | Sim | Sim | Sim | Não | Sim | Sim |
+
+<div align="center">
+    <h5 class="text-center">Tabela 1 - Análise de processos (Fonte: Gupta, 20019)</h5>
+</div>
+
+
+## Facetas
+
+Diversos aspectos do processo de Engenharia de Requisitos são abordados no IREB (2022)², fornecendo uma estrutura para identificar as características dos requisitos do projeto. A figura 1 apresenta a estrutura do diagrama, destacando os pontos relevantes a serem considerados.
+
+É importante ressaltar que o IREB (2022)² oferece diretrizes valiosas para a análise e compreensão abrangente dos requisitos de um projeto. Ao utilizar essa estrutura, é possível examinar diferentes facetas do processo de Engenharia de Requisitos, permitindo uma identificação mais precisa das necessidades e características essenciais para o sucesso do projeto.
+ 
+ <br>
+
+![facetas](assets/images/Facetas.png)
+
+<div align="center">
+    <h5 class="text-center">Figura 1 - Facetas do processo de ER (Fonte: IREB, 2022)</h5>
+</div>
+
+<br>
+
+Ao analisar as descrições das facetas do processo de Engenharia de Requisitos, concluímos que o mesmo será caracterizado por ser iterativo, exploratório e orientado ao mercado. Durante essa análise, foram considerados os seguintes aspectos:
+
+- Requisitos não completamente conhecidos desde o início: Reconhecemos que os requisitos do projeto podem evoluir ao longo do tempo e não estar totalmente definidos desde o início. Isso implica em uma abordagem flexível que permita ajustes e adaptações durante o desenvolvimento.
+
+- Ciclos curtos de feedback pela proximidade do time de desenvolvimento com o cliente: A proximidade entre a equipe de desenvolvimento e o cliente possibilita a realização de ciclos curtos de feedback, permitindo uma comunicação eficaz e rápida para entender as necessidades e realizar ajustes ao longo do processo.
+
+- Priorização e negociação de requisitos devido à duração do projeto: Dada a duração do projeto, é necessário estabelecer prioridades e negociar requisitos conforme as restrições de tempo e recursos. Isso envolve tomar decisões estratégicas para garantir a entrega de valor dentro do prazo e do orçamento estabelecidos.
+
+- Foco no desenvolvimento de um produto utilizável por diversos clientes: Embora exista um cliente inicial, o objetivo do projeto é desenvolver um produto que possa ser utilizado por uma ampla gama de clientes, cujos usuários individuais não são identificáveis antecipadamente. Isso requer uma abordagem que leve em consideração as necessidades e expectativas de um público diversificado.
+
+- Participação conjunta da equipe do projeto e do cliente na elicitação de requisitos: Embora a equipe do projeto tenha um papel central na elicitação de requisitos, é importante ressaltar que a participação do cliente é essencial. A colaboração entre ambas as partes contribui para uma compreensão mais abrangente das necessidades e para a definição dos requisitos de forma eficaz.
+
+Portanto, com base nesses aspectos, fica evidente a necessidade de adotar uma abordagem iterativa, exploratória e orientada ao mercado no processo de Engenharia de Requisitos, considerando a natureza dinâmica e a complexidade do projeto em questão. Sendo assim selecionado pela equipe o Scrum e o XP para o desenvolvimento do software.
+
+
 ### Scrum
 | |  |  |  |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
@@ -21,118 +70,57 @@ A equipe vai utilizar os métodos Scrum e algumas partes do XP (eXtreme Programm
 | Design Simples | Projetos com a prática de um design simples sao benéficos, principalmente, para a manutenção do projeto. |
 | Refatoração | Prática que envolve a melhoria contínua do código existente sem alterar sua funcionalidade |
 
-<br>
+### Etapa 1
 
-![ScrumMediumLabelled](https://user-images.githubusercontent.com/77307847/234932293-2b98669a-cb9d-4d36-b972-b6e2dad0d38a.png)
-
-<div align="center">
-    <h5 class="text-center">Figura 2 - Processo Scrum (Fonte: Mountain Goat Software, 2005)</h5>
-</div>
-<br>
-
-### Requisitos
-
-Utilizaremos o 7 valores da Engenharia de requisitos e suas atividade sendo eles:
-Valores:
-- Comunicação:
-    - É importante para transmitir os requisitos e compartilhar informações, aumenta o senso de equipe e cooperação eficaz.
-
-- Feedback:
-    - É importante para a melhoria e refinamento dos requisitos e correççao de prováveis erros.
-
-- Simplicidade:
-    - Melhora a comunicação eliminando requisitos desnecessários ou adiáveis.
-
-- Coragem:
-    - A coragem se faz necessária pois ela permite a resolução de impasses de maneira mais efetiva.
-
-- Respeito:
-    - O respeito é indispensável para se manter uma relação saudável entra os participantes do projeto.
-
-- Confiança:
-    - Sinaliza boa relação entre os participantes. 
-
-Atividades:
-- Elicitação e Descoberta:
-    - Extrair uma informação de alguém ou algo e descobrir algo que não estava disponível.
-
-- Análise e Consenso:
-    - Analisar o requisitos em sua forma bruta e conciliar um entendimento comum sobre eles.
-
-- Declaração:
-    - Comunicar os requisitos entre os envolvidos por meio de linguagem natural.
-
-- Representação:
-    - Apresentação dos requisitos em modelos e/ou visualizações do produto, sendo informal, semiformal ou formal.
-
-- Verificação e Validação:
-    - Confirmação ou não de que os requisitos são adequados em relação ao produto e a necessidade do cliente, confirmação ou não de que os requisitos foram realizados de maneira ideal.
-
-- Organização e Atualização:
-    - Estabelecer como os requisitos são estruturados e manter eles organizados em seu estado mais atual possível.
-
-E também baseado em Gupta, onde a abordagem deve ser baseada em como as necessidades e requisitos, ambiente e cultura organizacional, tamanho e complexidade, risco, orçamento e prazo de conclusão. Segue a tabela abaixo: 
-
-| Requisitos | Cascata | Prototipação | Interativo e Incremental | Evolutivo | Spiral | RAD | Nosso Contexto |
-| :--------: | :-----: | :----------: | :---------------------:  | :------:  | :-----: | :---: | :------------: |
-| Os requisitos são facilmente compreensíveis e definidos? | Sim | Não | Não | Não | Não | Sim | Sim |
-| Mudamos os requisitos com bastante frequência? | Não | Sim | Não | Não | Não | Sim | Não |
-| Podemos mudar os requisitos no início do ciclo? | Sim | Não | Sim | Sim | Não | Sim | Sim |
-| Os requisitos indicam um sistema complexo a ser construído? | Não | Sim | Sim | Sim | Não | Sim | Sim |
-
-## Atividades
-
-### Atividade 1
-
-| Atividade | Método | ferramenta | Entrega |
+| Etapa | Método | ferramenta | Entrega |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | Planejamento de estratégias e métodos de desenvolvimento | Reunião da equipe | Discord da equipe | Estratégias de desenvolvimento definidas |
 
-### Atividade 2
+### Etapa 2
 
-| Atividade | Método | ferramenta | Entrega |
+| Etapa | Método | ferramenta | Entrega |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | Planejar estratégias da equipe | Reunião da equipe | Discord da equipe | Estratégias da equipe |
 
-### Atividade 3
+### Etapa 3
 
-| Atividade | Método | ferramenta | Entrega |
+| Etapa | Método | ferramenta | Entrega |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | Decidir os objetivos de cada sprint | Reunião da equipe | Discord da equipe | O planejamento da sprint da semana |
 
-### Atividade 4
+### Etapa 4
 
-| Atividade | Método | ferramenta | Entrega |
+| Etapa | Método | ferramenta | Entrega |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | Apresentação dos resultados da sprint | Reunião de revisão (Review) | Discord da equipe | Alterações válidas em relação aos resultados da sprint |
 
-### Atividade 5
+### Etapa 5
 
-| Atividade | Método | ferramenta | Entrega |
+| Etapa | Método | ferramenta | Entrega |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | Validação com o cliente | Apresentação de ponto de controle | Discord | Entrega das funcionalidades aprovadas |
 
-### Atividade 6
+### Etapa 6
 
-| Atividade | Método | ferramenta | Entrega |
+| Etapa | Método | ferramenta | Entrega |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | Inspeção da sprint passada | Reunião de retrospectiva | Discord da equipe | Sprint revisada com os pontos de melhoria |
 
-### Atividade 7
+### Etapa 7
 
-| Atividade | Método | ferramenta | Entrega |
+| Etapa | Método | ferramenta | Entrega |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | Levantamento de melhorias para as próximas sprints | Reunião de retrospectiva | Discord da equipe | Pontos de melhoria |
 
-### Atividade 8
+### Etapa 8
 
-| Atividade | Método | ferramenta | Entrega |
+| Etapa | Método | ferramenta | Entrega |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | Avaliação das estratégias de desenvolvimento | Reunião de retrospectiva | Discord da equipe | Pontos positivos e negativos e analisar se precisa de mudanças e quais precisam ser feitas |
 
-### Atividade 9
+### Etapa 9
 
-| Atividade | Método | ferramenta | Entrega |
+| Etapa | Método | ferramenta | Entrega |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | valiação das estratégias da equipe | Reunião de retrospectiva | Discord da equipe | Pontos positivos e negativos da estratégia e pontos de melhoria |
 
@@ -140,5 +128,6 @@ E também baseado em Gupta, onde a abordagem deve ser baseada em como as necessi
 
 |  Data | Versão | Descrição | Autor(es) |
 | :--------: | :----: | :---------------------------------: | :---------: |
-| 26/04/2023 |  0.1   | Criação e estruturação do documento | Paulo Borba |
-| 24/05/2023 |  0.2   | Criação e estruturação do documento | Paulo Borba e Falipe Nunes |
+| 26/04/2023 |  1.0   | Criação e estruturação do documento | Paulo Borba |
+| 24/05/2023 |  1.1   | Criação e estruturação do documento | Paulo Borba e Falipe Nunes |
+| 13/06/2023 |  2.0   | Alterações de acordo com o parecer do professor na entrega 2 | Vinícius |

@@ -17,63 +17,33 @@
 
     <h1>Administração de Turmas</h1>
 
-    <progress value="0" max="100" id="uploader"></progress>
-    <br>
-    <input type="file" value="Upload" id="fileButton">
-    <hr>
-    <button class="btn btn-lg btn-blck btn-default" id="turma0Button">Turma 0</button>
+    <div style="overflow-y:scroll;width:400px;border:1px solid black;max-height:100px;">
+        <table id="classesTable"></table>
+    </div>
     <hr>
 
-    <div style="overflow-y:scroll;width:750px;border:3px solid black;max-height:250px;">
-        <table>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-          <tr>
-            <th>aaa</th>
-          </tr>
-        </table>
-      </div>
+    <div>
+        Nome da Turma:
+        <input id="nomeTurmaTextInput">
+        <hr>
+        <progress value="0" max="100" id="uploader"></progress>
+        <input type="file" value="Upload" id="fileButton">
+    </div>
+    <hr>
+
+    <div>
+
+        <button class="btn btn-lg btn-blck btn-default" id="criarTurmaButton">Criar Turma</button>
+    </div>
+    <hr>
+
+    <div style="overflow-y:scroll;width:400px;border:1px solid black;max-height:33px;">
+        <table id="onlinesTable"></table>
+    </div>
     <hr>
 
     <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Sair</button>
-    
+
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
@@ -90,8 +60,6 @@
         const app = initializeApp(firebaseConfig);
         import { getDatabase, ref, push, onValue, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
         const db = getDatabase(app);
-        const isOnlineRef = ref(db, '.info/connected');
-        console.log(isOnlineRef);
         import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
         const auth = getAuth(app);
         onAuthStateChanged(auth, (user) => {
@@ -148,9 +116,74 @@
                 });
             window.location.replace('index.html');
         });
-        document.getElementById('turma0Button').addEventListener('click', function () {
-            window.location.replace('class.html');
+
+        import { onChildAdded, onChildChanged, onChildRemoved } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+        var classesTable = document.querySelector("#classesTable");
+        var classesStatusRef = ref(db, '/classes/');
+        function addRowToClassesTable(className) {
+            var row = classesTable.insertRow();
+            row.id = className;
+            var cell = row.insertCell();
+            var button = document.createElement("button");
+            button.innerHTML = className;
+            button.addEventListener("click", function () {
+                window.location.replace('class.html');
+            });
+            cell.appendChild(button);
+        }
+
+        function removeRowFromClassesTable(className) {
+            var row = document.getElementById(className);
+            if (row) {
+                row.remove();
+            }
+        }
+        onChildAdded(classesStatusRef, (snapshot) => {
+            addRowToClassesTable(snapshot.key);
         });
+        onChildRemoved(classesStatusRef, (snapshot) => {
+            removeRowFromClassesTable(snapshot.key);
+        });
+        document.getElementById('criarTurmaButton').addEventListener('click', function () {
+            var classNameInput = document.getElementById('nomeTurmaTextInput');
+            var className = classNameInput.value;
+            console.log(className);
+            if (className) {
+                set(ref(db, '/classes/' + classNameInput.value), 123);
+            }
+            classNameInput.value = '';
+        });
+
+        var online_table = document.querySelector("#onlinesTable");
+        var onlinesStatusRef = ref(db, '/online_status/');
+        function addRowToOnlinesTable(uid) {
+            var row = online_table.insertRow();
+            row.id = uid;
+            var cell = row.insertCell();
+            cell.textContent = uid;
+        }
+        function removeRowFromOnlinesTable(uid) {
+            var row = document.getElementById(uid);
+            if (row) {
+                row.remove();
+            }
+        }
+        onChildAdded(onlinesStatusRef, (snapshot) => {
+            if (snapshot.val() === true) {
+                addRowToOnlinesTable(snapshot.key);
+            }
+        });
+        onChildChanged(onlinesStatusRef, (snapshot) => {
+            if (snapshot.val() === true) {
+                addRowToOnlinesTable(snapshot.key);
+            } else {
+                removeRowFromOnlinesTable(snapshot.key);
+            }
+        });
+        onChildRemoved(onlinesStatusRef, (snapshot) => {
+            removeRowFromOnlinesTable(snapshot.key);
+        });
+
     </script>
 </body>
 

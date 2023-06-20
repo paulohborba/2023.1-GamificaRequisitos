@@ -10,11 +10,6 @@
 </head>
 
 <body>
-
-    <div class="head">
-        <button class="btn btn-lg btn-block btn-primary" id="activitiesRedirectButton">Administrar Atividades</button>
-    </div>
-
     <h1>Administração de Turmas</h1>
 
     <div style="overflow-y:scroll;width:400px;border:1px solid black;max-height:100px;">
@@ -25,9 +20,10 @@
     <div>
         Nome da Turma:
         <input id="nomeTurmaTextInput">
-        <hr>
+        <br>
         <progress value="0" max="100" id="uploader"></progress>
         <input type="file" value="Upload" id="fileButton">
+        <hr>
     </div>
     <hr>
 
@@ -37,6 +33,7 @@
     </div>
     <hr>
 
+    Usuários Online:
     <div style="overflow-y:scroll;width:400px;border:1px solid black;max-height:33px;">
         <table id="onlinesTable"></table>
     </div>
@@ -99,9 +96,6 @@
                 }
             );
         })
-        document.getElementById('activitiesRedirectButton').addEventListener('click', function () {
-            window.location.replace('activity_manager.html');
-        });
         document.getElementById('logOutButton').addEventListener('click', function () {
             signOut(auth)
                 .then((userCredential) => {
@@ -156,11 +150,11 @@
 
         var online_table = document.querySelector("#onlinesTable");
         var onlinesStatusRef = ref(db, '/online_status/');
-        function addRowToOnlinesTable(uid) {
+        function addRowToOnlinesTable(uid, email) {
             var row = online_table.insertRow();
             row.id = uid;
             var cell = row.insertCell();
-            cell.textContent = uid;
+            cell.textContent = email;
         }
         function removeRowFromOnlinesTable(uid) {
             var row = document.getElementById(uid);
@@ -170,12 +164,23 @@
         }
         onChildAdded(onlinesStatusRef, (snapshot) => {
             if (snapshot.val() === true) {
-                addRowToOnlinesTable(snapshot.key);
+                var availableAccountsRef = ref(db, '/available_accounts/');
+                onValue(availableAccountsRef, (snap) => {
+                    snap.forEach((childSnap) => {
+                        var childData = childSnap.val();
+                        console.log(childData.credential);
+                        console.log(snapshot.key);
+                        if (childData.credential === snapshot.key) {
+                            addRowToOnlinesTable(snapshot.key, childData.email);
+                        }
+                    });
+                });
             }
         });
+
         onChildChanged(onlinesStatusRef, (snapshot) => {
             if (snapshot.val() === true) {
-                addRowToOnlinesTable(snapshot.key);
+                addRowToOnlinesTable(snapshot.key,);
             } else {
                 removeRowFromOnlinesTable(snapshot.key);
             }

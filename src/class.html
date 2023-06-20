@@ -12,7 +12,12 @@
 <body>
     <h1>Turma</h1>
 
-
+    <div class="head">
+        <div style="overflow-y:scroll;width:400px;border:1px solid black;max-height:33px;">
+            <table id="loreimdsfknm">TODO</table>
+        </div>
+        <button class="btn btn-lg btn-block btn-primary" id="addActivity">Adicionar Atividade</button>
+    </div>
 
     <p class="text-center">
         <button class="btn btn-lg btn-blck btn-default" id="backButton">Voltar</button>
@@ -65,6 +70,9 @@
                     console.log(error);
                 });
             window.location.replace('index.html');
+        });
+        document.getElementById('addActivity').addEventListener('click', function () {
+            //
         });
         document.getElementById('backButton').addEventListener('click', function () {
             window.location.replace('adm.html');

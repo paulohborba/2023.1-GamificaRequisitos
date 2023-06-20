@@ -1,10 +1,10 @@
 <html>
 
 <head>
-    <title>LOGIN</title>
+    <title>SIGAER</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
+
     <link rel="stylesheet" href="css/authStyles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
@@ -12,29 +12,28 @@
 <body>
     <h1>Login</h1>
     <div id="colorblock">
-    <ul id="usersList"></ul>
-    <hr>
-    <div class="col-md-4">
-        <h3 class="text-center" id="displayName">Insira os dados abaixo para realizar o Login</h3>
-        <br>
-        <form>
-            <div class="form-group">
-                <label for="emailInput">E-mail</label>
-                <input type="email" class="form-control" id="emailInput" placeholder="E-mail"></label>
-            </div>
-            <div class="form-group">
-                <label for="passwordInput">Senha</label>
-                <input type="password" class="form-control" id="passwordInput" placeholder="Password"></label>
-            </div>
-        </form>
-    </div>
+        <ul id="usersList"></ul>
+        <hr>
+        <div class="col-md-4">
+            <h3 class="text-center" id="displayName">Insira os dados abaixo para realizar o Login</h3>
+            <br>
+            <form>
+                <div class="form-group">
+                    <label for="emailInput">E-mail</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="E-mail"></label>
+                </div>
+                <div class="form-group">
+                    <label for="passwordInput">Senha</label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Password"></label>
+                </div>
+            </form>
+        </div>
 
-    <button class="btn btn-lg btn-block btn-primary" id="authEmailPassButton">Login</button>
+        <button class="btn btn-lg btn-block btn-primary" id="authEmailPassButton">Login</button>
 
-
-    <p class="text-center">
-        <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Voltar</button>
-    </p>
+        <p class="text-center">
+            <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Voltar</button>
+        </p>
     </div>
 
     <script type="module">
@@ -52,19 +51,16 @@
         const app = initializeApp(firebaseConfig);
 
         import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-
         const auth = getAuth(app);
-
         var emailInput = document.getElementById('emailInput');
         var passwordInput = document.getElementById('passwordInput');
-        var displayName = document.getElementById('displayName');
-
         document.getElementById('authEmailPassButton').addEventListener('click', function () {
             signInWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
                 .then((userCredential) => {
-                    if(emailInput.value=='prof@email.com'){
+                    
+                    if (emailInput.value == 'prof@email.com') {
                         window.location.replace("adm.html");
-                    }else{
+                    } else {
 
                     }
                 })
@@ -76,7 +72,7 @@
         });
         document.getElementById('logOutButton').addEventListener('click', function () {
             signOut(auth)
-                .then((userCredential) => {})
+                .then((userCredential) => { })
                 .catch((error) => {
                     console.error(error.code);
                     console.error(error.message);

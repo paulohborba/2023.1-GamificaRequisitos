@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>LOGIN</title>
+    <title>SIGAER</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>Login</h1>
+    <h1>Criação de Conta SIGAER</h1>
     <div id="colorblock">
         <ul id="usersList"></ul>
         <hr>
@@ -46,17 +46,30 @@
         };
         const app = initializeApp(firebaseConfig);
 
+        import { getDatabase, ref, push, onValue, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+        const db = getDatabase(app);
+        const isOnlineRef = ref(db, '.info/connected');
+
         import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-
         const auth = getAuth(app);
-
         var emailInput = document.getElementById('emailInput');
         var passwordInput = document.getElementById('passwordInput');
-
         document.getElementById('createUserButton').addEventListener('click', function () {
             createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
-                .then(function () {
-                    alert('Conta Criada com Sucesso\n'+emailInput.value)
+                .then((userCredential) => {
+                    const userId = userCredential.user.uid;
+                    const userStatusDatabaseRef = ref(db, '/status/' + userId);
+                    push(ref(db, 'available_accounts'), {
+                        email: emailInput.value,
+                    });
+                    onValue(isOnlineRef, (snapshot) => {
+                        if (snapshot.val() === false) {
+                            return;
+                        };
+                        onValue(userStatusDatabaseRef, () => set(userStatusDatabaseRef, false), { onlyOnce: true });
+                        set(userStatusDatabaseRef, true);
+                    }, { onlyOnce: true });
+                    alert('Conta Criada com Sucesso\n' + emailInput.value);
                 })
                 .catch(function (error) {
                     console.log(error)

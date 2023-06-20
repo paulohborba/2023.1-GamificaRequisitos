@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>LOGIN</title>
+    <title>SIGAER</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -13,7 +13,7 @@
     <h1>Manager de Atividades</h1>
 
     <p class="text-center">
-        <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Voltar</button>
+        <button class="btn btn-lg btn-blck btn-default" id="backButton">Voltar</button>
     </p>
     </div>
 
@@ -35,13 +35,8 @@
 
         const auth = getAuth(app);
         
-        document.getElementById('logOutButton').addEventListener('click', function () {
-            signOut(auth)
-                .then((userCredential) => { })
-                .catch((error) => {
-                    console.error(error.code);
-                    console.error(error.message);
-                });
+        document.getElementById('backButton').addEventListener('click', function () {
+            window.location.replace('adm.html');
         });
     </script>
 </body>

@@ -28,7 +28,6 @@
                 </div>
             </form>
         </div>
-
         <button class="btn btn-lg btn-block btn-primary" id="createUserButton">Criar</button>
     </div>
 
@@ -50,24 +49,39 @@
         const db = getDatabase(app);
         const isOnlineRef = ref(db, '.info/connected');
 
-        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+        import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
         const auth = getAuth(app);
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const uid = user.uid;
+                localStorage.setItem('loggedInUid', uid);
+                set(ref(db, '/online_status/' + uid), true);
+            } else {
+                const uid = localStorage.getItem('loggedInUid');
+                if (uid) {
+                    set(ref(db, '/online_status/' + uid), false);
+                    localStorage.removeItem('loggedInUid');
+                }
+            }
+        });
         var emailInput = document.getElementById('emailInput');
         var passwordInput = document.getElementById('passwordInput');
         document.getElementById('createUserButton').addEventListener('click', function () {
             createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
                 .then((userCredential) => {
                     const userId = userCredential.user.uid;
-                    const userStatusDatabaseRef = ref(db, '/status/' + userId);
+                    const userOnlineStatusDatabaseRef = ref(db, '/online_status/' + userId);
                     push(ref(db, 'available_accounts'), {
+                        credential: userId,
+                        admin_status: false,
                         email: emailInput.value,
                     });
                     onValue(isOnlineRef, (snapshot) => {
                         if (snapshot.val() === false) {
                             return;
                         };
-                        onValue(userStatusDatabaseRef, () => set(userStatusDatabaseRef, false), { onlyOnce: true });
-                        set(userStatusDatabaseRef, true);
+                        onValue(userOnlineStatusDatabaseRef, () => set(userOnlineStatusDatabaseRef, false), { onlyOnce: true });
+                        set(userOnlineStatusDatabaseRef, true);
                     }, { onlyOnce: true });
                     alert('Conta Criada com Sucesso\n' + emailInput.value);
                 })

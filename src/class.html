@@ -10,30 +10,14 @@
 </head>
 
 <body>
-    <h1>Login</h1>
-    <div id="colorblock">
-        <ul id="usersList"></ul>
-        <hr>
-        <div class="col-md-4">
-            <h3 class="text-center" id="displayName">Insira os dados abaixo para realizar o Login</h3>
-            <br>
-            <form>
-                <div class="form-group">
-                    <label for="emailInput">E-mail</label>
-                    <input type="email" class="form-control" id="emailInput" placeholder="E-mail"></label>
-                </div>
-                <div class="form-group">
-                    <label for="passwordInput">Senha</label>
-                    <input type="password" class="form-control" id="passwordInput" placeholder="Password"></label>
-                </div>
-            </form>
-        </div>
+    <h1>Turma</h1>
 
-        <button class="btn btn-lg btn-block btn-primary" id="authEmailPassButton">Login</button>
 
-        <p class="text-center">
-            <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Voltar</button>
-        </p>
+
+    <p class="text-center">
+        <button class="btn btn-lg btn-blck btn-default" id="backButton">Voltar</button>
+        <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Sair</button>
+    </p>
     </div>
 
     <script type="module">
@@ -52,9 +36,8 @@
 
         import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
         const db = getDatabase(app);
-        const isOnlineRef = ref(db, '.info/connected');
 
-        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+        import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
         const auth = getAuth(app);
         onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -69,23 +52,6 @@
                 }
             }
         });
-        var emailInput = document.getElementById('emailInput');
-        var passwordInput = document.getElementById('passwordInput');
-        document.getElementById('authEmailPassButton').addEventListener('click', function () {
-            signInWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
-                .then((userCredential) => {
-                    set(ref(db, '/online_status/' + userCredential.user.uid), true);
-                    if (emailInput.value == 'prof@email.com') {
-                        window.location.replace("adm.html");
-                    } else {
-
-                    }
-                })
-                .catch((error) => {
-                    console.log(error);
-                    alert('E-mail ou senha incorretos');
-                });
-        });
         document.getElementById('logOutButton').addEventListener('click', function () {
             signOut(auth)
                 .then((userCredential) => {
@@ -99,6 +65,9 @@
                     console.log(error);
                 });
             window.location.replace('index.html');
+        });
+        document.getElementById('backButton').addEventListener('click', function () {
+            window.location.replace('adm.html');
         });
     </script>
 </body>

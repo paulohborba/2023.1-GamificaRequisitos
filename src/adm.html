@@ -12,65 +12,68 @@
 <body>
 
     <div class="head">
-        <button class="btn btn-lg btn-block btn-primary" id="activitiesRedirectButton">Administrar Adtividades</button>
+        <button class="btn btn-lg btn-block btn-primary" id="activitiesRedirectButton">Administrar Atividades</button>
     </div>
 
-    <h1>Administração</h1>
+    <h1>Administração de Turmas</h1>
 
     <progress value="0" max="100" id="uploader"></progress>
     <br>
     <input type="file" value="Upload" id="fileButton">
     <hr>
-
-    <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Sair</button>
+    <button class="btn btn-lg btn-blck btn-default" id="turma0Button">Turma 0</button>
     <hr>
 
-    <table border='1'>
-        <thead>
-            <th>Col1 this is the longest title</th>
-            <th>Col2</th>
-            <th>Col3</th>
-            <th>Col4</th>
-            <th>Col5</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Value 1</td>
-                <td>Value 2</td>
-                <td>Value 3</td>
-                <td>Value 4</td>
-                <td>Value 5</td>
-            </tr>
-            <tr>
-                <td>Value 1</td>
-                <td>Value 2</td>
-                <td>Value 3</td>
-                <td>Value 4</td>
-                <td>Value 5</td>
-            </tr>
-            <tr>
-                <td>Value 1</td>
-                <td>Value 2</td>
-                <td>Value 3</td>
-                <td>Value 4</td>
-                <td>Value 5</td>
-            </tr>
-            <tr>
-                <td>Value 1</td>
-                <td>Value 2</td>
-                <td>Value 3</td>
-                <td>Value 4</td>
-                <td>Value 5</td>
-            </tr>
-            <tr>
-                <td>Value 1</td>
-                <td>Value 2</td>
-                <td>Value 3</td>
-                <td>Value 4</td>
-                <td>Value 5</td>
-            </tr>
-        </tbody>
-    </table>
+    <div style="overflow-y:scroll;width:750px;border:3px solid black;max-height:250px;">
+        <table>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+          <tr>
+            <th>aaa</th>
+          </tr>
+        </table>
+      </div>
+    <hr>
+
+    <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Sair</button>
+    
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
@@ -85,21 +88,32 @@
             measurementId: "G-FLC6D2WGBC"
         };
         const app = initializeApp(firebaseConfig);
-
-        import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-        import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-storage.js";
-
+        import { getDatabase, ref, push, onValue, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+        const db = getDatabase(app);
+        const isOnlineRef = ref(db, '.info/connected');
+        console.log(isOnlineRef);
+        import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
         const auth = getAuth(app);
-
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const uid = user.uid;
+                localStorage.setItem('loggedInUid', uid);
+                set(ref(db, '/online_status/' + uid), true);
+            } else {
+                const uid = localStorage.getItem('loggedInUid');
+                if (uid) {
+                    set(ref(db, '/online_status/' + uid), false);
+                    localStorage.removeItem('loggedInUid');
+                }
+            }
+        });
+        import { getStorage, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-storage.js";
         var uploader = document.getElementById('uploader');
-
         document.getElementById('fileButton').addEventListener('change', function (e) {
             var file = e.target.files[0];
             const storage = getStorage(app);
             const storageRef = ref(storage, 'arquivos/' + file.name);
-
             const uploadTask = uploadBytesResumable(storageRef, file);
-
             uploadTask.on('state_changed',
                 (snapshot) => {
                     var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
@@ -117,17 +131,26 @@
                 }
             );
         })
-
-
         document.getElementById('activitiesRedirectButton').addEventListener('click', function () {
             window.location.replace('activity_manager.html');
         });
-
         document.getElementById('logOutButton').addEventListener('click', function () {
-            signOut(auth);
-            window.location.replace("index.html");
+            signOut(auth)
+                .then((userCredential) => {
+                    const uid = localStorage.getItem('loggedInUid');
+                    if (uid) {
+                        set(ref(db, '/online_status/' + uid), false);
+                        localStorage.removeItem('loggedInUid');
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+            window.location.replace('index.html');
         });
-
+        document.getElementById('turma0Button').addEventListener('click', function () {
+            window.location.replace('class.html');
+        });
     </script>
 </body>
 

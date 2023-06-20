@@ -26,7 +26,7 @@ Para a criação do Backlog do Produto, foi ultilizado a ferramenta [MURAL](http
 |  E1  | US05 | Como professor, eu quero excluir um aluno ou monitor de uma turma                                                                               |
 |  E1  | US06 | Como monitor, eu quero excluir um aluno de uma turma                                                                                            |
 |  E3  | US07 | Como professor, eu quero criar equipes aleatórias de alunos cadastrados para o início da fase de seleção de equipes                             |
-|  E3  | US08 | Como aluno, eu quero jogar o jogo da memória durante a fase de seleção de equipes                                                                |
+|  E3  | US08 | Como aluno, eu quero jogar o jogo da memória durante a fase de seleção de equipes                                                               |
 |  E3  | US09 | Como aluno, eu quero vizualizar as informações do meu grupo                                                                                     |
 |  E3  | US10 | Como aluno, eu quero vizualizar as informações dos integrantes do meu grupo                                                                     |
 |  E4  | US11 | Como professor, eu quero definir a sequência das atividades e disciplinas                                                                       |
@@ -38,6 +38,8 @@ Para a criação do Backlog do Produto, foi ultilizado a ferramenta [MURAL](http
 |  E1  | US17 | Como professor, eu quero arquivar e excluir o arquivamento de uma turma                                                                         |
 |  E1  | US18 | Como professor, eu quero exportar uma arquivo .xls com matrícula, nome, email, equipe e o saldo de PAXs de todos os alunos da turma selecionada |
 |  E1  | US19 | Como professor, eu quero criar turmas sem a necessidade de importar um arquivo .xls para que eu tenha mais liberdade e controle                 |
+|  E1  | US19 | Como professor, eu quero criar turmas sem a necessidade de importar um arquivo .xls para que eu tenha mais liberdade e controle                 |
+|  E1  | US20 | Como professor, eu quero criar e editar informações das atividades e disciplinas                                                                |
 
 # URPS: Requisitos Não-funcionais
 | URPS            | ID  | Descrição                                                           |

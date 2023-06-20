@@ -15,10 +15,10 @@ No quadro apresentado na Tabela 1, são listados os principais papéis e os resp
 
 | Sprint | Produto (Entrega) | Data Início | Data fim |
 | :----: | :----------------:| :---------: | :------: |
-| 1 | Visão geral do produto e do projeto; site do projeto (GitPages) | 13/04/2023 | 19/04/2023 |
+| 1 | Visão geral do produto e do projeto; Criação do site do projeto (GitPages) | 13/04/2023 | 19/04/2023 |
 | 2 | Descoberta, elicitação, analise e consenso dos requisitos | 20/04/2023 | 26/04/2023 |
 | 3 | Validação, verificação e declaração dos requistos | 27/04/2023 | 03/05/2023 |
-| 4 | Backlog; priorizacao das US's | 04/05/2023 | 10/05/2023 |
+| 4 | Backlog; Priorizacao das US's | 04/05/2023 | 10/05/2023 |
 | 5 | Definição e consenso do MVP 1 e 2 | 11/05/2023 | 17/05/2023 |
 | 6 | Atualização do GitPages para entrega da unidade 2 | 18/05/2023 | 24/05/2023 |
 | 7 | Desenvolvimento da US01 e US02; Backlog estrutura SAFe | 25/05/2023 | 31/05/2023 |

@@ -36,6 +36,7 @@ async function login(email, password) {
             if (page_redirection) {
                 localStorage.setItem("email", email);
                 localStorage.setItem("password", password);
+                localStorage.setItem('id', userCredential.user.uid);
                 window.location.replace(page_redirection);
             }
         })

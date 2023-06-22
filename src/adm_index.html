@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <link rel="stylesheet" href="css/authStyles.css">
+    <link rel="stylesheet" href="css/adm_index_styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
@@ -39,7 +39,7 @@
         import { database, set, ref, onValue, get_online_users, get_user_info_by_id } from './js/database.js';
         let classesTable = document.querySelector("#classesTable");
         async function get_authenticated_admin_user_classes() {
-            const uid = localStorage.getItem('authUid');
+            const uid = localStorage.getItem('id');
             if (uid === null) {
                 throw new Error("No authenticated user");
             }
@@ -127,19 +127,19 @@
                 set(ref(database, '/class_registers/' + file_name + '/' + index), class_emails[index]);
             }
             authentication.currentUser = authentication_buffer;
-            const user_info = await get_user_info_by_id(authentication.currentUser.uid);
+            const user_info = await get_user_info_by_id(localStorage.getItem('id'));
             let classesList = user_info[1]['classes'] || [];
             if (!classesList.includes(file_name)) {
                 classesList.push(file_name);
             }
-            set(ref(database, '/user_registers/admin/' + authentication.currentUser.uid + '/classes'), classesList);
-            const email_buffer=localStorage.getItem('email');
-            const password_buffer=localStorage.getItem('password');
-            if(email_buffer&&password_buffer){
+            set(ref(database, '/user_registers/admin/' + localStorage.getItem('id') + '/classes'), classesList);
+            const email_buffer = localStorage.getItem('email');
+            const password_buffer = localStorage.getItem('password');
+            if (email_buffer && password_buffer) {
                 login(email_buffer, password_buffer);
             }
         });
-        onValue(ref(database, '/user_registers/admin/'+authentication.currentUser.uid+'/classes'), (snapshot) => {
+        onValue(ref(database, '/user_registers/admin/' + localStorage.getItem('id') + '/classes'), (snapshot) => {
             classesTable.innerHTML = '';
             const updatedClassesList = snapshot.val() || [];
             updatedClassesList.forEach((className) => {

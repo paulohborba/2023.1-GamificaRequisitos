@@ -39,30 +39,12 @@
         };
         const app = initializeApp(firebaseConfig);
 
-        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-        const db = getDatabase(app);
-
-        import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-        const auth = getAuth(app);
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                const uid = user.uid;
-                localStorage.setItem('loggedInUid', uid);
-                set(ref(db, '/online_status/' + uid), true);
-            } else {
-                const uid = localStorage.getItem('loggedInUid');
-                if (uid) {
-                    set(ref(db, '/online_status/' + uid), false);
-                    localStorage.removeItem('loggedInUid');
-                }
-            }
-        });
         document.getElementById('logOutButton').addEventListener('click', function () {
             signOut(auth)
                 .then((userCredential) => {
                     const uid = localStorage.getItem('loggedInUid');
                     if (uid) {
-                        set(ref(db, '/online_status/' + uid), false);
+                        set(ref(db, '/user_registers/' + uid + '/online_status'), false);
                         localStorage.removeItem('loggedInUid');
                     }
                 })

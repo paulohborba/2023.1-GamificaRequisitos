@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <title>SIGAER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="css/authStyles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Administração de Turmas</h1>
+
+    <div style="overflow-y:scroll;width:400px;border:1px solid black;max-height:500px;">
+        <table id="classesTable"></table>
+    </div>
+    <hr>
+
+    <div>
+        Nome da Turma:
+        <input id="nomeTurmaTextInput">
+        <br>
+        <input type="file" value="Upload" id="fileButton">
+        <button class="btn btn-lg btn-blck btn-default" id="criarTurmaButton">Criar Turma</button>
+    </div>
+    <hr>
+
+    Usuários Online:
+    <div style="overflow-y:scroll;width:400px;border:1px solid black;max-height:33px;">
+        <table id="onlinesTable"></table>
+    </div>
+    <hr>
+
+    <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Sair</button>
+
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+    <script type="module">
+        import { database, set, ref, onValue, get_online_users, get_user_info_by_id } from './js/database.js';
+        let classesTable = document.querySelector("#classesTable");
+        async function get_authenticated_admin_user_classes() {
+            const uid = localStorage.getItem('authUid');
+            if (uid === null) {
+                throw new Error("No authenticated user");
+            }
+            const userInfo = await get_user_info_by_id(uid);
+            if (!userInfo) {
+                throw new Error("User does not exist in the database");
+            }
+            const userType = userInfo[0];
+            const userData = userInfo[1];
+            if (userType !== 'admin') {
+                throw new Error("User is not an admin");
+            }
+            if (!('classes' in userData)) {
+                return [];
+            }
+            return userData.classes;
+        }
+        for (let teaching_class in await get_authenticated_admin_user_classes()) {
+            const td = document.createElement('td');
+
+            const teaching_class_button = document.createElement('button');
+            teaching_class_button.id = 'classButton';
+            const teaching_class_button_label = document.createElement('label');
+            teaching_class_button_label.textContent = teaching_class.name;
+            teaching_class_button.appendChild(teaching_class_button_label);
+
+            const teaching_class_button_archive_button = document.createElement('button');
+            teaching_class_button_archive_button.textContent = 'Arquivar';
+            teaching_class_button.appendChild(teaching_class_button_archive_button);
+            td.appendChild(teaching_class_button);
+
+            const tr = document.createElement('tr');
+            tr.appendChild(td);
+
+            classesTable.appendChild(tr);
+
+            teaching_class_button.addEventListener('click', () => {
+                console.log(classButtonElement.textContent);
+            });
+        }
+
+        let uploaded_class = [];
+        import { authentication, create_account, login, logout } from './js/authentication.js';
+        document.getElementById('fileButton').addEventListener('change', function (e) {
+            let file = e.target.files[0];
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                let data = new Uint8Array(e.target.result);
+                let workbook = XLSX.read(data, { type: 'array' });
+                for (let sheetName in workbook.Sheets) {
+                    let jsonData = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], { header: 1 });
+                    jsonData.forEach((row, rowIndex) => {
+                        uploaded_class.push(row);
+                    });
+                }
+            };
+            reader.readAsArrayBuffer(file);
+        });
+
+        let online_table = document.querySelector("#onlinesTable");
+        for (let user of await get_online_users()) {
+            const td = document.createElement('td');
+            td.textContent = user.email;
+            const tr = document.createElement('tr');
+            tr.appendChild(td);
+            online_table.appendChild(tr);
+        }
+
+        document.getElementById('criarTurmaButton').addEventListener('click', async () => {
+            const authentication_buffer = authentication.currentUser;
+            const file_name = document.getElementById('nomeTurmaTextInput').value;
+            const class_emails = [];
+            if (file_name == '' || uploaded_class == []) {
+                alert('Nome de turma ou upload não fornecido');
+            } else {
+                for (let user of uploaded_class) {
+                    const account_reference = await create_account('regular', user[0], '123456');
+                    set(ref(database, '/user_registers/regular/' + account_reference[0] + '/university_id'), user[1]);
+                    set(ref(database, '/user_registers/regular/' + account_reference[0] + '/class'), file_name);
+                    logout(0);
+                    class_emails.push(user[0]);
+                }
+            }
+            for (let index in class_emails) {
+                set(ref(database, '/class_registers/' + file_name + '/' + index), class_emails[index]);
+            }
+            authentication.currentUser = authentication_buffer;
+            const user_info = await get_user_info_by_id(authentication.currentUser.uid);
+            let classesList = user_info[1]['classes'] || [];
+            if (!classesList.includes(file_name)) {
+                classesList.push(file_name);
+            }
+            set(ref(database, '/user_registers/admin/' + authentication.currentUser.uid + '/classes'), classesList);
+            const email_buffer=localStorage.getItem('email');
+            const password_buffer=localStorage.getItem('password');
+            if(email_buffer&&password_buffer){
+                login(email_buffer, password_buffer);
+            }
+        });
+        onValue(ref(database, '/user_registers/admin/'+authentication.currentUser.uid+'/classes'), (snapshot) => {
+            classesTable.innerHTML = '';
+            const updatedClassesList = snapshot.val() || [];
+            updatedClassesList.forEach((className) => {
+                const row = document.createElement('tr');
+                const cell = document.createElement('td');
+                const button = document.createElement('button');
+                button.textContent = className;
+                button.addEventListener('click', (event) => {
+                    localStorage.setItem('clicked_class', className);
+                    window.location.replace('class.html');
+                });
+                cell.appendChild(button);
+                row.appendChild(cell);
+                classesTable.appendChild(row);
+            });
+        });
+
+        document.getElementById('logOutButton').addEventListener('click', () => {
+            logout('index.html');
+            window.location.replace('index.html');
+        });
+    </script>
+</body>
+
+</html>

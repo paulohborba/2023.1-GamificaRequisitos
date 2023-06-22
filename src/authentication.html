@@ -30,75 +30,12 @@
         </div>
 
         <button class="btn btn-lg btn-block btn-primary" id="authEmailPassButton">Login</button>
-
-        <p class="text-center">
-            <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Voltar</button>
-        </p>
     </div>
 
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-        const firebaseConfig = {
-            apiKey: "AIzaSyA224zrzRZ7Iy7rrNRE9dWCUs-Kr23ktiE",
-            authDomain: "disciplinareq.firebaseapp.com",
-            databaseURL: "https://disciplinareq-default-rtdb.firebaseio.com",
-            projectId: "disciplinareq",
-            storageBucket: "disciplinareq.appspot.com",
-            messagingSenderId: "292130692921",
-            appId: "1:292130692921:web:29ab9b610e1c220d5652e8",
-            measurementId: "G-FLC6D2WGBC"
-        };
-        const app = initializeApp(firebaseConfig);
-
-        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-        const db = getDatabase(app);
-        const isOnlineRef = ref(db, '.info/connected');
-
-        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-        const auth = getAuth(app);
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                const uid = user.uid;
-                localStorage.setItem('loggedInUid', uid);
-                set(ref(db, '/online_status/' + uid), true);
-            } else {
-                const uid = localStorage.getItem('loggedInUid');
-                if (uid) {
-                    set(ref(db, '/online_status/' + uid), false);
-                    localStorage.removeItem('loggedInUid');
-                }
-            }
-        });
-        var emailInput = document.getElementById('emailInput');
-        var passwordInput = document.getElementById('passwordInput');
-        document.getElementById('authEmailPassButton').addEventListener('click', function () {
-            signInWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
-                .then((userCredential) => {
-                    set(ref(db, '/online_status/' + userCredential.user.uid), true);
-                    if (emailInput.value == 'prof@email.com') {
-                        window.location.replace("adm.html");
-                    } else {
-
-                    }
-                })
-                .catch((error) => {
-                    console.log(error);
-                    alert('E-mail ou senha incorretos');
-                });
-        });
-        document.getElementById('logOutButton').addEventListener('click', function () {
-            signOut(auth)
-                .then((userCredential) => {
-                    const uid = localStorage.getItem('loggedInUid');
-                    if (uid) {
-                        set(ref(db, '/online_status/' + uid), false);
-                        localStorage.removeItem('loggedInUid');
-                    }
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-            window.location.replace('index.html');
+        import { login, logout } from './js/authentication.js';
+        await document.getElementById('authEmailPassButton').addEventListener('click', async () => {
+            await login(document.getElementById('emailInput').value, document.getElementById('passwordInput').value);
         });
     </script>
 </body>

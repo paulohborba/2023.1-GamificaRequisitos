@@ -25,7 +25,6 @@
         <a href="authentication.html">
             <button class="btn btn-login">ENTRAR</button>
         </a>
-
     </u1>
 
     <div class="curvaFooter">
@@ -36,39 +35,6 @@
         </svg>
         <h1>© 2023. All rights reserved.</h1>
     </div>
-
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-        const firebaseConfig = {
-            apiKey: "AIzaSyA224zrzRZ7Iy7rrNRE9dWCUs-Kr23ktiE",
-            authDomain: "disciplinareq.firebaseapp.com",
-            databaseURL: "https://disciplinareq-default-rtdb.firebaseio.com",
-            projectId: "disciplinareq",
-            storageBucket: "disciplinareq.appspot.com",
-            messagingSenderId: "292130692921",
-            appId: "1:292130692921:web:29ab9b610e1c220d5652e8",
-            measurementId: "G-FLC6D2WGBC"
-        };
-        const app = initializeApp(firebaseConfig);
-
-        import { getDatabase, ref } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-        const db = getDatabase(app);
-        import { getAuth } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-        const auth = getAuth(app);
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                const uid = user.uid;
-                localStorage.setItem('loggedInUid', uid);
-                set(ref(db, '/online_status/' + uid), true);
-            } else {
-                const uid = localStorage.getItem('loggedInUid');
-                if (uid) {
-                    set(ref(db, '/online_status/' + uid), false);
-                    localStorage.removeItem('loggedInUid');
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>

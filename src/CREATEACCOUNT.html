@@ -28,68 +28,25 @@
                 </div>
             </form>
         </div>
+        <input type="checkbox" id="adminToggle">
+        <label for="adminToggle">Usuário Administrador</label>
+        <br><br>
         <button class="btn btn-lg btn-block btn-primary" id="createUserButton">Criar</button>
     </div>
 
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-        const firebaseConfig = {
-            apiKey: "AIzaSyA224zrzRZ7Iy7rrNRE9dWCUs-Kr23ktiE",
-            authDomain: "disciplinareq.firebaseapp.com",
-            databaseURL: "https://disciplinareq-default-rtdb.firebaseio.com",
-            projectId: "disciplinareq",
-            storageBucket: "disciplinareq.appspot.com",
-            messagingSenderId: "292130692921",
-            appId: "1:292130692921:web:29ab9b610e1c220d5652e8",
-            measurementId: "G-FLC6D2WGBC"
-        };
-        const app = initializeApp(firebaseConfig);
-
-        import { getDatabase, ref, push, onValue, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-        const db = getDatabase(app);
-        const isOnlineRef = ref(db, '.info/connected');
-
-        import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-        const auth = getAuth(app);
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                const uid = user.uid;
-                localStorage.setItem('loggedInUid', uid);
-                set(ref(db, '/online_status/' + uid), true);
-            } else {
-                const uid = localStorage.getItem('loggedInUid');
-                if (uid) {
-                    set(ref(db, '/online_status/' + uid), false);
-                    localStorage.removeItem('loggedInUid');
-                }
+        import { create_account } from './js/authentication.js';
+        document.getElementById('createUserButton').addEventListener('click', () => {
+            let type;
+            if(document.getElementById('adminToggle').checked){
+                type='admin';
+            }else{
+                type='regular';
             }
+            create_account(type,
+            document.getElementById('emailInput').value,
+            document.getElementById('passwordInput').value);
         });
-        var emailInput = document.getElementById('emailInput');
-        var passwordInput = document.getElementById('passwordInput');
-        document.getElementById('createUserButton').addEventListener('click', function () {
-            createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
-                .then((userCredential) => {
-                    const userId = userCredential.user.uid;
-                    const userOnlineStatusDatabaseRef = ref(db, '/online_status/' + userId);
-                    push(ref(db, 'available_accounts'), {
-                        credential: userId,
-                        admin_status: false,
-                        email: emailInput.value,
-                    });
-                    onValue(isOnlineRef, (snapshot) => {
-                        if (snapshot.val() === false) {
-                            return;
-                        };
-                        onValue(userOnlineStatusDatabaseRef, () => set(userOnlineStatusDatabaseRef, false), { onlyOnce: true });
-                        set(userOnlineStatusDatabaseRef, true);
-                    }, { onlyOnce: true });
-                    alert('Conta Criada com Sucesso\n' + emailInput.value);
-                })
-                .catch(function (error) {
-                    console.log(error)
-                    alert('Falha no Registramento')
-                })
-        })
     </script>
 </body>
 

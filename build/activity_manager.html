@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Index</title>
+    <title>Edição de atividades</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -10,36 +10,28 @@
 </head>
 
 <body>
-    <div data-collapse="small" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+<div data-collapse="small" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
     role="banner" class="nav-bar w-nav">
     <div class="nav-container w-container">
         <div class="logo-div"><a href="/" aria-current="page" class="nav-logo w-inline-block w--current"><img
                     src="https://uploads-ssl.webflow.com/64935b1b48934f25b73f256d/6493625b0d68f51d26ddfa94_Screenshot%202023-06-21%20at%2017-47-51%20Logo%20Maker%20Used%20By%202.3%20Million%20Startups.png"
                     width="178" alt="" class="logo" /></a></div>
-        <nav role="navigation" class="nav-content w-nav-menu">
-            <div class="nav-cta-button-container"></div>
+        <nav role="navigation" class="nav-content w-nav-menu"><a href="adm.html"
+                class="nav-link w-nav-link">Turmas</a> <a href="class.html"
+                class="nav-link w-nav-link">Atividades</a>
+            <div class="nav-cta-button-container"><a href="/sign-up" class="nav-link cta-button w-nav-link">Free
+                    Sign Up</a></div>
         </nav>
         <div class="menu-button w-nav-button"><img
                 src="https://uploads-ssl.webflow.com/64935b1b48934f25b73f256d/64935b1c48934f25b73f25f8_Menu%20Icon.svg"
                 loading="lazy" width="24" alt="" class="menu-icon" /></div>
     </div>
 </div>
+
 <div class="page-wrapper">
-    <div class="section light-color-gradient wf-section">
+    <div class="section light-page-header wf-section">
         <div class="container">
-            <div class="w-layout-grid hero-grid">
-                <div class="text-box _500px">
-                    <h1 class="heading h1">Gamifica Requisitos</h1>
-                    <p class="paragraph large">O aplicativo procura auxiliar a dinâmica de gamificação da disciplina
-                        de Requisitos de Software.</p>
-                    <div class="spacer _16"></div><a href="authentication.html" class="button w-button">ENTRAR</a>
-                </div><img
-                    src=""
-                    loading="lazy" id="w-node-b090c9b0-c2c8-845a-860d-424f22a07e9a-b73f25b8"
-                    sizes="(max-width: 479px) 92vw, (max-width: 697px) 91vw, 635px"
-                    srcset="https://uploads-ssl.webflow.com/64935b1b48934f25b73f256d/64939161164686353de7749e_AtividadesdaRePBB.png 500w, https://uploads-ssl.webflow.com/64935b1b48934f25b73f256d/64939161164686353de7749e_AtividadesdaRePBB.png 635w"
-                    alt="" />
-            </div>
+            <h1 class="heading large-h1">Edição de Atividades</h1>
         </div>
     </div>
 </div>
@@ -47,7 +39,7 @@
     <div class="footer-container w-container">
         <div class="w-layout-grid footer-grid">
             <div id="w-node-b8d7be4a-ce45-83ab-5947-02d204c8bff0-cf3fcb86" class="footer-logo-block"><a
-                    data-ix="logo" href="/" aria-current="page" class="footer-logo w-nav-brand w--current"><img
+                    data-ix="logo" href="/" class="footer-logo w-nav-brand"><img
                         src="https://uploads-ssl.webflow.com/64935b1b48934f25b73f256d/6493625b0d68f51d26ddfa94_Screenshot%202023-06-21%20at%2017-47-51%20Logo%20Maker%20Used%20By%202.3%20Million%20Startups.png"
                         width="204" alt="" /></a>
                 <div class="spacer _16"></div>
@@ -71,9 +63,7 @@
         };
         const app = initializeApp(firebaseConfig);
 
-        import { getDatabase, ref } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-        const db = getDatabase(app);
-        import { getAuth } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+        import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
         const auth = getAuth(app);
         onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -87,6 +77,9 @@
                     localStorage.removeItem('loggedInUid');
                 }
             }
+        });
+        document.getElementById('backButton').addEventListener('click', function () {
+            window.location.replace('adm.html');
         });
     </script>
 </body>

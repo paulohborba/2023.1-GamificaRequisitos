@@ -44,30 +44,50 @@ Além da tabela supracitada, analisamos as relações entre as histórias no que
 
 
 ## MVP 1
+
 1.1.1 - Como professor, eu quero importar uma arquivo .xls com a matricula e o email dos alunos para a criação da turma
+
 1.1.7 - Como professor, eu quero realizar login para acessar a minha conta de usuário administrador
+
 1.2.1 - Como professor, eu quero criar uma atividade para uma turma
+
 1.3.1 - Como professor, eu quero criar equipes aleatórios de usuários cadastrados para o início da fase de seleção de equipes
 
 ## MVP 2
+
 1.1.3 - Como professor, eu quero arquivar uma turma para possuir um histórico das turmas
+
 1.1.6 - Como professor, eu quero exportar uma arquivo .xls com matrícula, nome, email, equipe e o saldo de PAXs de todos os alunos da turma selecionada
+
 2.1.1 - Como aluno, eu quero jogar jogos durante a fase de seleção de equipes
+
 2.1.2 - Como aluno, eu quero contatar os membros da minha equipe por whatsapp
+
 2.1.3 - Como aluno, eu quero vizualizar o ranking em PAX de todas as equipes da minha turma
+
 2.2.1 - Como aluno, eu quero visualizar os requisitos para o cumprimento da atividade
+
 2.2.2 - Como aluno, eu quero visualizar valor em PAX da atividade
+
 2.2.3 - Como aluno, quero receber avisos das atividades criadas pelo professor
+
 2.3.3 - Como aluno, eu quero editar informações do perfil do meu usuário
+
 2.3.1 - Como aluno, eu quero realizar um cadastro para acessar a plataforma
+
 2.3.2 - Como aluno, eu quero realizar login para acessar a minha conta
 
 ## MVP 3
 1.1.2 - Como professor, eu quero alterar o nome da turma para que eu possa administra-las
+
 1.1.4 - Como professor, eu quero adicionar monitores a uma turma para me auxiliarem
+
 1.1.5 - Como professor, eu quero excluir um monitor de uma turmas
+
 1.2.2 - Como professor, eu quero alterar as informações de uma atividade existente
+
 1.3.2 - Como professor, eu quero adicionar um aluno a uma equipe
+
 1.3.3 - Como professor, eu quero excluir um aluno de uma equipe
 
 ## Gerenciamento de Riscos 

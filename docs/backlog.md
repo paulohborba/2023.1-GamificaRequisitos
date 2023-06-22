@@ -5,11 +5,11 @@ Para a organização do processo de desenvolvimento do backlog foi usado o [TREL
 
 <br>
 
-# Persona 1: Professor
+## Persona 1: Professor
 
-## Funcionalidade 1.1: Organizar Turmas
+### Funcionalidade 1.1: Organizar Turmas
 
-### Histórias de Usuário
+#### Histórias de Usuário
 
 1.1.1 - Como professor, eu quero importar uma arquivo .xls com a matricula e o email dos alunos para a criação da turma
 
@@ -25,17 +25,17 @@ Para a organização do processo de desenvolvimento do backlog foi usado o [TREL
 
 1.1.7 - Como professor, eu quero realizar login para acessar a minha conta de usuário administrador
 
-## Funcionalidade 1.2: Publicar Atividade
+### Funcionalidade 1.2: Publicar Atividade
 
-### Histórias de Usuário
+#### Histórias de Usuário
 
 1.2.1 - Como professor, eu quero criar uma atividade para uma turma
 
 1.2.2 - Como professor, eu quero alterar as informações de uma atividade existente
 
-## Funcionalidade 1.3: Organizar de Equipes
+### Funcionalidade 1.3: Organizar de Equipes
 
-### Histórias de Usuário
+#### Histórias de Usuário
 
 1.3.1 - Como professor, eu quero criar equipes aleatórios de usuários cadastrados para o início da fase de seleção de equipes
 
@@ -45,11 +45,11 @@ Para a organização do processo de desenvolvimento do backlog foi usado o [TREL
 
 <br>
 
-# Persona 2: Aluno
+## Persona 2: Aluno
 
-## Funcionalidade 2.1: Visualizar Equipes
+### Funcionalidade 2.1: Visualizar Equipes
 
-### Histórias de Usuário
+#### Histórias de Usuário
 
 2.1.1 - Como aluno, eu quero jogar jogos durante a fase de seleção de equipes
 
@@ -57,9 +57,9 @@ Para a organização do processo de desenvolvimento do backlog foi usado o [TREL
 
 2.1.3 - Como aluno, eu quero vizualizar o ranking em PAX de todas as equipes da minha turma
 
-## Funcionalidade 2.2: Visualizar Atividades
+### Funcionalidade 2.2: Visualizar Atividades
 
-### Histórias de Usuário
+#### Histórias de Usuário
 
 2.2.1 - Como aluno, eu quero visualizar os requisitos para o cumprimento da atividade
 
@@ -67,9 +67,9 @@ Para a organização do processo de desenvolvimento do backlog foi usado o [TREL
 
 2.2.3 - Como aluno, quero receber avisos das atividades criadas pelo professor
 
-## Funcionalidade 2.3: Perfil
+### Funcionalidade 2.3: Perfil
 
-### Histórias de Usuário
+#### Histórias de Usuário
 
 2.3.1 - Como aluno, eu quero realizar um cadastro para acessar a plataforma
 
@@ -79,7 +79,7 @@ Para a organização do processo de desenvolvimento do backlog foi usado o [TREL
 
 <br>
 
-# Requisitos Não-funcionais
+## Requisitos Não-funcionais
 | URPS            | ID  | Descrição                                                           |
 | --------------- | --- | ------------------------------------------------------------------- |
 | Suportabilidade | RN1 | O sistema deve ser uma solução web                                  |
@@ -89,7 +89,7 @@ Para a organização do processo de desenvolvimento do backlog foi usado o [TREL
 | Usabilidade     | RN5 | Design simples e minimalista, para facilitar o uso do usuário       |
 | Confiabilidade  | RN6 | O sistema deve garantir segurança em relação aos dados dos usuários |
 
-### Histórico de versões
+## Histórico de versões
 |  Data | Versão | Descrição | Autor(es) |
 | :--------: | :----: | :------------------: | :------------: |
 | 23/05/2023 |  1.0   | Criação do documento | Vinícius |

@@ -1,47 +1,85 @@
 # Backlog do Produto
 Para a criação do Backlog do Produto, foi ultilizado a ferramenta [MURAL](https://app.mural.co/invitation/mural/reqbacklog0444/1683932566864?sender=uf7e1660760d0a1d8cb2e3880&key=0b05e724-71e6-467f-bd58-573228f58888).
 
-## Temas
-| Tema  | Descrição |
-|:--:|:---------:|
-| T1 | Professor |
-| T2 |   Alunos  |
+Para a organização do processo de desenvolvimento do backlog foi usado o [TRELLO](https://trello.com/b/0l3PmEOC). 
 
-### Épicos
-|Tema| Épico| Descrição |
-|:-: |:----:| :-----------------------: |
-| T1 |  E1  | Gerenciamento de Turmas   |
-| T1 |  E2  | Gerenciamento de Equipes  |
-| T2 |  E3  | Formação das Equipes      |
-| T2 |  E4  | Atividades                |
-| T2 |  E5  | Perfil                    |
+<br>
 
-#### Histórias de Usuário
-|Épico |  HU  | Descrição |
-|:----:|:----:| :-----------------------: |
-|  E1  | US01 | Como professor, eu quero importar uma arquivo .xls com a matricula e o email dos alunos para a criação da turma                                 |
-|  E1  | US02 | Como professor, eu quero editar todos os dados das turmas para que eu possa administra-las                                                      |
-|  E1  | US03 | Como professor, eu quero excluir turmas caso seja necessidade para que eu tenha o controle                                                      |
-|  E5  | US04 | Como aluno, eu quero editar informações do meu usuário de turma                                                                                 |
-|  E1  | US05 | Como professor, eu quero excluir um aluno ou monitor de uma turma                                                                               |
-|  E1  | US06 | Como monitor, eu quero excluir um aluno de uma turma                                                                                            |
-|  E3  | US07 | Como professor, eu quero criar equipes aleatórias de alunos cadastrados para o início da fase de seleção de equipes                             |
-|  E3  | US08 | Como aluno, eu quero jogar o jogo da memória durante a fase de seleção de equipes                                                               |
-|  E3  | US09 | Como aluno, eu quero vizualizar as informações do meu grupo                                                                                     |
-|  E3  | US10 | Como aluno, eu quero vizualizar as informações dos integrantes do meu grupo                                                                     |
-|  E4  | US11 | Como professor, eu quero definir a sequência das atividades e disciplinas                                                                       |
-|  E4  | US12 | Como aluno, eu quero vizualizar as unidades e atividades                                                                                        |
-|  E4  | US13 | Como aluno, eu quero vizualizar os requisitos para o cumprimento das atividades                                                                 |
-|  E4  | US14 | Como aluno, eu quero visualizar valor dos PAX de cada atividade                                                                                 |
-|  E4  | US15 | Como aluno, eu quero vizualizar o ranking de PAX da minha turma                                                                                 |
-|  E4  | US16 | Como aluno, eu quero acessar mídias da atividade                                                                                                |
-|  E1  | US17 | Como professor, eu quero arquivar e excluir o arquivamento de uma turma                                                                         |
-|  E1  | US18 | Como professor, eu quero exportar uma arquivo .xls com matrícula, nome, email, equipe e o saldo de PAXs de todos os alunos da turma selecionada |
-|  E1  | US19 | Como professor, eu quero criar turmas sem a necessidade de importar um arquivo .xls para que eu tenha mais liberdade e controle                 |
-|  E1  | US19 | Como professor, eu quero criar turmas sem a necessidade de importar um arquivo .xls para que eu tenha mais liberdade e controle                 |
-|  E1  | US20 | Como professor, eu quero criar e editar informações das atividades e disciplinas                                                                |
+# Persona 1: Professor
 
-# URPS: Requisitos Não-funcionais
+## Funcionalidade 1.1: Organizar Turmas
+
+### Histórias de Usuário
+
+1.1.1 - Como professor, eu quero importar uma arquivo .xls com a matricula e o email dos alunos para a criação da turma
+
+1.1.2 - Como professor, eu quero alterar o nome da turma para que eu possa administra-las
+
+1.1.3 - Como professor, eu quero arquivar uma turma para possuir um histórico das turmas
+
+1.1.4 - Como professor, eu quero adicionar monitores a uma turma para me auxiliarem
+
+1.1.5 - Como professor, eu quero excluir um monitor de uma turmas
+
+1.1.6 - Como professor, eu quero exportar uma arquivo .xls com matrícula, nome, email, equipe e o saldo de PAXs de todos os alunos da turma selecionada
+
+1.1.7 - Como professor, eu quero realizar login para acessar a minha conta de usuário administrador
+
+## Funcionalidade 1.2: Publicar Atividade
+
+### Histórias de Usuário
+
+1.2.1 - Como professor, eu quero criar uma atividade para uma turma
+
+1.2.2 - Como professor, eu quero alterar as informações de uma atividade existente
+
+## Funcionalidade 1.3: Organizar de Equipes
+
+### Histórias de Usuário
+
+1.3.1 - Como professor, eu quero criar equipes aleatórios de usuários cadastrados para o início da fase de seleção de equipes
+
+1.3.2 - Como professor, eu quero adicionar um aluno a uma equipe
+
+1.3.3 - Como professor, eu quero excluir um aluno de uma equipe
+
+<br>
+
+# Persona 2: Aluno
+
+## Funcionalidade 2.1: Visualizar Equipes
+
+### Histórias de Usuário
+
+2.1.1 - Como aluno, eu quero jogar jogos durante a fase de seleção de equipes
+
+2.1.2 - Como aluno, eu quero contatar os membros da minha equipe por whatsapp
+
+2.1.3 - Como aluno, eu quero vizualizar o ranking em PAX de todas as equipes da minha turma
+
+## Funcionalidade 2.2: Visualizar Atividades
+
+### Histórias de Usuário
+
+2.2.1 - Como aluno, eu quero visualizar os requisitos para o cumprimento da atividade
+
+2.2.2 - Como aluno, eu quero visualizar valor em PAX da atividade
+
+2.2.3 - Como aluno, quero receber avisos das atividades criadas pelo professor
+
+## Funcionalidade 2.3: Perfil
+
+### Histórias de Usuário
+
+2.3.1 - Como aluno, eu quero realizar um cadastro para acessar a plataforma
+
+2.3.2 - Como aluno, eu quero realizar login para acessar a minha conta
+
+2.3.3 - Como aluno, eu quero editar informações do perfil do meu usuário
+
+<br>
+
+# Requisitos Não-funcionais
 | URPS            | ID  | Descrição                                                           |
 | --------------- | --- | ------------------------------------------------------------------- |
 | Suportabilidade | RN1 | O sistema deve ser uma solução web                                  |
@@ -51,7 +89,8 @@ Para a criação do Backlog do Produto, foi ultilizado a ferramenta [MURAL](http
 | Usabilidade     | RN5 | Design simples e minimalista, para facilitar o uso do usuário       |
 | Confiabilidade  | RN6 | O sistema deve garantir segurança em relação aos dados dos usuários |
 
-## Histórico de versões
+### Histórico de versões
 |  Data | Versão | Descrição | Autor(es) |
 | :--------: | :----: | :------------------: | :------------: |
-| 23/05/2023 |  1.0   | Criação do documento | Vinícius Alves |
+| 23/05/2023 |  1.0   | Criação do documento | Vinícius |
+| 18/06/2023 |  2.0   | Alteração para a entrega 2 | Vinícius |

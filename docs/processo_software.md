@@ -21,7 +21,7 @@ De acordo com as considerações de Gupta (2008)¹, é fundamental que a seleç�
 </div>
 
 
-## Facetas
+### Facetas
 
 Diversos aspectos do processo de Engenharia de Requisitos são abordados no IREB (2022)², fornecendo uma estrutura para identificar as características dos requisitos do projeto. A figura 1 apresenta a estrutura do diagrama, destacando os pontos relevantes a serem considerados.
 
@@ -52,7 +52,7 @@ Ao analisar as descrições das facetas do processo de Engenharia de Requisitos,
 Portanto, com base nesses aspectos, fica evidente a necessidade de adotar uma abordagem iterativa, exploratória e orientada ao mercado no processo de Engenharia de Requisitos, considerando a natureza dinâmica e a complexidade do projeto em questão. Sendo assim selecionado pela equipe o Kanban e o Scrum para o desenvolvimento do software, apesar do GUPTA nos indicar a metodologia RAD.
 
 
-### Scrum
+## Scrum
 | |  |  |  |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
 | Planejamento da sprint | Reuniao realizada no inicio de cada sprint com o objetivo de definir as Historias de Usuario entregaveis na sprint. | Discord |

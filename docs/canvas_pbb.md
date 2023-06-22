@@ -12,43 +12,9 @@
 
 ## Persona: Professor
 
-### Funcionalidade 1: Publicar atividade
+### Funcionalidade 1: Organizar turmas
 
-#### História 1.1:
-
-Eu, como **professor** posso **definir a sequência das atividades e disciplinas** para **disponibilizar conteúdo**.
-
-#### Critérios de aceitação:
-
-1) O professor deve poder realizar essa tarefa sem dificuldades técnicas significativas, garantindo uma experiência de usuário fluida.
-
-2) O conteúdo disponibilizado segue a sequência estabelecida pelo professor de forma consistente e acessível para os alunos.
-
-#### História 1.2: 
-
-Eu, como **professor** posso **definir o valor em PAX** para **bonificação clara para trazer motivação**.
-
-#### Critérios de aceitação:
-
-1) Os alunos compreendem claramente o valor em PAX definido como bonificação e como ele afeta sua motivação.
-
-2) O sistema armazena e exibe o valor correto, permitindo que tanto o professor quanto os alunos tenham visibilidade em relação aos PAXs definidos.
-
-#### História 1.3: 
-
-Eu, como **professor** posso **definir datas** para **gerenciar atividades realizadas**.
-
-#### Critérios de aceitação:
-
-1) O aplicativo permite o professor inserir as datas de início e término das atividades de maneira intuitiva, sem ambiguidade ou erros de formato.
-
-2) O aplicativo permite o professor definir a data do fim do semestre.
-
-3) O aplicativo permite o professor defirnir as datas de entrega importante.
-
-### Funcionalidade 2: Organizar turmas
-
-#### História 2.1: 
+#### História 1.1: 
 
 Eu, como **professor** posso **editar todos os dados das turmas** para **centralização dos dados**.
 
@@ -58,7 +24,7 @@ Eu, como **professor** posso **editar todos os dados das turmas** para **central
 
 2) As alterações realizadas pelo professor nos dados das turmas são refletidas corretamente e de forma consistente em todos os sistemas e interfaces relacionados. 
 
-#### História 2.2: 
+#### História 1.2: 
 
 Eu, como **professor** posso **criar grupos aleatórios de usuários cadastrados para o início da fase de seleção de grupos** para **centralização dos dados**.
 
@@ -70,7 +36,7 @@ Eu, como **professor** posso **criar grupos aleatórios de usuários cadastrados
 
 3) O sistema fornece ao professor a opção de revisar e ajustar os grupos gerados aleatoriamente, se necessário.
 
-#### História 2.3: 
+#### História 1.3: 
 
 Eu, como **professor** posso **exportar um arquivo .xls com matrícula, nome, email, equipe e o saldo de PAX de todos os alunos da turma selecionada** para **feedback rápido do desempenho**.
 
@@ -80,7 +46,7 @@ Eu, como **professor** posso **exportar um arquivo .xls com matrícula, nome, em
 
 2) O arquivo .xls exportado é gerado de forma precisa e estruturada, garantindo a integridade e a correta formatação dos dados.
 
-#### História 2.4: 
+#### História 1.4: 
 
 Eu, como **professor** posso **arquivar turmas** para **possuir o histórico das turmas**.
 
@@ -90,7 +56,7 @@ Eu, como **professor** posso **arquivar turmas** para **possuir o histórico das
 
 2) As turmas arquivadas são armazenadas e mantidas no histórico do sistema de forma organizada e acessível.
 
-#### História 2.5: 
+#### História 1.5: 
 
 Eu, como **professor** posso **importar um arquivo .xls com matrícula, nome e email de todos os alunos da turma selecionada** para **centralização dos dados**.
 
@@ -100,9 +66,43 @@ Eu, como **professor** posso **importar um arquivo .xls com matrícula, nome e e
 
 2) O processo de importação do arquivo .xls é eficiente e confiável, permitindo ao professor centralizar rapidamente os dados dos alunos selecionados.
 
+### Funcionalidade 2: Publicar atividade
+
+#### História 2.1:
+
+Eu, como **professor** posso **definir a sequência das atividades e disciplinas** para **disponibilizar conteúdo**.
+
+#### Critérios de aceitação:
+
+1) O professor deve poder realizar essa tarefa sem dificuldades técnicas significativas, garantindo uma experiência de usuário fluida.
+
+2) O conteúdo disponibilizado segue a sequência estabelecida pelo professor de forma consistente e acessível para os alunos.
+
+#### História 2.2: 
+
+Eu, como **professor** posso **definir o valor em PAX** para **bonificação clara para trazer motivação**.
+
+#### Critérios de aceitação:
+
+1) Os alunos compreendem claramente o valor em PAX definido como bonificação e como ele afeta sua motivação.
+
+2) O sistema armazena e exibe o valor correto, permitindo que tanto o professor quanto os alunos tenham visibilidade em relação aos PAXs definidos.
+
+#### História 2.3: 
+
+Eu, como **professor** posso **definir datas** para **gerenciar atividades realizadas**.
+
+#### Critérios de aceitação:
+
+1) O aplicativo permite o professor inserir as datas de início e término das atividades de maneira intuitiva, sem ambiguidade ou erros de formato.
+
+2) O aplicativo permite o professor definir a data do fim do semestre.
+
+3) O aplicativo permite o professor defirnir as datas de entrega importante.
+
 ## Persona: Estudante
 
-### Funcionalidade 3: Criação de equipes
+### Funcionalidade 3: Organizar equipes
 
 #### História 3.1: 
 
@@ -124,7 +124,7 @@ Eu, como **estudante** posso **selecionar participanres para formar minha equipe
 
 2) O sistema deve permitir o aluno Verificar a lista de participantes da sua equipe.
 
-### Funcionalidade 4: Visualizar infomações do grupo
+### Funcionalidade 4: Visualizar Equipes
 
 #### História 4.1: 
 
@@ -168,9 +168,9 @@ Eu, como **estudante** posso **visualizar o ranking de PAX da minha turma** para
 
 2) O ranking de PAX é atualizado regularmente, refletindo com precisão o progresso das equipes ao longo do tempo.
 
-### Funcionalidade 5: Visualizar unidades e atividades
+### Funcionalidade 5: Visualizar Atividades
 
-#### História 5.1: 
+#### História 5.1:
 
 Eu, como **estudante** posso **visualizar as unidades e atividades** para **centralização das informações**.
 
@@ -203,3 +203,11 @@ Eu, como **estudante** posso **visualizar valor dos PAX's de cada atividade** pa
 2) O sistema permite Validar restrições de acesso ao valor dos PAX da atividade.
 
 3) O sistema permite verificar visualização do valor dos PAX das atividades como professor.
+
+
+## Histórico de revisão
+
+|  Data | Versão | Descrição | Autor(es) |
+| :--------: | :----: | :---------------------------------: | :---------: |
+| 15/06/2023 |  1.0   | Criação das US | Vinícius |
+| 16/06/2023 |  1.0   | Criação dos critérios de aceitação | Felipe |

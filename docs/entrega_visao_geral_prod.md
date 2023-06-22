@@ -12,3 +12,11 @@
 ![visaoProduto5](assets/images/visaoProduto5.png)
 ## Tela 6
 ![visaoProduto6](assets/images/visaoProduto6.png)
+
+
+## Histórico de revisão
+
+|  Data | Versão | Descrição | Autor(es) |
+| :--------: | :----: | :---------------------------------: | :---------: |
+| 10/05/2023 |  1.0   | Criação do documento | Paulo |
+| 18/06/2023 |  1.1   | Edição para entrega 3 | Vinícius |

@@ -8,6 +8,7 @@ nav:
   - Processo de Desenvolvimento: processo_software.md
   - Product Backlog: backlog.md
   - MVPs: mvps.md
+  - Backlog estrutura SAFe: backlog_estrutura_safe.md
   - Canvas PBB: 
     - US's: canvas_pbb.md
     - BDD's: bdd.md

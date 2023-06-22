@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Atividades</title>
+    <title>Edição de atividades</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    <div data-collapse="small" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+<div data-collapse="small" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
     role="banner" class="nav-bar w-nav">
     <div class="nav-container w-container">
         <div class="logo-div"><a href="/" aria-current="page" class="nav-logo w-inline-block w--current"><img
                     src="https://uploads-ssl.webflow.com/64935b1b48934f25b73f256d/6493625b0d68f51d26ddfa94_Screenshot%202023-06-21%20at%2017-47-51%20Logo%20Maker%20Used%20By%202.3%20Million%20Startups.png"
                     width="178" alt="" class="logo" /></a></div>
         <nav role="navigation" class="nav-content w-nav-menu"><a href="adm.html"
-                class="nav-link w-nav-link">Turmas</a> <a href="activity_manager.html"
-                class="nav-link w-nav-link">Edição de Atividades</a>
+                class="nav-link w-nav-link">Turmas</a> <a href="class.html"
+                class="nav-link w-nav-link">Atividades</a>
                 <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Log out</button>
         </nav>
         <div class="menu-button w-nav-button"><img
@@ -26,35 +26,27 @@
                 loading="lazy" width="24" alt="" class="menu-icon" /></div>
     </div>
 </div>
+
 <div class="page-wrapper">
     <div class="section light-page-header wf-section">
         <div class="container">
-            <h1 class="heading large-h1">Atividades</h1>
+            <h1 class="heading large-h1">Edição de Atividades</h1>
         </div>
     </div>
 </div>
-
-    <div class="head">
-        <div style="overflow-y:scroll;width:400px;border:2px solid black;max-height:33px; margin-left: 1vh;">
-            <table id="loreimdsfknm">TODO</table>
-        </div>
-        <button class="btn btn-lg btn-block btn-primary" id="addActivity">Adicionar Atividade</button>
-    </div>
-
-    </div>
-    <address class="footer wf-section">
-        <div class="footer-container w-container">
-            <div class="w-layout-grid footer-grid">
-                <div id="w-node-b8d7be4a-ce45-83ab-5947-02d204c8bff0-cf3fcb86" class="footer-logo-block"><a
-                        data-ix="logo" href="/" aria-current="page" class="footer-logo w-nav-brand w--current"><img
-                            src="https://uploads-ssl.webflow.com/64935b1b48934f25b73f256d/6493625b0d68f51d26ddfa94_Screenshot%202023-06-21%20at%2017-47-51%20Logo%20Maker%20Used%20By%202.3%20Million%20Startups.png"
-                            width="204" alt="" /></a>
-                    <div class="spacer _16"></div>
-                </div>
-                <div class="paragraph small">© 2023 All Rights Reserved.</div>
+<address class="footer wf-section">
+    <div class="footer-container w-container">
+        <div class="w-layout-grid footer-grid">
+            <div id="w-node-b8d7be4a-ce45-83ab-5947-02d204c8bff0-cf3fcb86" class="footer-logo-block"><a
+                    data-ix="logo" href="/" class="footer-logo w-nav-brand"><img
+                        src="https://uploads-ssl.webflow.com/64935b1b48934f25b73f256d/6493625b0d68f51d26ddfa94_Screenshot%202023-06-21%20at%2017-47-51%20Logo%20Maker%20Used%20By%202.3%20Million%20Startups.png"
+                        width="204" alt="" /></a>
+                <div class="spacer _16"></div>
             </div>
+            <div class="paragraph small">© 2023 All Rights Reserved.</div>
         </div>
-    </address>
+    </div>
+</address>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
@@ -70,22 +62,20 @@
         };
         const app = initializeApp(firebaseConfig);
 
-        document.getElementById('logOutButton').addEventListener('click', function () {
-            signOut(auth)
-                .then((userCredential) => {
-                    const uid = localStorage.getItem('loggedInUid');
-                    if (uid) {
-                        set(ref(db, '/user_registers/' + uid + '/online_status'), false);
-                        localStorage.removeItem('loggedInUid');
-                    }
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
-            window.location.replace('index.html');
-        });
-        document.getElementById('addActivity').addEventListener('click', function () {
-            //
+        import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+        const auth = getAuth(app);
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const uid = user.uid;
+                localStorage.setItem('loggedInUid', uid);
+                set(ref(db, '/online_status/' + uid), true);
+            } else {
+                const uid = localStorage.getItem('loggedInUid');
+                if (uid) {
+                    set(ref(db, '/online_status/' + uid), false);
+                    localStorage.removeItem('loggedInUid');
+                }
+            }
         });
         document.getElementById('backButton').addEventListener('click', function () {
             window.location.replace('adm.html');

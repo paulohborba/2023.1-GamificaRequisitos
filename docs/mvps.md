@@ -14,60 +14,94 @@ Após atribuirmos as pontuações em cada dimensão, calculamos a pontuação to
 
 ## Pontuação das HU´s
 
-| História de Usuário                                                                                                                    | Valor de Negócio | Capacidade Técnica | Viabilidade | TOTAL |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | ----------- | ----- |
-| US08- Como estudante, eu quero jogar o jogo da memória durante a fase de seleção de grupos                                             | MA               | A                  | MA          | 14    |
-| US14- Como estudante, eu quero visualizar valor dos PAX de cada atividade                                                              | MA               | A                  | A           | 13    |
-| US01- Como professor, eu quero importar uma arquivo .xls com a matricula e o email dos alunos para a criação da turma                  | MA               | B                  | MA          | 12    |
-| US07- Como professor, eu quero criar grupos aleatórios de usuários cadastrados para o início da fase de seleção de grupos              | MA               | M                  | A           | 12    |
-| US09- Como estudante, eu quero vizualizar as informações do meu grupo                                                                  | A                | A                  | A           | 12    |
-| US10- Como estudante, eu quero vizualizar as informações dos integrantes do meu grupo                                                  | A                | A                  | A           | 12    |
-| US13- Como estudante, eu quero vizualizar os requisitos para o cumprimento das atividades                                              | A                | A                  | A           | 12    |
-| US15- Como estudante, eu quero vizualizar o ranking de PAX da minha turma                                                              | MA               | M                  | A           | 12    |
-| US02 - Como professor, eu quero editar todos os dados das turmas para que eu possa administra-las                                      | B                | A                  | MA          | 11    |
-| US03 - Como professor, eu quero excluir turmas caso seja necessidade para que eu tenha o controle                                      | B                | A                  | MA          | 11    |
-| US18- Como professor, eu quero exportar uma arquivo .xls com os dados da turma, como as equipes e o saldo dos PAXs                     | MA               | B                  | A           | 11    |
-| US04- Como usuário, eu quero editar informações do meu usuário de turma                                                                | A                | M                  | M           | 10    |
-| US05- Como professor, eu quero excluir um aluno ou monitor de uma turma                                                                | B                | M                  | A           | 9     |
-| US12- Como estudante, eu quero vizualizar as unidades e atividades                                                                     | M                | M                  | M           | 9     |
-| US19 - Como professor, eu quero criar turmas sem a necessidade de importar um arquivo .xls para que eu tenha mais liberdade e controle | MB               | M                  | A           | 8     |
-| US11- Como professor, eu quero definir a sequência das atividades e disciplinas                                                        | B                | B                  | M           | 7     |
-| US06 - Como monitor, eu quero excluir um aluno de uma turma                                                                            | B                | B                  | B           | 6     |
-| US17- Como professor, eu quero arquivar e excluir o arquivamento de uma turma                                                          | MB               | B                  | MB          | 4     |
-| US16- Como estudante, eu quero acessar mídias da atividade                                                                             | B                | MB                 | MB          | 4     |
+| User Stories         | Valor de negócio | Capacidade técnica | Viabilidade | MA | A | M | B | MB | TOTAL |
+| -------------------- | ---------------- | ------------------ | ----------- | -- | - | - | - | -- | ----- |
+| 2.1.3 - Como aluno, eu quero vizualizar o ranking em PAX de todas as equipes da minha turma          | MA               | A                  | MA            | 10 | 4  | 0 | 0 | 0  | 14    |
+| 2.2.2 - Como aluno, eu quero visualizar valor em PAX da atividade                                                                                       | MA               | A                  | MA            | 10 | 4  | 0 | 0 | 0  | 14    |
+| 2.3.3 - Como aluno, eu quero editar informações do perfil do meu usuário                                                                                | MA               | A                  | A            | 5  | 8  | 0 | 0 | 0  | 13    |
+| 2.1.2 - Como aluno, eu quero contatar os membros da minha equipe por whatsapp                                                                           | A                | A                  | A            | 0  | 12 | 0 | 0 | 0  | 12    |
+| 2.2.1 - Como aluno, eu quero visualizar os requisitos para o cumprimento da atividade                                                                   | A                | A                  | A             | 0  | 12 | 0 | 0 | 0  | 12    |
+| 2.3.2 - Como aluno, eu quero realizar login para acessar a minha conta                                                                                  | A                | A                  | A             | 0  | 12 | 0 | 0 | 0  | 12    |
+| 1.1.1 - Como professor, eu quero importar uma arquivo .xls com a matricula e o email dos alunos para a criação da turma                                 | MA               | B                  | A             | 5  | 4  | 0 | 2 | 0  | 11    |
+| 1.1.6 - Como professor, eu quero exportar uma arquivo .xls com matrícula, nome, email, equipe e o saldo de PAXs de todos os alunos da turma selecionada | MA               | B                  | A             | 5  | 4  | 0 | 2 | 0  | 11    |
+| 1.2.1 - Como professor, eu quero criar uma atividade para uma turma                                                                                     | A                | M                  | A           | 0  | 8  | 3 | 0 | 0  | 11    |
+| 1.3.1 - Como professor, eu quero criar equipes aleatórios de usuários cadastrados para o início da fase de seleção de equipes                           | A                | M                  | A           | 0  | 8  | 3 | 0 | 0  | 11    |
+| 2.1.1 - Como aluno, eu quero jogar jogos durante a fase de seleção de equipes                                                                           | A                | M                  | A           | 0  | 8  | 3 | 0 | 0  | 11    |
+| 1.2.2 - Como professor, eu quero alterar as informações de uma atividade existente                                                                      | B                | MA                 | M           | 5  | 0  | 3 | 2 | 0  | 10    |
+| 2.3.1 - Como aluno, eu quero realizar um cadastro para acessar a plataforma                                                                             | M                | A                  | M           | 0  | 4  | 6 | 0 | 0  | 10    |
+| 1.1.3 - Como professor, eu quero arquivar uma turma para possuir um histórico das turmas                                                                | A                | B                  | M           | 0  | 4  | 3 | 2 | 0  | 9     |
+| 1.1.4 - Como professor, eu quero adicionar monitores a uma turma para me auxiliarem                                                                     | M                | M                  | M           | 0  | 0  | 9 | 0 | 0  | 9     |
+| 1.1.2 - Como professor, eu quero alterar o nome da turma para que eu possa administra-las                                                               | MB               | MA                 | B           | 5  | 0  | 0 | 2 | 1  | 8     |
+| 1.1.7 - Como professor, eu quero realizar login para acessar a minha conta de usuário administrador                                                     | B                | M                  | M           | 0  | 0  | 6 | 2 | 0  | 8     |
+| 2.2.3 - Como aluno, quero receber avisos das atividades criadas pelo professor                                                                          | B                | M                  | M           | 0  | 0  | 6 | 2 | 0  | 8     |
+| 1.1.5 - Como professor, eu quero excluir um monitor de uma turmas                                                                                       | MB               | A                  | B           | 0  | 4  | 0 | 2 | 1  | 7     |
+| 1.3.2 - Como professor, eu quero adicionar um aluno a uma equipe                                                                                        | MB               | A                  | B           | 0  | 4  | 0 | 2 | 1  | 7     |
+| 1.3.3 - Como professor, eu quero excluir um aluno de uma equipe                                                                                         | MB               | A                  | B           | 0  | 4  | 0 | 2 | 1  | 7     |
+
+Com base na tabela de priorização, podemos observar que as histórias de usuário da persona "Aluno" possuem alta prioridade devido à sua baixa complexidade técnica e alta viabilidade. No entanto, é necessário ter cuidado ao considerar sua inclusão no MVP 1. Isso se deve ao fato de que as histórias de usuário da persona "Professor" são de extrema importância e são fundamentais para viabilizar as histórias de usuário da persona "Aluno". Portanto, é crucial avaliar cuidadosamente a sequência de implementação, levando em consideração a dependência entre as personas e garantindo que as necessidades do professor sejam atendidas antes de priorizar as histórias do aluno.
+
+Além da tabela supracitada, analisamos as relações entre as histórias no que tange a arquitetura do software. Levantado todos esses pontos realizamos a criação de 3 MVP’s.
 
 
 ## MVP 1
 
-| Tema |Épico |  HU  | Descrição |
-|:----:|:----:|:----:| :-----------------------: |
-|  T1    |  E1  | US01 | Como professor, eu quero importar uma arquivo .xls com a matricula e o email dos alunos para a criação da turma                                 |
-|   T1   |  E1  | US02 | Como professor, eu quero editar todos os dados das turmas para que eu possa administra-las                                                      |
-|   T2   |  E3  | US07 | Como professor, eu quero criar equipes aleatórias de alunos cadastrados para o início da fase de seleção de equipes                             |
-|   T2   |  E3  | US08 | Como aluno, eu quero jogar o jogo da memória durante a fase de seleção de equipes                                                                |
-|   T2   |  E3  | US09 | Como aluno, eu quero vizualizar as informações do meu grupo                                                                                     |
-|   T2   |  E3  | US10 | Como aluno, eu quero vizualizar as informações dos integrantes do meu grupo                                                                     |
-|   T2   |  E4  | US13 | Como aluno, eu quero vizualizar os requisitos para o cumprimento das atividades                                                                 |
-|   T2   |  E4  | US14 | Como aluno, eu quero visualizar valor dos PAX de cada atividade                                                                                 |
-|   T2   |  E4  | US15 | Como aluno, eu quero vizualizar o ranking de PAX da minha turma                                                                                 |
+1.1.1 - Como professor, eu quero importar uma arquivo .xls com a matricula e o email dos alunos para a criação da turma
+
+1.1.7 - Como professor, eu quero realizar login para acessar a minha conta de usuário administrador
+
+1.2.1 - Como professor, eu quero criar uma atividade para uma turma
+
+1.3.1 - Como professor, eu quero criar equipes aleatórios de usuários cadastrados para o início da fase de seleção de equipes
 
 ## MVP 2
 
-| Tema |Épico |  HU  | Descrição |
-|:----:|:----:|:----:| :-----------------------: |
-|  T1    |  E1  | US03 | Como professor, eu quero excluir turmas caso seja necessidade para que eu tenha o controle                                                      |
-|  T2    |  E5  | US04 | Como aluno, eu quero editar informações do meu usuário de turma                                                                                 |
-|  T1    |  E1  | US05 | Como professor, eu quero excluir um aluno ou monitor de uma turma                                                                               |
-|   T1   |  E1  | US06 | Como monitor, eu quero excluir um aluno de uma turma                                                                                            |
-|   T2   |  E4  | US11 | Como professor, eu quero definir a sequência das atividades e disciplinas                                                                       |
-|  T2    |  E4  | US12 | Como aluno, eu quero vizualizar as unidades e atividades                                                                                        |
-|   T2   |  E4  | US16 | Como aluno, eu quero acessar mídias da atividade                                                                                                |
-|   T1   |  E1  | US17 | Como professor, eu quero arquivar e excluir o arquivamento de uma turma                                                                         |
-|   T1   |  E1  | US18 | Como professor, eu quero exportar uma arquivo .xls com matrícula, nome, email, equipe e o saldo de PAXs de todos os alunos da turma selecionada |
-|   T1   |  E1  | US19 | Como professor, eu quero criar turmas sem a necessidade de importar um arquivo .xls para que eu tenha mais liberdade e controle                 |
+1.1.3 - Como professor, eu quero arquivar uma turma para possuir um histórico das turmas
 
+1.1.6 - Como professor, eu quero exportar uma arquivo .xls com matrícula, nome, email, equipe e o saldo de PAXs de todos os alunos da turma selecionada
+
+2.1.1 - Como aluno, eu quero jogar jogos durante a fase de seleção de equipes
+
+2.1.2 - Como aluno, eu quero contatar os membros da minha equipe por whatsapp
+
+2.1.3 - Como aluno, eu quero vizualizar o ranking em PAX de todas as equipes da minha turma
+
+2.2.1 - Como aluno, eu quero visualizar os requisitos para o cumprimento da atividade
+
+2.2.2 - Como aluno, eu quero visualizar valor em PAX da atividade
+
+2.2.3 - Como aluno, quero receber avisos das atividades criadas pelo professor
+
+2.3.3 - Como aluno, eu quero editar informações do perfil do meu usuário
+
+2.3.1 - Como aluno, eu quero realizar um cadastro para acessar a plataforma
+
+2.3.2 - Como aluno, eu quero realizar login para acessar a minha conta
+
+## MVP 3
+1.1.2 - Como professor, eu quero alterar o nome da turma para que eu possa administra-las
+
+1.1.4 - Como professor, eu quero adicionar monitores a uma turma para me auxiliarem
+
+1.1.5 - Como professor, eu quero excluir um monitor de uma turmas
+
+1.2.2 - Como professor, eu quero alterar as informações de uma atividade existente
+
+1.3.2 - Como professor, eu quero adicionar um aluno a uma equipe
+
+1.3.3 - Como professor, eu quero excluir um aluno de uma equipe
+
+## Gerenciamento de Riscos 
+
+- Falta de habilidades técnicas:
+    - O time não possui habilidades suficientes para a realização do projeto.
+    
+            Capacitar a equipe constantemente durante o projeto;
+            Ajuda constante caso um membro não consiga realizar uma tarefa.
+
+Conforme previsto em nossa análise de riscos, devido à falta de habilidades técnicas, foi necessário criar um terceiro MVP para evitar que as histórias se tornassem débito técnico. O objetivo foi mitigar os riscos identificados e garantir a qualidade do produto final.
 
 ## Histórico de versões
  |  Data | Versão | Descrição | Autor(es) |
 | :--------: | :----: | :---------------------------------: | :---------: |
-| 24/05/2023 |   1.0   | Criação do documento | Vinícius Alves |
+| 24/05/2023 |   1.0   | Criação do documento | Vinícius |
+| 20/05/2023 |   2.0   | Criação do documento | Vinícius |

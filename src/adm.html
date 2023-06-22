@@ -1,0 +1,229 @@
+<html>
+
+<head>
+    <title>Turmas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="css/Styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <div data-collapse="small" data-animation="default" data-duration="400" data-easing="ease" data-easing2="ease"
+    role="banner" class="nav-bar w-nav">
+    <div class="nav-container w-container">
+        <div class="logo-div"><a href="/" aria-current="page" class="nav-logo w-inline-block w--current"><img
+                    src="https://uploads-ssl.webflow.com/64935b1b48934f25b73f256d/6493625b0d68f51d26ddfa94_Screenshot%202023-06-21%20at%2017-47-51%20Logo%20Maker%20Used%20By%202.3%20Million%20Startups.png"
+                    width="178" alt="" class="logo" /></a></div>
+        <nav role="navigation" class="nav-content w-nav-menu"><a href="class.html"
+                class="nav-link w-nav-link">Atividades</a> <a href="activity_manager.html"
+                class="nav-link w-nav-link">Edição de Atividades</a>
+                    <button class="btn btn-lg btn-blck btn-default" id="logOutButton">Log out</button>
+
+        </nav>
+        <div class="menu-button w-nav-button"><img
+                src="https://uploads-ssl.webflow.com/64935b1b48934f25b73f256d/64935b1c48934f25b73f25f8_Menu%20Icon.svg"
+                loading="lazy" width="24" alt="" class="menu-icon" /></div>
+    </div>
+</div>
+<div class="page-wrapper">
+    <div class="section light-page-header wf-section">
+        <div class="container">
+            <h1 class="heading large-h1">Turmas</h1>
+        </div>
+    </div>
+</div>
+    <div style="overflow-y:scroll;width:400px;border:1px solid black;max-height:100px;">
+        <table id="classesTable"></table>
+    </div>
+    <hr>
+
+    <div style="margin-top: 2vh;">
+        Nome da Turma:
+        <input id="nomeTurmaTextInput">
+        <br>
+        <progress value="0" max="100" id="uploader"></progress>
+        <input type="file" value="Upload" id="fileButton" style="margin-top: 2vh;">
+        <hr>
+    </div>
+    <hr>
+
+    <div>
+
+        <button class="btn btn-lg btn-blck btn-default" id="criarTurmaButton" style="margin-top: 2vh;">Criar Turma</button>
+    </div>
+    <hr>
+
+    Usuários Online:
+    <div style="overflow-y:scroll;width:400px;border:1px solid black;max-height:33px; margin-top: 2vh;">
+        <table id="onlinesTable"></table>
+    </div>
+    <hr>
+
+    <address class="footer wf-section">
+        <div class="footer-container w-container">
+            <div class="w-layout-grid footer-grid">
+                <div id="w-node-b8d7be4a-ce45-83ab-5947-02d204c8bff0-cf3fcb86" class="footer-logo-block"><a
+                        data-ix="logo" href="/" aria-current="page" class="footer-logo w-nav-brand w--current"><img
+                            src="https://uploads-ssl.webflow.com/64935b1b48934f25b73f256d/6493625b0d68f51d26ddfa94_Screenshot%202023-06-21%20at%2017-47-51%20Logo%20Maker%20Used%20By%202.3%20Million%20Startups.png"
+                            width="204" alt="" /></a>
+                    <div class="spacer _16"></div>
+                </div>
+                <div class="paragraph small">© 2023 All Rights Reserved.</div>
+            </div>
+        </div>
+    </address>
+
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyA224zrzRZ7Iy7rrNRE9dWCUs-Kr23ktiE",
+            authDomain: "disciplinareq.firebaseapp.com",
+            databaseURL: "https://disciplinareq-default-rtdb.firebaseio.com",
+            projectId: "disciplinareq",
+            storageBucket: "disciplinareq.appspot.com",
+            messagingSenderId: "292130692921",
+            appId: "1:292130692921:web:29ab9b610e1c220d5652e8",
+            measurementId: "G-FLC6D2WGBC"
+        };
+        const app = initializeApp(firebaseConfig);
+        import { getDatabase, ref, push, onValue, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+        const db = getDatabase(app);
+        import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+        const auth = getAuth(app);
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const uid = user.uid;
+                localStorage.setItem('loggedInUid', uid);
+                set(ref(db, '/online_status/' + uid), true);
+            } else {
+                const uid = localStorage.getItem('loggedInUid');
+                if (uid) {
+                    set(ref(db, '/online_status/' + uid), false);
+                    localStorage.removeItem('loggedInUid');
+                }
+            }
+        });
+        import { getStorage, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-storage.js";
+        var uploader = document.getElementById('uploader');
+        document.getElementById('fileButton').addEventListener('change', function (e) {
+            var file = e.target.files[0];
+            const storage = getStorage(app);
+            const storageRef = ref(storage, 'arquivos/' + file.name);
+            const uploadTask = uploadBytesResumable(storageRef, file);
+            uploadTask.on('state_changed',
+                (snapshot) => {
+                    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                    console.log('Upload is ' + progress + '% done');
+                    uploader.value = progress;
+                },
+                (error) => {
+                    console.log(error);
+                },
+                () => {
+                    getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                        console.log('File available at', downloadURL);
+                        alert('Envio Completo');
+                    });
+                }
+            );
+        })
+        document.getElementById('logOutButton').addEventListener('click', function () {
+            signOut(auth)
+                .then((userCredential) => {
+                    const uid = localStorage.getItem('loggedInUid');
+                    if (uid) {
+                        set(ref(db, '/online_status/' + uid), false);
+                        localStorage.removeItem('loggedInUid');
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+            window.location.replace('index.html');
+        });
+
+        import { onChildAdded, onChildChanged, onChildRemoved } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+        var classesTable = document.querySelector("#classesTable");
+        var classesStatusRef = ref(db, '/classes/');
+        function addRowToClassesTable(className) {
+            var row = classesTable.insertRow();
+            row.id = className;
+            var cell = row.insertCell();
+            var button = document.createElement("button");
+            button.innerHTML = className;
+            button.addEventListener("click", function () {
+                window.location.replace('class.html');
+            });
+            cell.appendChild(button);
+        }
+
+        function removeRowFromClassesTable(className) {
+            var row = document.getElementById(className);
+            if (row) {
+                row.remove();
+            }
+        }
+        onChildAdded(classesStatusRef, (snapshot) => {
+            addRowToClassesTable(snapshot.key);
+        });
+        onChildRemoved(classesStatusRef, (snapshot) => {
+            removeRowFromClassesTable(snapshot.key);
+        });
+        document.getElementById('criarTurmaButton').addEventListener('click', function () {
+            var classNameInput = document.getElementById('nomeTurmaTextInput');
+            var className = classNameInput.value;
+            console.log(className);
+            if (className) {
+                set(ref(db, '/classes/' + classNameInput.value), 123);
+            }
+            classNameInput.value = '';
+        });
+
+        var online_table = document.querySelector("#onlinesTable");
+        var onlinesStatusRef = ref(db, '/online_status/');
+        function addRowToOnlinesTable(uid, email) {
+            var row = online_table.insertRow();
+            row.id = uid;
+            var cell = row.insertCell();
+            cell.textContent = email;
+        }
+        function removeRowFromOnlinesTable(uid) {
+            var row = document.getElementById(uid);
+            if (row) {
+                row.remove();
+            }
+        }
+        onChildAdded(onlinesStatusRef, (snapshot) => {
+            if (snapshot.val() === true) {
+                var availableAccountsRef = ref(db, '/available_accounts/');
+                onValue(availableAccountsRef, (snap) => {
+                    snap.forEach((childSnap) => {
+                        var childData = childSnap.val();
+                        console.log(childData.credential);
+                        console.log(snapshot.key);
+                        if (childData.credential === snapshot.key) {
+                            addRowToOnlinesTable(snapshot.key, childData.email);
+                        }
+                    });
+                });
+            }
+        });
+
+        onChildChanged(onlinesStatusRef, (snapshot) => {
+            if (snapshot.val() === true) {
+                addRowToOnlinesTable(snapshot.key,);
+            } else {
+                removeRowFromOnlinesTable(snapshot.key);
+            }
+        });
+        onChildRemoved(onlinesStatusRef, (snapshot) => {
+            removeRowFromOnlinesTable(snapshot.key);
+        });
+
+    </script>
+</body>
+
+</html>

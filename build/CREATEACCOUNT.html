@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <title>Criação de Conta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="css/Styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <div class="w-users-userformpagewrap full-page-wrapper"><a href="/" class="form-page-logo-link w-inline-block"><img
+        src=""
+        loading="lazy"class="form-page-logo" /></a>
+<div class="w-users-userloginformwrapper admin-form-card">
+    <form data-wf-user-form-type="login" data-wf-user-form-redirect="/resources" method="post">
+        <div class="w-users-userformheader form-card-header">
+            <h2 class="heading h3">Cadastar</h2>
+            <p class="paragraph small">Insira seus dados abaixo.</p>
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="emailInput" placeholder="Email"></label>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Senha"></label>
+                </div>
+            </form>
+        <div class="w-users-userformfooter form-card-footer"><span>Já possui uma conta?</span><a
+                href="authentication.html">Criar conta</a></div>
+    </form>
+</div>
+<button class="bton btn-lg btn-block btn-primary" id="authEmailPassButton">Acessar</button>
+</div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyA224zrzRZ7Iy7rrNRE9dWCUs-Kr23ktiE",
+            authDomain: "disciplinareq.firebaseapp.com",
+            databaseURL: "https://disciplinareq-default-rtdb.firebaseio.com",
+            projectId: "disciplinareq",
+            storageBucket: "disciplinareq.appspot.com",
+            messagingSenderId: "292130692921",
+            appId: "1:292130692921:web:29ab9b610e1c220d5652e8",
+            measurementId: "G-FLC6D2WGBC"
+        };
+        const app = initializeApp(firebaseConfig);
+
+        import { getDatabase, ref, push, onValue, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+        const db = getDatabase(app);
+        const isOnlineRef = ref(db, '.info/connected');
+
+        import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+        const auth = getAuth(app);
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                const uid = user.uid;
+                localStorage.setItem('loggedInUid', uid);
+                set(ref(db, '/online_status/' + uid), true);
+            } else {
+                const uid = localStorage.getItem('loggedInUid');
+                if (uid) {
+                    set(ref(db, '/online_status/' + uid), false);
+                    localStorage.removeItem('loggedInUid');
+                }
+            }
+        });
+        var emailInput = document.getElementById('emailInput');
+        var passwordInput = document.getElementById('passwordInput');
+        document.getElementById('createUserButton').addEventListener('click', function () {
+            createUserWithEmailAndPassword(auth, emailInput.value, passwordInput.value)
+                .then((userCredential) => {
+                    const userId = userCredential.user.uid;
+                    const userOnlineStatusDatabaseRef = ref(db, '/online_status/' + userId);
+                    push(ref(db, 'available_accounts'), {
+                        credential: userId,
+                        admin_status: false,
+                        email: emailInput.value,
+                    });
+                    onValue(isOnlineRef, (snapshot) => {
+                        if (snapshot.val() === false) {
+                            return;
+                        };
+                        onValue(userOnlineStatusDatabaseRef, () => set(userOnlineStatusDatabaseRef, false), { onlyOnce: true });
+                        set(userOnlineStatusDatabaseRef, true);
+                    }, { onlyOnce: true });
+                    alert('Conta Criada com Sucesso\n' + emailInput.value);
+                })
+                .catch(function (error) {
+                    console.log(error)
+                    alert('Falha no Registramento')
+                })
+        })
+    </script>
+</body>
+
+</html>

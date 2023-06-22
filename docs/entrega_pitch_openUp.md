@@ -20,3 +20,11 @@
 ![pitOpenUp9](assets/images/pitOpenUp9.png)
 ## Tela 10
 ![pitOpenUp10](assets/images/pitOpenUp10.png)
+
+
+## Histórico de revisão
+
+|  Data | Versão | Descrição | Autor(es) |
+| :--------: | :----: | :---------------------------------: | :---------: |
+| 10/05/2023 |  1.0   | Criação do documento | Paulo |
+| 18/06/2023 |  1.1   | Edição para entrega 3 | Vinícius |

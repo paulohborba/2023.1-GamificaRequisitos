@@ -54,8 +54,11 @@ Uma síntese da solução pode ser encontrada no quadro-resumo a seguir, apresen
 - Simplificar a gestão e administração da disciplina, proporcionando uma experiência mais eficiente e envolvente para os usuários do software.
 
 ## Tecnologias a Serem Utilizadas
-- Firebase e GitHub para o desenvolvimento do projeto.
-- MkDocs e Mural para a documentação e gerenciamento dos requisitos do projeto.
+
+- HTML5, CSS3, JavaScript serão as linguagens utilizadas.
+- Firebase para o backend do projeto.
+- GitHub para o versionamento e desenvolvimento colaborativo.
+- MkDocs, Trello e Mural para a documentação e gerenciamento dos requisitos do projeto.
 - Discord e Whatsapp para a comunicação da equipe.
 
 ## Histórico de revisão

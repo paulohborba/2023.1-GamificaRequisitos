@@ -1,4 +1,4 @@
-import { getDatabase, onValue, ref, get, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+import { getDatabase, onValue, ref, get, set, onChildChanged } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 import { application } from './app.js';
 const database = getDatabase(application);
 async function allocate_user(type, id, email) {
@@ -19,7 +19,7 @@ async function allocate_user(type, id, email) {
         console.log('invalid type:');
         return;
     }
-    const self_reference=ref(database, '/user_registers/' + type + '/' + id);
+    const self_reference = ref(database, '/user_registers/' + type + '/' + id);
     await set(self_reference, allocation_data);
     return self_reference;
 }
@@ -72,11 +72,11 @@ async function get_online_users() {
 async function set_user_online_status(userOrUid, status) {
     let id = typeof userOrUid === 'string' ? userOrUid : userOrUid.uid;
     const [type] = await get_user_info_by_id(id);
-    if(type !== null){
+    if (type !== null) {
         set(ref(database, '/user_registers/' + type + '/' + id + '/online_status'), status);
         return type;
     } else {
         console.error("Invalid user type");
     }
 }
-export { database, onValue, ref, set, allocate_user, get_user_info_by_id, get_online_users, set_user_online_status };
+export { database, onValue, ref, set, allocate_user, get_user_info_by_id, get_online_users, set_user_online_status, onChildChanged };

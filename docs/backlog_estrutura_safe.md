@@ -6,3 +6,9 @@
         style='min-width: 640px; min-height: 480px; background-color: #f4f4f4; border: 1px solid #efefef'
         sandbox='allow-same-origin allow-scripts allow-modals allow-popups allow-popups-to-escape-sandbox'>
 </iframe>
+
+## Histórico de revisão
+
+|  Data | Versão | Descrição | Autor(es) |
+| :--------: | :----: | :-----------------------: | :----: |
+| 16/06/2023 |  1.0   | Criação do documento SAFe | Felipe |

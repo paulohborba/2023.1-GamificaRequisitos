@@ -534,3 +534,10 @@ Eu, como **estudante** posso **visualizar valor dos PAX's de cada atividade** pa
 **Quando** acesso a página de visualização do valor dos PAX da atividade "Atividade C"
 
 **Então** visualizo corretamente o valor dos PAX da atividade
+
+
+## Histórico de revisão
+
+|  Data | Versão | Descrição | Autor(es) |
+| :--------: | :----: | :---------------------------------: | :---------: |
+| 17/06/2023 |  1.0   | Criação dos BDD's | Vinícius |

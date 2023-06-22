@@ -49,7 +49,7 @@ Ao analisar as descrições das facetas do processo de Engenharia de Requisitos,
 
 - Participação conjunta da equipe do projeto e do cliente na elicitação de requisitos: Embora a equipe do projeto tenha um papel central na elicitação de requisitos, é importante ressaltar que a participação do cliente é essencial. A colaboração entre ambas as partes contribui para uma compreensão mais abrangente das necessidades e para a definição dos requisitos de forma eficaz.
 
-Portanto, com base nesses aspectos, fica evidente a necessidade de adotar uma abordagem iterativa, exploratória e orientada ao mercado no processo de Engenharia de Requisitos, considerando a natureza dinâmica e a complexidade do projeto em questão. Sendo assim selecionado pela equipe o Scrum e o XP para o desenvolvimento do software.
+Portanto, com base nesses aspectos, fica evidente a necessidade de adotar uma abordagem iterativa, exploratória e orientada ao mercado no processo de Engenharia de Requisitos, considerando a natureza dinâmica e a complexidade do projeto em questão. Sendo assim selecionado pela equipe o Kanban e o Scrum para o desenvolvimento do software, apesar do GUPTA nos indicar a metodologia RAD.
 
 
 ### Scrum
@@ -62,13 +62,16 @@ Portanto, com base nesses aspectos, fica evidente a necessidade de adotar uma ab
 | Daily Scrum | Reunião diária com duração máxima de 15 minutos, na qual os membros da equipe devem discutir o progresso de trabalho da Sprint desde a última reunião diária. | Discord (Assincrono) |
 | Backlog do produto | Lista dos requisitos do produto que necessitam ser desenvolvidos. | Trello |
 
-### XP
-| |  |  |  |
-| :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| Toda a Equipe | Ajuda a equipe trabalhar junta para resolver problemas e assim alcançar os objetivos do projeto, aumentando a produtividade e diminuindo conflitos entre os membros da equipe. |
-| Ritmo Sustentável | Evita sobrecarga de trabalho e esgotamento físico e mental dos membros da equipe. Testes: Devem ser implementados testes unitários, de integração e de aceitação ao longo do processo de desenvolvimento |
-| Design Simples | Projetos com a prática de um design simples sao benéficos, principalmente, para a manutenção do projeto. |
-| Refatoração | Prática que envolve a melhoria contínua do código existente sem alterar sua funcionalidade |
+## Kanban
+
+O Kanban é um método que se baseia nos princípios Lean e Ágil, com o objetivo de aprimorar a execução de serviços, garantir entregas de valor contínuas e promover a evolução constante do sistema de produção por meio da resolução sistemática de problemas. Sua implantação simplificada e a capacidade de obter resultados rápidos, mesmo em equipes com pouca familiaridade com metodologias ágeis, tornam-no uma escolha promissora para nosso projeto. Segue abaixo as práticas que estabelecemos para o processo:
+
+- Visualizar o Trabalho (modelo visual)
+- Limitar o Trabalho em Progresso (WIP)
+- Gerenciar o Fluxo
+- Critérios para puxar/mover os itens (DOR e DONE)
+- Estabelecer Ciclos de Feedback
+- Melhorar Colaborativamente, Evoluir Experimentalmente
 
 ### Etapa 1
 

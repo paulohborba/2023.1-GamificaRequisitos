@@ -7,3 +7,10 @@
 ## Feedback da cliente MVP 1
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-trKR8XX4yU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+## Histórico de revisão
+
+|  Data | Versão | Descrição | Autor(es) |
+| :--------: | :----: | :---------------------------------: | :---------: |
+| 19/06/2023 |  1.0   | Adição das apresentações | Vinícius |

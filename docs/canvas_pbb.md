@@ -203,3 +203,11 @@ Eu, como **estudante** posso **visualizar valor dos PAX's de cada atividade** pa
 2) O sistema permite Validar restrições de acesso ao valor dos PAX da atividade.
 
 3) O sistema permite verificar visualização do valor dos PAX das atividades como professor.
+
+
+## Histórico de revisão
+
+|  Data | Versão | Descrição | Autor(es) |
+| :--------: | :----: | :---------------------------------: | :---------: |
+| 15/06/2023 |  1.0   | Criação das US | Vinícius |
+| 16/06/2023 |  1.0   | Criação dos critérios de aceitação | Felipe |

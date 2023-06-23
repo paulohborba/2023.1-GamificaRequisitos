@@ -102,4 +102,4 @@ O Kanban é um método que se baseia nos princípios Lean e Ágil, com o objetiv
 | 26/04/2023 |  1.0   | Criação e estruturação do documento | Paulo Borba |
 | 24/05/2023 |  1.1   | Criação e estruturação do documento | Paulo Borba e Falipe Nunes |
 | 13/06/2023 |  2.0   | Alterações de acordo com o parecer do professor na entrega 2 | Vinícius |
-| 22/06/2023 |  2.0   | Alterações nas atividades da Engenharia de software | Vinícius |
+| 22/06/2023 |  2.1   | Alterações nas atividades da Engenharia de software | Vinícius |

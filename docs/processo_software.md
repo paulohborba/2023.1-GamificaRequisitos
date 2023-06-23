@@ -51,7 +51,6 @@ Ao analisar as descrições das facetas do processo de Engenharia de Requisitos,
 
 Portanto, com base nesses aspectos, fica evidente a necessidade de adotar uma abordagem iterativa, exploratória e orientada ao mercado no processo de Engenharia de Requisitos, considerando a natureza dinâmica e a complexidade do projeto em questão. Sendo assim selecionado pela equipe o Kanban e o Scrum para o desenvolvimento do software, apesar do GUPTA nos indicar a metodologia RAD.
 
-
 ## Scrum
 | |  |  |  |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
@@ -73,59 +72,28 @@ O Kanban é um método que se baseia nos princípios Lean e Ágil, com o objetiv
 - Estabelecer Ciclos de Feedback
 - Melhorar Colaborativamente, Evoluir Experimentalmente
 
-### Etapa 1
+## Etapa 1 - Requisitos
 
-| Etapa | Método | ferramenta | Entrega |
+| Atividade | Método | Ferramenta | Entrega |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| Planejamento de estratégias e métodos de desenvolvimento | Reunião da equipe | Discord da equipe | Estratégias de desenvolvimento definidas |
+| Elicitação e Descoberta | Entrevista com cliente | Meet |  Compreender o negócio do cliente, juntamente com seus objetivos, para extrair informações essenciais para a definição dos requisitos |
+| Análise e Consenso | Reunião com devs e cliente | Meet | Chegar a um consenso sobre os requisitos específicos que serão atendidos. Buscar alinhar as visões do desenvolvedor e do cliente, garantindo que as soluções propostas sejam adequadas e atendam às expectativas |
+| Declaração | Histórias de Usuários | Trello e GitHub Pages | Expressar os requisitos do projeto de forma compreensível, utilizando linguagem natural e evitando termos técnicos excessivos |
+| Organização e Atualização | Product Backlog (Kanban) | Trello e GitHub Pages | Manter uma organização adequada e acompanhar o estado de cada requisito ao longo do ciclo de desenvolvimento |
+| Verificação | Reunião com devs | Meet | Avaliar se os requisitos foram interpretados corretamente e se foram implementadas as funcionalidades correspondentes |
+| Validação | Reunião devs e cliente | Meet | Confirmação de que os requisitos atendem às necessidades reais do cliente |
 
-### Etapa 2
+## Etapa 2 - Construção
 
-| Etapa | Método | ferramenta | Entrega |
+| Atividade | Método | Ferramenta | Entrega |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| Planejar estratégias da equipe | Reunião da equipe | Discord da equipe | Estratégias da equipe |
+| Implementação dos MVP's | Revisões de código | GitHub | Entregas incrementais de valor para o cliente |
 
-### Etapa 3
+## Etapa 3 - Teste
 
-| Etapa | Método | ferramenta | Entrega |
+| Atividade | Método | Ferramenta | Entrega |
 | :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| Decidir os objetivos de cada sprint | Reunião da equipe | Discord da equipe | O planejamento da sprint da semana |
-
-### Etapa 4
-
-| Etapa | Método | ferramenta | Entrega |
-| :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| Apresentação dos resultados da sprint | Reunião de revisão (Review) | Discord da equipe | Alterações válidas em relação aos resultados da sprint |
-
-### Etapa 5
-
-| Etapa | Método | ferramenta | Entrega |
-| :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| Validação com o cliente | Apresentação de ponto de controle | Discord | Entrega das funcionalidades aprovadas |
-
-### Etapa 6
-
-| Etapa | Método | ferramenta | Entrega |
-| :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| Inspeção da sprint passada | Reunião de retrospectiva | Discord da equipe | Sprint revisada com os pontos de melhoria |
-
-### Etapa 7
-
-| Etapa | Método | ferramenta | Entrega |
-| :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| Levantamento de melhorias para as próximas sprints | Reunião de retrospectiva | Discord da equipe | Pontos de melhoria |
-
-### Etapa 8
-
-| Etapa | Método | ferramenta | Entrega |
-| :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| Avaliação das estratégias de desenvolvimento | Reunião de retrospectiva | Discord da equipe | Pontos positivos e negativos e analisar se precisa de mudanças e quais precisam ser feitas |
-
-### Etapa 9
-
-| Etapa | Método | ferramenta | Entrega |
-| :----: | --------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------- |
-| valiação das estratégias da equipe | Reunião de retrospectiva | Discord da equipe | Pontos positivos e negativos da estratégia e pontos de melhoria |
+| Testagem | Testes Unitários | Jasmine | Detecção precoce de erros |
 
 ## Histórico de revisão
 
@@ -134,3 +102,4 @@ O Kanban é um método que se baseia nos princípios Lean e Ágil, com o objetiv
 | 26/04/2023 |  1.0   | Criação e estruturação do documento | Paulo Borba |
 | 24/05/2023 |  1.1   | Criação e estruturação do documento | Paulo Borba e Falipe Nunes |
 | 13/06/2023 |  2.0   | Alterações de acordo com o parecer do professor na entrega 2 | Vinícius |
+| 22/06/2023 |  2.0   | Alterações nas atividades da Engenharia de software | Vinícius |

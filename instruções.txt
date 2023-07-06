@@ -1,0 +1,19 @@
+Navegue até o diretório onde a sua pasta "2023.1-GamificaRequisitos" está localizada usando o terminal ou prompt de comando.
+
+Meu caso:
+C:\GitHub\2023.1-GamificaRequisitos>
+
+Use o comando para no Windows (veja o comando correto para o seu sistema operacional):
+
+python -m venv venv
+venv\Scripts\activate 
+pip install -r requirements.txt
+
+Espere ser instalado os pacotes necessários. Depois execute os comandos:
+
+cd projeto_gamifica
+python manage.py runserver
+
+Acesse: http://127.0.0.1:8000/
+
+Peça para o chatGPT alterar os comandos para o seu sistema operacional :)

@@ -1,0 +1,31 @@
+<h1>{{ atividade.nome }}</h1>
+
+    {% if atividade.pontos %}
+        <p>Pontos: {{ atividade.pontos }}</p>
+    {% else %}
+        <p>Pontos: N/A</p>
+    {% endif %}
+    
+    {% if atividade.data_entrega %}
+        <p>Data de Entrega: {{ atividade.data_entrega }}</p>
+    {% else %}
+        <p>Data de Entrega: N/A</p>
+    {% endif %}
+    
+    {% if atividade.descricao_detalhada %}
+        <p>Descrição Detalhada: {{ atividade.descricao_detalhada }}</p>
+    {% else %}
+        <p>Descrição Detalhada: N/A</p>
+    {% endif %}
+    
+    {% if atividade.arquivos %}
+        <p>Arquivos: <a href="{{ atividade.arquivos.url }}" target="_blank">{{ atividade.arquivos }}</a></p>
+    {% else %}
+        <p>Arquivos: Nenhum arquivo disponível</p>
+    {% endif %}
+    
+    {% if atividade.recursos %}
+        <p>Recursos: <a href="{{ atividade.recursos }}" target="_blank">{{ atividade.recursos }}</a></p>
+    {% else %}
+        <p>Recursos: Nenhum recurso disponível</p>
+    {% endif %}

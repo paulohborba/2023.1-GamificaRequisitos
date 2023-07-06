@@ -1,0 +1,14 @@
+<h1>Página Inicial</h1>
+
+<!-- Adicionar o link para a página de cadastro de alunos -->
+<a href="{% url 'cadastro_alunos' %}">Cadastrar Alunos</a>
+
+<!-- Exibir a lista de turmas -->
+<h2>Turmas:</h2>
+<ul>
+  {% for turma in turmas %}
+    <li>
+      <a href="{% url 'turma_detalhe' turma.id %}">{{ turma.nome }}</a>
+    </li>
+  {% endfor %}
+</ul>

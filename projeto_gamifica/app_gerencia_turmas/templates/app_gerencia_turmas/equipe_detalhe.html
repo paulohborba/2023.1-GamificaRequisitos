@@ -1,0 +1,10 @@
+  <h1>Detalhes da Equipe</h1>
+  <h2>{{ equipe.nome }}</h2>
+  <p>{{ equipe.descricao }}</p>
+  <p>Turma: {{ equipe.turma }}</p>
+  <p>Membros:</p>
+  <ul>
+    {% for aluno in equipe.aluno_set.all %}
+      <li>{{ aluno.nome }}</li>
+    {% endfor %}
+  </ul>

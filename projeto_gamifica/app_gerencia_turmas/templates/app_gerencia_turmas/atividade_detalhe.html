@@ -1,31 +1,54 @@
 <h1>{{ atividade.nome }}</h1>
 
-    {% if atividade.pontos %}
-        <p>Pontos: {{ atividade.pontos }}</p>
-    {% else %}
-        <p>Pontos: N/A</p>
-    {% endif %}
+{% if atividade.pontos %}
+    <p>Pontos: {{ atividade.pontos }}</p>
+{% else %}
+    <p>Pontos: N/A</p>
+{% endif %}
+
+{% if atividade.data_entrega %}
+    <p>Data de Entrega: {{ atividade.data_entrega }}</p>
+{% else %}
+    <p>Data de Entrega: N/A</p>
+{% endif %}
+
+{% if atividade.descricao_detalhada %}
+    <p>Descrição Detalhada: {{ atividade.descricao_detalhada }}</p>
+{% else %}
+    <p>Descrição Detalhada: N/A</p>
+{% endif %}
+
+{% if atividade.arquivos %}
+    <p>Arquivos: <a href="{{ atividade.arquivos.url }}" target="_blank">{{ atividade.arquivos }}</a></p>
+{% else %}
+    <p>Arquivos: Nenhum arquivo disponível</p>
+{% endif %}
+
+{% if atividade.recursos %}
+    <p>Recursos: <a href="{{ atividade.recursos }}" target="_blank">{{ atividade.recursos }}</a></p>
+{% else %}
+    <p>Recursos: Nenhum recurso disponível</p>
+{% endif %}
+
+<form method="post" action="{% url 'classificar_atividade' turma_id=atividade.turma.id atividade_id=atividade.id %}">
+    {% csrf_token %}
+    <h2>Classificar Atividade</h2>
+    <h3>Turma: {{ atividade.turma.nome }}</h3>
     
-    {% if atividade.data_entrega %}
-        <p>Data de Entrega: {{ atividade.data_entrega }}</p>
-    {% else %}
-        <p>Data de Entrega: N/A</p>
-    {% endif %}
+    <h4>Equipes:</h4>
+    {% for equipe in equipes %}
+        <div>
+            <input type="checkbox" name="equipes" value="{{ equipe.id }}"
+                {% if equipe in equipes_realizadas %} checked {% endif %}>
+            <label>{{ equipe.nome }}</label>
+            {% if equipe in equipes_realizadas %}
+                <span class="success-message">Realizada com sucesso</span>
+            {% endif %}
+        </div>
+    {% endfor %}
     
-    {% if atividade.descricao_detalhada %}
-        <p>Descrição Detalhada: {{ atividade.descricao_detalhada }}</p>
-    {% else %}
-        <p>Descrição Detalhada: N/A</p>
-    {% endif %}
+    <input type="hidden" name="turma_id" value="{{ atividade.turma.id }}">
+    <input type="hidden" name="atividade_id" value="{{ atividade.id }}">
     
-    {% if atividade.arquivos %}
-        <p>Arquivos: <a href="{{ atividade.arquivos.url }}" target="_blank">{{ atividade.arquivos }}</a></p>
-    {% else %}
-        <p>Arquivos: Nenhum arquivo disponível</p>
-    {% endif %}
-    
-    {% if atividade.recursos %}
-        <p>Recursos: <a href="{{ atividade.recursos }}" target="_blank">{{ atividade.recursos }}</a></p>
-    {% else %}
-        <p>Recursos: Nenhum recurso disponível</p>
-    {% endif %}
+    <button type="submit">Classificar</button>
+</form>

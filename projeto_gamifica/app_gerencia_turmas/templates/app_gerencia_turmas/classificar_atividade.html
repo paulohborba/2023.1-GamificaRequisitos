@@ -1,0 +1,17 @@
+<form method="post">
+    {% csrf_token %}
+    <h1>Classificar Atividade</h1>
+    <h2>Turma: {{ turma.nome }}</h2>
+    <h3>Atividade: {{ atividade.nome }}</h3>
+  
+    <h4>Equipes:</h4>
+    {% for equipe in equipes %}
+      <div>
+        <input type="checkbox" name="equipes" value="{{ equipe.id }}">
+        <label>{{ equipe.nome }}</label>
+      </div>
+    {% endfor %}
+  
+    <button type="submit">Classificar</button>
+  </form>
+  

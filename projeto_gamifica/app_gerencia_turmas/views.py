@@ -1,26 +1,42 @@
-from django.shortcuts import render, get_object_or_404
-from django.urls import reverse
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User
-from .models import Turma, Equipe, Aluno, Atividade
+from .models import Turma, Equipe, Aluno, Atividade, RealizacaoAtividade
 from random import sample
 import pandas as pd
+import os
 
 def pagina_inicial(request):
-    turmas = Turma.objects.all()
+    turmas = Turma.objects.all().order_by('-data_criacao')
     context = {'turmas': turmas}
     return render(request, 'app_gerencia_turmas/pagina_inicial.html', context)
 
 def turma_detalhe(request, turma_id):
     turma = get_object_or_404(Turma, id=turma_id)
-    atividades = Atividade.objects.filter(turma=turma)
-    context = {'turma': turma, 'atividades': atividades}
+    atividades = Atividade.objects.filter(turma=turma).order_by('data_criacao')
+    equipes = Equipe.objects.filter(turma=turma).order_by('-saldo_pontos')    
+    context = {'turma': turma, 'atividades': atividades, 'equipes':equipes}
     return render(request, 'app_gerencia_turmas/turma_detalhe.html', context)
 
 def atividade_detalhe(request, atividade_id):
     atividade = get_object_or_404(Atividade, id=atividade_id)
-    context = {'atividade': atividade}
+    
+    # Obter as equipes que já realizaram a atividade com sucesso
+    equipes_realizadas = Equipe.objects.filter(
+        realizacaoatividade__atividade=atividade,
+        realizacaoatividade__realizada_com_sucesso=True
+    )
+    
+    # Obter todas as equipes da turma da atividade
+    equipes = atividade.turma.equipe_set.all()
+    
+    context = {
+        'atividade': atividade,
+        'equipes_realizadas': equipes_realizadas,
+        'equipes': equipes
+    }
     return render(request, 'app_gerencia_turmas/atividade_detalhe.html', context)
+
 
 def equipe_detalhe(request, equipe_id):
     equipe = get_object_or_404(Equipe, id=equipe_id)
@@ -35,7 +51,10 @@ def cadastro_alunos(request):
         turma_id = request.POST.get('turma')
         quantidade_equipes = int(request.POST.get('equipes'))
 
-        if arquivo.name.endswith('.xlsx'):
+         # Obter a extensão do arquivo
+        _, ext = os.path.splitext(arquivo.name)
+
+        if ext.lower() in ['.xlsx', '.xls', '.xlsm']:
             df = pd.read_excel(arquivo)
             alunos = list(df.to_dict('records'))
             random_alunos = sample(alunos, len(alunos))  # Embaralhar a ordem dos alunos
@@ -85,3 +104,34 @@ def cadastro_alunos(request):
 
     context = {'turmas': turmas}
     return render(request, 'app_gerencia_turmas/cadastro_alunos.html', context)
+
+from django.contrib import messages
+
+def classificar_atividade(request, turma_id, atividade_id):
+    turma = get_object_or_404(Turma, id=turma_id)
+    atividade = get_object_or_404(Atividade, id=atividade_id)
+    equipes = Equipe.objects.filter(turma=turma)
+
+    if request.method == 'POST':
+        equipes_selecionadas = request.POST.getlist('equipes')
+        for equipe_id in equipes_selecionadas:
+            equipe = get_object_or_404(Equipe, id=equipe_id)
+            # Verificar se a equipe já realizou a atividade com sucesso
+            if RealizacaoAtividade.objects.filter(equipe=equipe, atividade=atividade, realizada_com_sucesso=True).exists():
+                messages.error(request, f"A equipe {equipe.nome} já realizou a atividade com sucesso.")
+                continue
+
+            realizacao_atividade = RealizacaoAtividade.objects.create(equipe=equipe, atividade=atividade, realizada_com_sucesso=True)
+            # Atualizar saldo de pontos da equipe
+            equipe.saldo_pontos += atividade.pontos
+            equipe.save()
+
+        return redirect('atividade_detalhe', atividade_id=atividade.id)
+
+    context = {
+        'turma': turma,
+        'atividade': atividade,
+        'equipes': equipes,
+    }
+    return render(request, 'app_gerencia_turmas/classificar_atividade.html', context)
+

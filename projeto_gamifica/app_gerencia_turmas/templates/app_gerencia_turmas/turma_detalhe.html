@@ -1,16 +1,19 @@
+
 <h1>{{ turma.nome }}</h1>
 <p>Descrição: {{ turma.descricao }}</p>
 
-<h2>Equipes:</h2>
-<ul>
-    {% for equipe in turma.equipe_set.all %}
-    <li>
-        <a href="{% url 'equipe_detalhe' equipe.id %}">{{ equipe.nome }}</a>
-    </li>
-    {% empty %}
-    <li>Não há equipes cadastradas.</li>
+<h2>Ranking das Equipes:</h2>
+{% if equipes %}
+  <ol>
+    {% for equipe in equipes %}
+      <li>
+        <a href="{% url 'equipe_detalhe' equipe.id %}">{{ equipe.nome }}</a> - Saldo de pontos: {{ equipe.saldo_pontos }}
+      </li>
     {% endfor %}
-</ul>
+  </ol>
+{% else %}
+  <p>Não há equipes cadastradas.</p>
+{% endif %}
 
 <h2>Atividades:</h2>
 <ul>
@@ -22,3 +25,5 @@
     <li>Não há atividades cadastradas.</li>
     {% endfor %}
 </ul>
+
+

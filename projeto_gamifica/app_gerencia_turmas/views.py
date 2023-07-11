@@ -11,6 +11,12 @@ def pagina_inicial(request):
     context = {'turmas': turmas}
     return render(request, 'app_gerencia_turmas/pagina_inicial.html', context)
 
+def turmas(request):
+    turmas = Turma.objects.all().order_by('-data_criacao')
+    context = {'turmas': turmas}
+    return render(request, 'app_gerencia_turmas/turmas.html', context)
+
+
 def turma_detalhe(request, turma_id):
     turma = get_object_or_404(Turma, id=turma_id)
     atividades = Atividade.objects.filter(turma=turma).order_by('data_criacao')

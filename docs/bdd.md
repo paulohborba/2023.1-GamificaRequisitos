@@ -100,7 +100,7 @@ Eu, como **professor** posso **editar todos os dados das turmas** para **central
 
 **Quando** acesso a página de edição da turma "Turma A"
 
-**Quando** modifico as informações da turma
+**Quando** modifico as informações da turma como os nome, matrícula, e-mail dos alunos, equipes e seus saldos de PAXs
 
 **Então** as informações da turma são atualizadas com sucesso
 
@@ -108,7 +108,7 @@ Eu, como **professor** posso **editar todos os dados das turmas** para **central
 
 **Dado** que estou autenticado como administrador
 
-**Quando** tento editar as informações da turma "Turma B"
+**Quando** tento editar o nome, matrícula, e-mail dos alunos, equipes e seus saldos de PAXs da turma "Turma B"
 
 **Quando** insiro dados inválidos
 

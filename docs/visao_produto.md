@@ -56,7 +56,7 @@ Uma síntese da solução pode ser encontrada no quadro-resumo a seguir, apresen
 ## Tecnologias a Serem Utilizadas
 
 - HTML5, CSS3, JavaScript serão as linguagens utilizadas.
-- Firebase para o backend do projeto.
+- Firebase e Django para o backend do projeto.
 - GitHub para o versionamento e desenvolvimento colaborativo.
 - MkDocs, Trello e Mural para a documentação e gerenciamento dos requisitos do projeto.
 - Discord e Whatsapp para a comunicação da equipe.

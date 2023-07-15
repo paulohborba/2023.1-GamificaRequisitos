@@ -86,3 +86,4 @@ No quadro apresentado na Tabela 1, são listados os principais papéis e os resp
 | 26/04/2023 |  1.0   | Criação e estruturação do documento | Paulo Borba e Luciano Machado |
 | 24/05/2023 |  1.1   | Alteração do documento | Paulo Borba |
 | 16/06/2023 |  2.0   | Atualização do visão para a entrega 3 | Vinícius Alves |
+| 15/07/2023 |  2.1   | Atualização do visão para a entrega 4 | Felipe Nunes |

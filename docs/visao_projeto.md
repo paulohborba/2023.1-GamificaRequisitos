@@ -40,7 +40,7 @@ No quadro apresentado na Tabela 1, são listados os principais papéis e os resp
 | 11 | Desenvolvimento da US 1.1.3, US 1.1.6 e US 2.1.1; Modelos de casos de uso | 22/06/2023 | 28/06/2023 |
 | 12 | Desenvolvimento da US 2.1.2, US 2.1.3 e US 2.2.1; User Story Mapping; Especificação de casos de uso  | 29/06/2023 | 05/07/2023 |
 | 13 | Desenvolvimento da US 2.2.2, US 2.2.3, US 2.3.3, US 2.3.1, US 2.3.2 | 06/07/2023 | 12/07/2023 |
-| 14 | Atualização do GitPages; Testes e validação do produto (MVP 2) com o cliente | 13/07/2023 | 19/07/2023 |
+| 14 | Desenvolvimentos e finalização das US´s pendentes  | 13/07/2023 | 19/07/2023 |
 
 ## Matriz de Comunicação
 

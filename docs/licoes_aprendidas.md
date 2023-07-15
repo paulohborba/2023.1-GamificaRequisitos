@@ -19,3 +19,4 @@ A equipe aprendeu a realizar levantamento de requisitos utilizando as técnicas 
 | 26/04/2023 |  1.0   | Criação e estruturação do documento | Paulo Borba e Felipe Nunes |
 | 24/05/2023 |  2.0   | Alteração do documento | Paulo Borba|
 | 17/06/2023 |  2.1   | Criação das lições da unidade 3 | Vinícius|
+| 17/06/2023 |  2.2   | Criação das lições da unidade 4 | Felipe Nunes|

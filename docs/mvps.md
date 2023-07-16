@@ -97,6 +97,12 @@ Além da tabela supracitada, analisamos as relações entre as histórias no que
     
             Capacitar a equipe constantemente durante o projeto;
             Ajuda constante caso um membro não consiga realizar uma tarefa.
+      
+- Mudança de tecnologias durante o projeto : 
+    - O time reconhecer durante o projeto que precisa alterar e/ou adicionar outras tecnologias durante o desenvolvimento do projeto.
+    
+            Analisar o espoco do projeto e pesquisar tecnologias que são necessárias para o desenvolvimento do projeto;
+            Compreender o que é necessário para a realização do projeto.
 
 Conforme previsto em nossa análise de riscos, devido à falta de habilidades técnicas, foi necessário criar um terceiro MVP para evitar que as histórias se tornassem débito técnico. O objetivo foi mitigar os riscos identificados e garantir a qualidade do produto final.
 

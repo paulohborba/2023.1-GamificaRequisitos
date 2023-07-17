@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site" : " GamificaReq ",
     "public": "public",
     "ignore": [
       "firebase.json",

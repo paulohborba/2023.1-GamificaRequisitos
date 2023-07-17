@@ -52,6 +52,20 @@ No quadro apresentado na Tabela 1, são listados os principais papéis e os resp
 | Situação do Projeto | Equipe do Projeto, Cliente | Semanal | Vídeo da reunião |
 | Reunião com monitor | Equipe do Projeto, Monitor | Semanal | Nenhum |
 
+## Planning
+
+| Reunião | Objetivo | Objetivo concluído | 
+| :--------: | :-------------------------------------------------------: | :-----------: | 
+| 20/04/2023 | Criação do Template da Visão do Produto e Projeto | ✅ |
+| 26/04/2023 | Criar a GitPage  | ✅ |
+| 11/05/2023 | Reunião com o cliente e definição das features do projeto | ✅ |
+| 12/05/2023 | Desenvolvimento do Mural | ✅ |
+| 24/05/2023 | Validação com o cliente e correção das User Storys | ✅ |
+| 18/06/2023 | Desenvolvimento do PBB | ✅ | 
+| 21/06/2023 | Criação do Trello e organização das Sprints futuras | ✅ |
+| 02/07/2023 | Distribuição das Sprints restantes  | ✅ |
+| 04/07/2023 | Validação com o cliente e realização decorreções pendentes | ✅ |
+
 ## Gerenciamento de Riscos
 
 - Redução na equipe : Baixa

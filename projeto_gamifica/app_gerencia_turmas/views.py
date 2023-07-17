@@ -5,6 +5,20 @@ from .models import Turma, Equipe, Aluno, Atividade, RealizacaoAtividade
 from random import sample
 import pandas as pd
 import os
+import pyrebase
+
+config={
+    "apiKey": "AIzaSyBec5PFcwPpoOE4KROYmwXmNpk81mAdV8w",
+    "authDomain": "gamifica-requisitos-d6866.firebaseapp.com",
+    "projectId": "gamifica-requisitos-d6866",
+    "storageBucket": "gamifica-requisitos-d6866.appspot.com",
+    "messagingSenderId": "278887328933",
+    "appId": "1:278887328933:web:48da729fdaba590145f14c"
+}
+
+firebase=pyrebase.initialize_app(config)
+authe = firebase.auth()
+
 
 def pagina_inicial(request):
     turmas = Turma.objects.all().order_by('-data_criacao')
